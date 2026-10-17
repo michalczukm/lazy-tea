@@ -8,70 +8,54 @@ web
 
 ## Stack
 
-- Czysty HTML, CSS i JavaScript; bez frameworka i bundlera.
-- Docelowe repozytorium: https://github.com/michalczukm/lazy-tea.
-- Docelowy hosting: Cloudflare Pages.
-- Przed konfiguracją CI i publikacji odczytać repozytoria lazy-list oraz
-  lazy-dirt i ich instrukcje. Nie zgadywać konfiguracji.
-- HTML, CSS i moduły JavaScript w osobnych plikach katalogu `public/`.
+- Plain HTML, CSS and JavaScript; no framework or bundler.
+- Target repository: https://github.com/michalczukm/lazy-tea.
+- Target hosting: Cloudflare Pages.
+- Read lazy-list, lazy-dirt and their instructions before configuring CI or deployment. Do not guess the configuration.
+- HTML, CSS and JavaScript modules live in separate files under `public/`.
 
 ## Users
 
-Osoba parząca herbatę liściastą w kubku lub dzbanku, korzystająca
-z telefonu albo tabletu 10″ podczas parzenia.
+Someone brewing loose-leaf tea in a mug or teapot, using a phone or a 10-inch tablet while brewing.
 
 ## Product Purpose
 
-Interaktywna ściąga po polsku: szybki podgląd temperatury, czasu i dawki
-suszu oraz minutnik. Na telefonie najważniejsze są duże, czytelne parametry
-i wygodna obsługa dotykiem. Na tablecie 10″ podstawowe parametry wszystkich
-sześciu rodzajów powinny mieścić się na jednym ekranie w orientacji poziomej.
+A Polish interactive brewing guide: quick access to water temperature, steeping time, leaf quantity and a timer. Phones prioritize large, readable parameters and comfortable touch controls. A 10-inch landscape tablet should show the basic parameters for all six teas on one screen.
 
 ## Capabilities and Constraints
 
-- Sześć pozycji: czarna, Earl Grey, zielona, biała, oolong i rooibos.
-- Earl Grey jest osobną pozycją na bazie czarnej herbaty.
-- Bez gongfu, pu-erh i ziół.
-- Wybór herbaty i objętości wody: 250, 350, 500 ml oraz własna wartość.
-- Dawka początkowa: **1 g / 100 ml**, przeliczana proporcjonalnie.
-  Przykłady: 250 ml → 2,5 g; 350 ml → 3,5 g; 500 ml → 5 g.
-- Dawka służy jako punkt startowy do dostosowania według smaku.
-- Minutnik z czasem domyślnym dla herbaty, ręczną edycją, startem,
-  pauzą i resetem.
-- Edycja czasu zastępuje duże cyfry polami minut i sekund w tym samym
-  miejscu. Bez dodatkowego panelu; dostępne zapisanie i anulowanie zmiany.
-- Dla każdej herbaty: temperatura wody, zakres czasu, domyślny czas
-  minutnika, dawka suszu, informacja o kolejnym parzeniu i jedna wskazówka.
-- Kolejność prac: uzgodnienie treści, projekt z Impeccable, implementacja.
-- Uzgodniony sposób projektowania: najpierw schematy i opis, następnie kod.
-  Bez generowania makiet obrazowych przed implementacją.
-- Alarm: subtelny krótki dźwięk przez Web Audio API i trwały komunikat
-  „Gotowe”. Bez biblioteki i pliku audio.
-- Odczyt czasu jest korygowany po powrocie z tła; brak gwarancji alarmu
-  przy zablokowanym urządzeniu i brak powiadomień systemowych.
-- Widoczna strona automatycznie korzysta z Screen Wake Lock, także przed
-  uruchomieniem minutnika. Po powrocie do karty ponawia blokadę uśpienia.
-  System lub przeglądarka mogą odmówić; brak API nie blokuje parzenia.
-- Interfejs nie ma stopki ani dodatkowych uwag pod główną zawartością.
+- Six entries: black, Earl Grey, green, white, oolong and rooibos.
+- Earl Grey is a separate entry based on black tea.
+- No gongfu, pu-erh or herbal infusions.
+- Tea selection and water volumes of 250, 350, 500 ml or a custom value.
+- Starting dose: **1 g / 100 ml**, scaled proportionally. Examples: 250 ml → 2.5 g; 350 ml → 3.5 g; 500 ml → 5 g.
+- The dose is a starting point to adjust to taste.
+- A timer with a default duration for each tea, manual editing, start, pause and reset.
+- Time editing replaces the large digits with minute and second fields in the same position. No additional panel; changes can be saved or cancelled.
+- Each tea provides water temperature, a steeping range, default timer, leaf quantity, advice about another infusion and one short tip.
+- Work sequence: agree on content, design with Impeccable, then implement.
+- Agreed design process: diagrams and descriptions before code. Do not generate image mockups before implementation.
+- Alarm: a short, subtle Web Audio API sound and a persistent “Gotowe” message. No audio library or file.
+- The timer corrects its display when the page returns from the background. No guaranteed alarm while the device is locked and no system notifications.
+- The visible page automatically requests Screen Wake Lock, even before the timer starts, and requests it again when the tab becomes visible. The system or browser may deny it; missing API support does not block brewing.
+- No footer or additional notes below the main content.
 
 ## Approved Content
 
-Użytkownik zatwierdził poniższą treść wraz ze zmianą dawki na 1 g / 100 ml.
+The user approved this content with a dose of 1 g / 100 ml. Polish names and quoted text below are the approved interface copy.
 
-| Herbata   | Woda     | Czas    | Minutnik |
-| --------- | -------- | ------- | -------- |
-| Czarna    | 90–100°C | 3–5 min | 4:00     |
-| Earl Grey | 95°C     | 3–5 min | 4:00     |
-| Zielona   | 75–80°C  | 1–3 min | 2:00     |
-| Biała     | 80–85°C  | 3–5 min | 3:00     |
-| Oolong    | 85–95°C  | 2–4 min | 3:00     |
-| Rooibos   | 95–100°C | 5–7 min | 5:00     |
+| Tea       | Water    | Steeping | Timer |
+| --------- | -------- | -------- | ----- |
+| Czarna    | 90–100°C | 3–5 min  | 4:00  |
+| Earl Grey | 95°C     | 3–5 min  | 4:00  |
+| Zielona   | 75–80°C  | 1–3 min  | 2:00  |
+| Biała     | 80–85°C  | 3–5 min  | 3:00  |
+| Oolong    | 85–95°C  | 2–4 min  | 3:00  |
+| Rooibos   | 95–100°C | 5–7 min  | 5:00  |
 
-To uproszczone wartości startowe, nie uniwersalne receptury. Szczególnie
-białe herbaty i oolongi mają zróżnicowane zalecenia. Zasada interpretacji treści:
-**„Zalecenia na opakowaniu mają pierwszeństwo”.**
+These are simplified starting values, not universal recipes. White teas and oolongs vary particularly widely. Interpret all guidance according to **“Zalecenia na opakowaniu mają pierwszeństwo”** (package instructions take priority).
 
-| Herbata   | Kolejne parzenie                        | Wskazówka                                                                   |
+| Tea       | Another infusion                        | Tip                                                                         |
 | --------- | --------------------------------------- | --------------------------------------------------------------------------- |
 | Czarna    | Możliwe, zwykle delikatniejsze          | Po parzeniu wyjmij sitko lub oddziel napar od liści                         |
 | Earl Grey | Możliwe, zwykle delikatniejsze          | Mocniejszy napar uzyskaj większą ilością liści, zamiast przedłużać parzenie |
@@ -80,23 +64,29 @@ białe herbaty i oolongi mają zróżnicowane zalecenia. Zasada interpretacji tr
 | Oolong    | Warto spróbować; dostosuj czas do smaku | Zostaw liściom dużo miejsca na rozwinięcie                                  |
 | Rooibos   | Najlepiej zacząć od świeżej porcji      | Użyj drobnego sitka                                                         |
 
-Bez sztywnej liczby kolejnych parzeń.
+Do not prescribe a fixed number of infusions.
 
 ## Confirmed Layout
 
-Wybrany kierunek: „Kuchenna ściąga”. Tablet poziomo: tabela sześciu herbat
-i minutnik po prawej. Telefon: wybór herbaty, duże parametry jednej pozycji,
-objętość, minutnik i krótkie wskazówki.
+Selected style: the light dashboard at `http://127.0.0.1:4198/dashboard.html`, consistent with the green identity of `../lazy-diet`. It replaces the dark “Kuchenny pulpit” direction: paper background #fbfaf5, ink #263d33, green accent #59784f and locally hosted Atkinson Hyperlegible Next. Use lighter numerals, flat dividers and the `lazy-tea.` wordmark with a green dot.
+
+Landscape tablet: a six-tea table with the timer on the right. All basic content, including the complete text under “Kolejne parzenie”, should fit on screen. Target device: Lenovo TB310FU. Smaller landscape CSS widths retain the table instead of switching to the large phone view.
+
+Phone: tea selection, large parameters for one tea, volume, timer and short tips. Touch targets remain at least 48 px.
+
+The tablet runs in fullscreen. A photograph of the actual device showed that text was too small despite fitting vertically. Actual text and controls were enlarged, then reduced in small steps after device checks. After correcting the preview address, the user requested the previous, slightly larger variant. At 1280×800, parameters are now 34 px, tea names 25 px, notes 18 px, controls 20 px and the timer 112 px. Scale depends on viewport width and height; do not force page height or stretch table rows. Shorter screens retain the compact variant.
+
+The new style is previewed locally first. Publishing this change awaits user approval.
 
 ## Brand Commitments
 
-- Nazwa: lazy-tea.
-- Interfejs i treść po polsku.
-- Projektowanie z użyciem skilla impeccable:impeccable.
+- Name: lazy-tea; the wordmark ends with a dot (`lazy-tea.`).
+- Interface and product copy remain in Polish.
+- Design work uses the impeccable:impeccable skill.
 
 ## Evidence on Hand
 
-Treść jest syntezą poradników, a nie recepturą dla konkretnego produktu:
+The content synthesizes several guides; it is not a recipe for a specific product:
 
 - https://www.harney.com/pages/steeping-temperatures
 - https://inpursuitoftea.com/pages/how-to-make-tea
@@ -107,13 +97,11 @@ Treść jest syntezą poradników, a nie recepturą dla konkretnego produktu:
 
 ## Product Principles
 
-- Szybki odczyt parametrów podczas parzenia.
-- Zalecenia na opakowaniu mają pierwszeństwo przed ściągą.
-- Proste punkty startowe z możliwością dostosowania do smaku.
-- Obsługa dotykiem i czytelność prowadzą decyzje o interfejsie.
+- Make brewing parameters quick to read while brewing.
+- Package instructions take priority over this guide.
+- Offer simple starting points that can be adjusted to taste.
+- Let touch usability and readability guide interface decisions.
 
 ## Accessibility & Inclusion
 
-Duży, czytelny tekst i wygodna obsługa dotykiem na telefonie. Podstawowe
-parametry wszystkich sześciu herbat widoczne na jednym ekranie tabletu 10″
-w orientacji poziomej.
+Large, readable text and comfortable touch controls on phones. Basic parameters for all six teas visible on one landscape screen of a 10-inch tablet.

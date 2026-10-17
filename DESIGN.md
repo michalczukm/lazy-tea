@@ -1,252 +1,242 @@
 ---
 name: lazy-tea
-description: Polska kuchenna ściąga do parzenia herbaty.
+description: A light tea brewing guide with a timer.
 colors:
-  paper: '#fbfaf5'
+  bg: '#fbfaf5'
+  surface: '#fbfaf5'
   ink: '#263d33'
   muted: '#58675c'
+  accent: '#59784f'
+  on-accent: '#fbfaf5'
+  soft: '#e5eadd'
   line: '#cdd5ca'
-  selected: '#dce5d9'
-  soft: '#f0f2e9'
-  error: '#963b27'
-  wordmark-accent: '#5a7c51'
-  primary-hover: '#354e3e'
-  done: '#4b6b3e'
+  focus: '#263d33'
+  error: '#8f392b'
 typography:
   wordmark:
-    fontFamily: 'Manrope, sans-serif'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
     fontSize: '32px'
-    fontWeight: 800
-    letterSpacing: '-0.04em'
+    fontWeight: 700
+    letterSpacing: '-0.035em'
   headline:
-    fontFamily: 'Manrope, sans-serif'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
     fontSize: '24px'
-    fontWeight: 650
+    fontWeight: 600
+    lineHeight: 1.2
     letterSpacing: '-0.025em'
   title:
-    fontFamily: 'Manrope, sans-serif'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
     fontSize: '18px'
-    fontWeight: 700
+    fontWeight: 600
   body:
-    fontFamily: 'Manrope, sans-serif'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
     fontSize: '16px'
     fontWeight: 400
-    lineHeight: 1.6
+    lineHeight: 1.5
   note:
-    fontFamily: 'Manrope, sans-serif'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
     fontSize: '14px'
     fontWeight: 400
-    lineHeight: 1.55
   label:
-    fontFamily: 'Manrope, sans-serif'
-    fontSize: '12px'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
+    fontSize: '14px'
     fontWeight: 600
-  control:
-    fontFamily: 'Manrope, sans-serif'
-    fontSize: '16px'
-    fontWeight: 650
   table-number:
-    fontFamily: 'Manrope, sans-serif'
-    fontSize: '25px'
-    fontWeight: 500
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
+    fontSize: '24px'
+    fontWeight: 600
   mobile-parameter:
-    fontFamily: 'Manrope, sans-serif'
-    fontSize: '31px'
-    fontWeight: 550
-    letterSpacing: '-0.035em'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
+    fontSize: '32px'
+    fontWeight: 600
+    lineHeight: 1.15
+    letterSpacing: '-0.025em'
   countdown:
-    fontFamily: 'Manrope, sans-serif'
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
     fontSize: '88px'
-    fontWeight: 500
-    lineHeight: 1.2
-    letterSpacing: '-0.04em'
+    fontWeight: 400
+    lineHeight: 1.15
+    letterSpacing: '-0.025em'
 rounded:
-  control: '8px'
+  control: '10px'
   row: '0'
   indicator: '50%'
 spacing:
   tight: '6px'
   small: '8px'
-  control-gap: '12px'
-  related: '14px'
+  control-gap: '10px'
+  related: '12px'
   standard: '16px'
   section-small: '20px'
   section: '24px'
-  section-wide: '28px'
-  columns: '48px'
+  page-inline: '32px'
+  columns: '36px'
 components:
   button-primary:
     backgroundColor: '{colors.ink}'
-    textColor: '{colors.paper}'
-    typography: '{typography.control}'
+    textColor: '{colors.bg}'
     rounded: '{rounded.control}'
     padding: '12px 24px'
-  button-primary-hover:
-    backgroundColor: '{colors.primary-hover}'
   button-reset:
-    backgroundColor: 'transparent'
+    backgroundColor: '{colors.surface}'
     textColor: '{colors.ink}'
     rounded: '{rounded.control}'
     padding: '12px 18px'
   button-text:
     backgroundColor: 'transparent'
-    textColor: '{colors.muted}'
+    textColor: '{colors.accent}'
     rounded: '{rounded.control}'
     padding: '0'
   volume-choice:
     backgroundColor: 'transparent'
     textColor: '{colors.ink}'
-    typography: '{typography.control}'
     rounded: '{rounded.control}'
     padding: '10px 16px'
   choice-selected:
     backgroundColor: '{colors.ink}'
-    textColor: '{colors.paper}'
+    textColor: '{colors.bg}'
   tea-choice-mobile:
     backgroundColor: 'transparent'
     textColor: '{colors.ink}'
     rounded: '{rounded.control}'
-    padding: '10px 5px'
+    padding: '10px 4px'
   field:
-    backgroundColor: '{colors.paper}'
+    backgroundColor: '{colors.surface}'
     textColor: '{colors.ink}'
     rounded: '{rounded.control}'
-    padding: '8px 12px'
+    padding: '10px 12px'
   tea-row-selected:
-    backgroundColor: '{colors.selected}'
+    backgroundColor: '{colors.soft}'
     textColor: '{colors.ink}'
     rounded: '{rounded.row}'
+  button-primary-hover:
+    backgroundColor: '{colors.accent}'
+    textColor: '{colors.bg}'
+  wordmark:
+    textColor: '{colors.ink}'
+    typography: '{typography.wordmark}'
 ---
 
 # Design System: lazy-tea
 
 ## Overview
 
-**Creative North Star: "Kuchenna ściąga"**
+**Creative North Star: "Dashboard by the kettle"**
 
-„Kuchenna ściąga” porządkuje parametry herbaty jak podręczną tabelę przy czajniku. Ciepły papier, zielony atrament i jeden czytelny sans tworzą spokojny, użytkowy charakter; duże liczby są pierwszym planem, krótkie podpisy pomagają je odczytać.
+A light dashboard on a paper background, with green ink and a calm green accent. The direction matches the dashboard selected by the user: large, readable parameters, a lighter timer and the lazy-tea. wordmark with a green dot.
 
-System jest płaski i oszczędny: cienkie poziome linie rozdzielają informacje, wypełnienie wskazuje wybór, a mocny przycisk prowadzi do uruchomienia minutnika. Różne szerokości ekranu zachowują tę samą hierarchię parametrów i stanu parzenia. Interfejs pozostaje po polsku.
+Flat dividers and compact typography make brewing data easy to scan. The layout adjusts its density for phones and landscape tablets while preserving comfortable controls, clear selection and a clear timer state.
 
 **Key Characteristics:**
 
-- Ciepły papier i przygaszona zieleń.
-- Duże liczby, spokojne podpisy i czytelny Manrope.
-- Prostokątne kontrolki z delikatnie zaokrąglonymi narożnikami.
-- Płaskie powierzchnie, poziome linie i jednoznaczne zaznaczenie.
+- Paper background, dark green ink and a green accent.
+- Locally hosted Atkinson Hyperlegible Next and tabular numerals.
+- Flat dividers, outlined choices and gently rounded controls.
+- A lightweight timer and a stronger wordmark with a green dot.
 
 ## Colors
 
-Paleta jest ciepła, przygaszona i oparta na zieleni; wartości w frontmatter są normatywne i odpowiadają `public/styles.css`.
+The normative frontmatter values match the variables in `public/styles.css`.
 
 ### Primary
 
-- **Zielony atrament** (`ink`): tekst, zaznaczone przyciski, przycisk Start, fokus i kropka zaznaczenia.
-- **Zieleń wyboru** (`selected`): zaznaczony wiersz i zaznaczenie tekstu.
-- **Zieleń działania** (`primary-hover`): najechanie na główny przycisk.
-- **Zieleń gotowości** (`done`): cyfry zakończonego minutnika; komunikat „Gotowe” dodatkowo wzmacnia stan.
-- **Zieleń podpisu** (`wordmark-accent`): kropka znaku słownego.
+- **Accent green** (`accent`): links, brand and selection dots, the completed timer and the Start hover state.
+- **Green ink** (`ink`): text, the primary action and selected option fills.
+- **Paper on accent** (`on-accent`): an existing token with the same value as the background; current primary actions and choices use `bg` directly.
 
 ### Neutral
 
-- **Ciepły papier** (`paper`): tło strony, pól i jasny tekst na zielonym przycisku.
-- **Cichy tekst** (`muted`): jednostki, podpisy, objaśnienia i pomocnicze kontrolki.
-- **Linia papieru** (`line`): poziome podziały tabeli, sekcji i obrysy pól.
-- **Miękka zieleń papieru** (`soft`): najechanie na niezaznaczone opcje i Reset oraz przycisk Ustaw.
+- **Paper** (`bg`, `surface`): shared background for the page, fields and Reset; sections do not form separate cards.
+- **Muted green** (`muted`): labels, units, status and field outlines.
+- **Light sage** (`soft`): the selected row and hover states for unselected choices or Reset.
+- **Sage line** (`line`): separators and option outlines.
+- **Focus ink** (`focus`): keyboard focus outlines and text-action hover states.
 
-Błąd pola używa rdzawej czerwieni (`error`) na obrysie i w komunikacie; to kolor walidacji, nie drugi akcent marki.
+**Brick error** (`error`) marks invalid fields and their messages.
 
-**The Czytelnego wyboru Rule.** Wybrana pozycja ma własne wypełnienie i stan aria-pressed; wiersz tabeli dodatkowo ma małą kropkę.
+**The Clear selection Rule.** Selected options have an ink fill and light text; the selected row has a sage background and a green dot.
 
 ## Typography
 
-**Display Font:** Manrope, sans-serif.
-**Body Font:** Manrope, sans-serif.
+**Display Font:** Atkinson Hyperlegible Next, sans-serif.
+**Body Font:** Atkinson Hyperlegible Next, sans-serif.
 
-Jeden lokalny font zmienny (`public/fonts/manrope.ttf`, wagi 200–800, `font-display: swap`) obsługuje całą stronę. Nie ma osobnego kroju ozdobnego ani monospace. Root ma wielkość (16px); cyfry tabeli, parametrów telefonu i minutnika używają `tabular-nums`.
+Local files provide weights (400, 600, 700), with `font-display: swap` and synthesis disabled. One readable family serves the entire interface; base text is (16px) with line height (1.5).
 
 ### Hierarchy
 
-- **Wordmark:** rola `wordmark`; na telefonie wielkość maleje do (28px).
-- **Headline:** rola `headline`; krótkie pytanie nad wyborem herbaty w widoku telefonu.
-- **Title:** rola `title` dla nagłówka minutnika; na telefonie wielkość (17px). Nazwa wybranej herbaty ma (19px, 650).
-- **Body:** rola `body`; akapity mają interlinię (1.6).
-- **Note:** rola `note` dla wskazówek, maksymalna szerokość (65ch); na telefonie wielkość rośnie do (16px), z zachowaniem interlinii (1.55).
-- **Label:** rola `label` dla nagłówków kolumn i pomocniczych podpisów; komunikaty i kontrolki tekstowe często mają (13px), nazwa herbaty w nagłówku minutnika (14px).
-- **Table number:** rola `table-number`; na tablecie wielkość (23px). Jednostka ma (0.55em), wagę (500) i odsunięcie (4px).
-- **Mobile parameter:** rola `mobile-parameter`; poniżej (360px) wielkość (26px). Jednostki telefonu mają (13px) i odsunięcie (2px).
-- **Countdown:** rola `countdown`; w zakresie tabletu wielkość (80px). Nie animuje zmiany sekund.
+- **Wordmark:** the `wordmark` role, a compact brand mark (700).
+- **Headline:** the `headline` role, the question above phone tea selection (600).
+- **Title:** the `title` role, the timer heading (600); (16px) on phones.
+- **Body:** the `body` role; tips use line height (1.45) and a maximum width of (65ch).
+- **Note / Label:** the `note` and `label` roles; footnotes and default durations use (12px).
+- **Table number:** the `table-number` role; tea names use (18px, 600), units (0.65em, 400).
+- **Mobile parameter:** the `mobile-parameter` role; below (360px), values shrink to (28px), with (14px) units.
+- **Countdown:** the `countdown` role, light weight (400); phones and compact tablets use (80px), short tablets (72px). The time editor uses the same typography. Larger tablet variants are specified in Layout.
 
-**The Spokojnych cyfr Rule.** Parametry i minutnik używają cyfr tabelarycznych; jednostki i podpisy pozostają mniejsze od wartości.
+**The Calm numbers Rule.** Parameters and the timer use tabular numerals; units and labels remain smaller than their values.
 
 ## Layout
 
-Strona ma szerokość maksymalną (1280px), jest wyśrodkowana i ma padding (32px 40px 24px). Nagłówek jest krótki; odstęp pod nim wynosi (28px). Powtarzane odstępy zapisano w skali `spacing`; układ nie wymusza jednej matematycznej skali.
+The page is centered, with a maximum width of (1280px) and padding (24px 32px). Fine rules divide the header and shared volume bar. The table and timer form columns of `minmax(0, 1.8fr) minmax(300px, 1fr)`, separated by (36px). The table uses horizontal dividers; its first three columns occupy (30%, 25%, 27%).
 
-Od (900px) pasek objętości znajduje się nad dwukolumnowym układem. Lewa kolumna zawiera tabelę sześciu herbat; prawa minutnik, wskazówkę i kolejne parzenie. Kolumny: `minmax(0, 1.9fr) minmax(280px, 1fr)`, odstęp (48px). Tabela ma wyłącznie poziome linie, szerokości pierwszych trzech kolumn (30%, 25%, 27%) i padding komórek liczbowych (16px 12px). Pasek objętości ma padding (20px 0), odstępy (16px 28px) i margines dolny (28px).
+Up to (899px) in portrait, or up to (759px) in any orientation, the page has a maximum width of (600px), padding (20px) and one column. A three-column choice grid replaces the table, with gaps of (8px). Parameters for one tea use `1.4fr 1fr 0.85fr` proportions and gaps of (10px). Below (360px), horizontal padding shrinks to (16px).
 
-W zakresie (900–1100px) strona ma padding (24px 28px 20px), odstęp nagłówka (16px), kolumny `minmax(0, 1.8fr) minmax(270px, 1fr)` i odstęp (28px). Pasek objętości ma padding (16px 0), odstępy (12px 20px) i margines dolny (24px). Komórki liczbowe mają padding (7px 10px), przycisk nazwy herbaty zachowuje padding (16px 4px 16px 0). To gęstsza kompozycja do odczytu sześciu wierszy i minutnika na poziomym tablecie 10″.
+At (760–1280px) in landscape, the two columns use `minmax(0, 1.5fr) minmax(250px, 1fr)` and a gap of (24px). Page padding is (12px 24px), parameter cells use (4px 8px), and the timer uses (80px). Parameters remain (24px), tea names (18px), and buttons at least (48px) high. At heights up to (560px), vertical page padding shrinks to (8px), the timer to (72px), and spacing around the header and tips tightens. The page has a natural height, with no forced minimum or stretched table rows.
 
-Do (899px) strona ma szerokość maksymalną (600px) i padding (22px 24px 24px). Tabela znika; wybór sześciu herbat jest siatką trzech kolumn z odstępem (8px). Poniżej są duże parametry jednej herbaty w proporcjach `1.2fr 1fr 0.8fr`, odstęp (12px), następnie objętość, minutnik i wskazówki. Pasek objętości ma odstęp (14px) i margines dolny (20px). Do (359px) boczny padding strony i odstęp parametrów maleją odpowiednio do (16px) i (8px).
+At heights of at least (720px), actual text size scales with viewport width and height. At (1280×800), tea names are (25px), parameters (34px), table headings (16px), default durations (16px), controls (20px), notes and status (18px), and the timer and its editor (112px). After correcting the preview address, the user requested a larger scale. Page padding is (20px 28px), cell padding (8px 10px), and parameter line height (1.2). Columns use `minmax(0, 1.7fr) minmax(300px, 1fr)` with a gap of (28px). `clamp()` and `min()` limit scale on narrower or shorter viewports. Shorter screens retain the compact variant. Sizes were corrected using a photograph of the actual device: fitting content alone does not prove readability. Additional fields and messages may increase content height.
 
 ## Elevation & Depth
 
-Brak cieni i dekoracyjnych warstw. Różnicę między grupami tworzą odstępy i linie (1px), między stanami — wypełnienia. Fokus jest obrysem, nie cieniem.
+The system uses no shadows. The page and sections share a background; spacing and (1px) rules separate groups. Tonal changes mark selection, while focus remains an outline.
 
-**The Płaskiego papieru Rule.** Oddzielaj grupy linią, odstępem lub tonem tła; bieżący system nie używa cieni.
+**The Flat surfaces Rule.** Separate groups with a rule, spacing or an existing sage surface tone.
 
 ## Shapes
 
-Przyciski i pola są prostokątne, z narożnikiem `control`. Wiersze i ich przyciski mają narożnik `row`; kropka wybranej herbaty ma średnicę (6px) i zaokrąglenie `indicator`. Tabela nie ma zewnętrznej karty ani pionowych linii. Bazowa grubość obrysu kontrolki i separatora wynosi (1px).
+Buttons and fields use `control` corners; rows and tea-name buttons stay square (`row`). The selection dot has a diameter of (6px). Field, option and separator borders are (1px). The table has no surrounding card or vertical rules.
 
 ## Components
 
 ### Buttons
 
-Główny przycisk jest spokojnym, mocnym polem zielonego atramentu z jasnym tekstem. Używa wariantu `button-primary`, obrysu (1px) i minimalnej wysokości (52px), na telefonie (56px). Waga tekstu wynosi (650). Stan najechania używa `button-primary-hover`. Etykieta odzwierciedla stan: Start, Pauza, Wznów lub Parz ponownie.
+The ink-colored Start uses `button-primary`, text (18px, 600), a minimum height of (56px) and an `ink` border. Hover changes the background and border to `accent`. Phones and compact tablets use (16px) text; compact tablets have a minimum height of (48px) and padding (10px 18px). The larger tablet scale is specified in Layout.
 
-Reset używa wariantu `button-reset`, cienkiego obrysu i miękkiego tła po najechaniu. Zmień czas używa wariantu `button-text`, tekstu (13px) i podkreślenia odsuniętego o (4px); wyłączony traci podkreślenie. Przycisk Ustaw ma tło `soft`, padding (8px 12px) i obrys `line`.
+Reset uses `button-reset`, a `line` border and a `soft` hover background. Text actions use `button-text`, (16px) text, an underline offset of (4px) and a minimum width of (48px); hover uses `focus`.
 
-Wspólne minimum przycisków to (48px). Fokus klawiatury przycisków, pól i linków ma obrys (3px solid ink) z odsunięciem (4px). Wyłączone przyciski mają opacity (0.55) i domyślny kursor. Bieżący kod nie definiuje osobnego wizualnego stanu `:active`.
+All buttons have a minimum height of (48px). Button, field and link focus uses an outline of (3px solid focus), offset by (4px). Disabled buttons use `muted`, opacity (0.55) and a `not-allowed` cursor; disabled text actions lose their underline. There is no separate visual `:active` state.
 
 ### Choice controls
 
-Objętość używa wariantu `volume-choice`, odstępu (6px), wagi (650) i lżejszego (400) oznaczenia ml. Na tablecie padding wynosi (10px 12px); na telefonie (10px 8px) i tekst (14px), a przyciski równo wypełniają szerokość.
-
-Telefoniczny wybór herbaty używa `tea-choice-mobile`, tekstu (14px, 600) i siatki opisanej w Layout. Obie grupy mają ciemne wypełnienie zaznaczenia (`choice-selected`) oraz `aria-pressed`. Niezaznaczone opcje po najechaniu używają tła `soft`.
+Volume uses outlined `volume-choice`, weight (600), lighter units (400) and gaps of (6px). Phones distribute the options evenly and reduce padding to (10px 8px). Tea selection uses `tea-choice-mobile` and text (16px, 600). Both groups use the ink-colored `choice-selected`, `aria-pressed` and sage hover states for unselected options.
 
 ### Inputs / Fields
 
-Wariant `field` ma minimalną wysokość (48px), obrys (1px solid line), tło papieru i caret w kolorze atramentu. Pole własnej objętości ma szerokość (112px). Edytor minutnika zastępuje odczyt czasu w tym samym miejscu. Minuty i sekundy mają tę samą typografię co cyfry minutnika, szerokość (2ch), zerowy padding i jedynie dolny obrys (1px solid line); pola rozdziela dwukropek. Pod nimi Ustaw czas i Anuluj zajmują miejsce kontrolki Zmień czas, z odstępem (24px). Poprawna edycja nie przesuwa przycisku Start. Niepoprawne pola używają obrysu `error`, komunikatu tekstowego (13px) i `aria-invalid`.
+The `field` variant has a minimum height of (48px), a `muted` outline and an `accent` caret. The custom-volume field is (112px) wide. The timer editor replaces the digits in place: fields are (2ch) wide, with no padding and only a `muted` bottom border. Save and cancel are text actions separated by (24px). `aria-invalid` changes the border to `error`; the message uses (14px).
 
 ### Tea table
 
-Wybrany wiersz używa `tea-row-selected`; nazwa herbaty ma (18px, 650), na tablecie (17px). Przycisk obejmuje dostępną szerokość pierwszej komórki. Najechanie używa tła `soft`, a reguła zaznaczenia ma pierwszeństwo. Jedyna krótka animacja systemu to zmiana tła wiersza (`background-color 160ms ease-out`); `prefers-reduced-motion: reduce` wyłącza przejścia.
+The selected row uses `tea-row-selected`, and its tea-name button fills the first cell. Hover and selection use `soft`; a green dot distinguishes selection. Row backgrounds transition over (`160ms ease-out`); `prefers-reduced-motion: reduce` disables transitions. Digits do not animate every second.
 
 ### Timer and notes
 
-Minutnik jest częścią płaskiej prawej kolumny, z dolną linią i paddingiem dolnym (24px). Nazwa odliczanej herbaty jest obok nagłówka; status rezerwuje wysokość (24px), a liczby używają roli `countdown`. Działania są siatką `1fr auto` z odstępem (12px). „Gotowe” pozostaje widocznym komunikatem; status ma wówczas wagę (800), a cyfry kolor `done`.
+The timer is a flat section with a bottom rule and padding (20px), reduced to (12px) on tablets. Status reserves (24px) of height, or (20px) on tablets. Actions form a `1fr auto` grid with a gap of (12px). Completion emphasizes status with weight (600) and `ink`, and digits with `accent`. Tips are short paragraphs.
 
-Przeglądanie innej herbaty podczas odliczania albo pauzy nie zmienia sesji minutnika. Przy rozbieżnym wyborze pojawia się tekst wskazujący nadal odliczaną herbatę. Edycja czasu jest wówczas wyłączona. Wskazówki odnoszą się do przeglądanej pozycji i pozostają krótkimi akapitami.
+### Brand link
 
-Zmień czas otwiera edycję w miejscu dużych cyfr, bez dodatkowego panelu. Ustaw czas lub Enter zapisuje wartość; Anuluj lub Escape przywraca niezmieniony odczyt. Fokus wraca do kontrolki edycji. Uruchomienie minutnika podczas poprawnej edycji zapisuje czas i rozpoczyna odliczanie.
-
-### Brand link and assets
-
-Jedyny widoczny link marki to tekstowy `lazy-tea.` prowadzący do strony głównej. Podkreślenie jest usunięte, a zielona kropka stanowi akcent. Link pomijający nagłówek pojawia się po otrzymaniu fokusu. Projekt nie ma osobnego menu nawigacji, kart ani obrazów rastrowych; dostarczone zasoby to lokalny font z licencją i mały favicon SVG.
+`lazy-tea.` uses ink-colored text without an underline, a green dot and a minimum height of (48px). The skip link appears on focus. There is no separate navigation menu, card or chip system; choices are buttons.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- Do zachowuj polskie etykiety, czytelne jednostki i wyraźną hierarchię liczb.
-- Do używaj istniejących kolorów i lokalnego Manrope.
-- Do zachowuj widoczny fokus, dotykowe pola oraz tekstowy komunikat „Gotowe”.
-- Do sprawdzaj obie kompozycje po obu stronach granicy 899/900 px oraz wąski telefon.
+- Do use the paper background, green ink and locally hosted Atkinson Hyperlegible Next.
+- Do preserve a lightweight timer, stronger values and smaller units.
+- Do preserve visible focus and touch targets of at least 48 px.
+- Do check complete content on phones and short landscape tablets.
 
 ### Don't:
 
-- Don't rozbijaj tabeli sześciu herbat na sześć kart w widoku poziomego tabletu.
-- Don't zastępuj małych jednostek i podpisów równie dużym tekstem jak wartości.
-- Don't dodawaj ozdobnych cieni, wejść ani animacji każdej sekundy do tej płaskiej ściągi.
-- Don't utożsamiaj przeglądanej herbaty z herbatą aktywnego minutnika; stan sesji ma własny podpis.
+- Don't restore the replaced dark palette with a gold accent.
+- Don't split the six-tea table into cards in the landscape dashboard.
+- Don't add decorative shadows, entrance animations or animation on every second.

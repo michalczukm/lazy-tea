@@ -5,13 +5,31 @@
     "ignoreFiles": [],
     "ignoreValues": [
       {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-10-17T22:17:06.954Z",
+        "reason": "Finish reviewer: volume-bar uses intentional open spacing and a bottom divider, not a bordered container; all five viewport captures preserve readable inset and grouping."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-10-17T22:17:07.123Z",
+        "reason": "Finish reviewer: compact Operate hierarchy is carried by prominent tea parameters and countdown, not heading-size steps; all five captures retain clear hierarchy matching the user-selected Kuchenny pulpit reference."
+      },
+      {
         "rule": "cream-palette",
         "value": "*",
         "files": [
           "public/index.html"
         ],
-        "createdAt": "2026-10-17T19:08:51.303Z",
-        "reason": "User confirmed: selected Kuchenna ściąga via model-pick on the Impeccable decision page; the approved direction explicitly uses warm paper #FBFAF5, recorded in DESIGN.md and the surface brief."
+        "createdAt": "2026-10-17T22:28:52.106Z",
+        "reason": "User explicitly selected http://127.0.0.1:4198/dashboard.html and emphasized it looks best; its exact background is #fbfaf5. Light paper palette is intentional reference fidelity."
       }
     ]
   }

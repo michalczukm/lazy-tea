@@ -1,25 +1,42 @@
 @font-face {
-  font-family: Manrope;
-  src: url('/fonts/manrope.ttf') format('truetype');
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-400.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
-  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 
 :root {
   color-scheme: light;
-  --paper: #fbfaf5;
+  --bg: #fbfaf5;
+  --surface: #fbfaf5;
   --ink: #263d33;
   --muted: #58675c;
+  --accent: #59784f;
+  --on-accent: #fbfaf5;
+  --soft: #e5eadd;
   --line: #cdd5ca;
-  --selected: #dce5d9;
-  --soft: #f0f2e9;
-  --error: #963b27;
-  font-family: Manrope, sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-  font-synthesis: none;
+  --focus: #263d33;
+  --error: #8f392b;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
   font-size: 16px;
+  font-synthesis: none;
+  color: var(--ink);
+  background: var(--bg);
 }
 
 * {
@@ -28,8 +45,12 @@
 [hidden] {
   display: none !important;
 }
+html {
+  scrollbar-color: var(--muted) var(--bg);
+}
 body {
   margin: 0;
+  line-height: 1.5;
 }
 button,
 input {
@@ -41,34 +62,46 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 button,
-input {
-  border-radius: 8px;
+a {
+  touch-action: manipulation;
 }
 button {
   cursor: pointer;
   color: inherit;
   min-height: 48px;
+  border-radius: 10px;
 }
 button:disabled {
-  cursor: default;
+  cursor: not-allowed;
+  color: var(--muted);
   opacity: 0.55;
 }
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  outline: 3px solid var(--ink);
+  outline: 3px solid var(--focus);
   outline-offset: 4px;
 }
 input {
-  accent-color: var(--ink);
-  caret-color: var(--ink);
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--muted);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+  color: var(--ink);
+  accent-color: var(--accent);
+  caret-color: var(--accent);
+}
+input[aria-invalid='true'] {
+  border-color: var(--error);
 }
 ::selection {
-  background: var(--selected);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
 }
 a {
-  color: inherit;
+  color: var(--accent);
   text-underline-offset: 4px;
 }
 p,
@@ -76,9 +109,6 @@ h1,
 h2,
 h3 {
   margin: 0;
-}
-p {
-  line-height: 1.6;
 }
 h1,
 h2,
@@ -109,9 +139,9 @@ legend {
   position: fixed;
   top: -100px;
   left: 16px;
-  padding: 12px;
-  background: var(--paper);
   z-index: 5;
+  padding: 12px;
+  background: var(--surface);
 }
 .skip-link:focus {
   top: 16px;
@@ -119,81 +149,87 @@ legend {
 .page {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 32px 40px 24px;
+  padding: 24px 32px;
 }
 .page-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding-bottom: 28px;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
 }
 .wordmark {
+  display: inline-flex;
+  min-block-size: 48px;
+  align-items: center;
+  color: var(--ink);
   font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  letter-spacing: -0.035em;
   text-decoration: none;
+  white-space: nowrap;
 }
 .wordmark span {
-  color: #5a7c51;
+  color: var(--accent);
 }
 .page-header p {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .volume-bar {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px 28px;
-  border-top: 1px solid var(--line);
+  gap: 16px 20px;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
   border-bottom: 1px solid var(--line);
-  padding: 20px 0;
-  margin-bottom: 28px;
 }
 .volume-bar fieldset {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 .volume-bar legend {
   float: left;
-  margin-right: 20px;
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 13px;
+  padding-top: 12px;
+  margin-right: 16px;
+  font-weight: 600;
 }
 .volume-options {
   display: flex;
   gap: 6px;
 }
 .volume-options button {
-  background: transparent;
   border: 1px solid var(--line);
+  background: transparent;
   padding: 10px 16px;
-  font-weight: 650;
+  font-weight: 600;
 }
 .volume-options button span {
   font-weight: 400;
 }
-.volume-options button[aria-pressed='true'] {
+.volume-options button[aria-pressed='true'],
+.tea-picker button[aria-pressed='true'] {
   background: var(--ink);
+  color: var(--bg);
   border-color: var(--ink);
-  color: var(--paper);
 }
-.volume-options button:hover:not([aria-pressed='true']) {
+.volume-options button:hover:not([aria-pressed='true']),
+.tea-picker button:hover:not([aria-pressed='true']) {
   background: var(--soft);
 }
 .dose-note {
   margin-left: auto;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
 }
 .dose-note strong {
   display: block;
   color: var(--ink);
-  font-weight: 650;
+  font-weight: 600;
 }
 .dose-note span {
   display: block;
@@ -202,44 +238,33 @@ legend {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .custom-volume input {
   width: 112px;
 }
-input {
-  width: 100%;
-  min-height: 48px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--ink);
-  padding: 8px 12px;
-}
-input[aria-invalid='true'] {
-  border-color: var(--error);
-}
 .field-error {
-  font-size: 13px;
-  color: var(--error);
   width: 100%;
+  color: var(--error);
+  font-size: 14px;
 }
 
 .brewing-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(280px, 1fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.8fr) minmax(300px, 1fr);
+  gap: 36px;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
   text-align: left;
+  font-variant-numeric: tabular-nums;
 }
 thead th {
-  font-size: 12px;
-  font-weight: 600;
   color: var(--muted);
-  padding: 0 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 12px 12px;
 }
 thead th:first-child {
   width: 30%;
@@ -252,8 +277,8 @@ thead th:nth-child(3) {
 }
 tbody tr {
   border-top: 1px solid var(--line);
-  transition: background-color 160ms ease-out;
   cursor: pointer;
+  transition: background-color 160ms ease-out;
 }
 tbody tr:last-child {
   border-bottom: 1px solid var(--line);
@@ -262,16 +287,16 @@ tbody tr:hover {
   background: var(--soft);
 }
 tbody tr.is-selected {
-  background: var(--selected);
+  background: var(--soft);
 }
 tbody th {
   padding: 0 0 0 12px;
-  font-weight: 650;
+  font-weight: 600;
 }
 tbody td {
-  padding: 16px 12px;
-  font-size: 25px;
-  font-weight: 500;
+  padding: 14px 12px;
+  font-size: 24px;
+  font-weight: 600;
   white-space: nowrap;
 }
 .tea-select {
@@ -281,9 +306,9 @@ tbody td {
   width: 100%;
   border: 0;
   border-radius: 0;
-  padding: 16px 4px 16px 0;
+  padding: 14px 4px 14px 0;
   background: transparent;
-  font-weight: 650;
+  font-weight: 600;
   font-size: 18px;
   text-align: left;
 }
@@ -291,28 +316,28 @@ tbody td {
   content: '';
   width: 6px;
   height: 6px;
-  background: var(--ink);
-  border-radius: 50%;
   flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent);
 }
 .unit {
-  font-size: 0.55em;
-  font-weight: 500;
+  font-size: 0.65em;
+  font-weight: 400;
   margin-left: 4px;
   color: var(--muted);
 }
 .default-time {
   display: block;
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--muted);
   margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
 }
 .table-footnote {
   color: var(--muted);
   font-size: 12px;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 .mobile-guide {
   display: none;
@@ -322,7 +347,7 @@ tbody td {
   min-width: 0;
 }
 .timer {
-  padding-bottom: 24px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--line);
 }
 .timer-heading {
@@ -333,37 +358,40 @@ tbody td {
 }
 .timer-heading h2 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .timer-heading > span {
-  font-size: 14px;
   color: var(--muted);
+  font-size: 16px;
 }
 .timer-status {
-  min-height: 24px;
   color: var(--muted);
-  font-size: 13px;
-  margin-top: 12px;
+  font-size: 14px;
+  min-height: 24px;
+  margin-top: 8px;
 }
 .countdown,
 .time-inputs {
   display: block;
-  font-size: 88px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-  font-variant-numeric: tabular-nums;
   padding-top: 2px;
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-variant-numeric: tabular-nums;
 }
 .text-button {
+  min-inline-size: 48px;
   border: 0;
   background: transparent;
+  padding: 0;
+  color: var(--accent);
+  font-size: 16px;
   text-decoration: underline;
   text-underline-offset: 4px;
-  font-size: 13px;
-  min-height: 48px;
-  padding: 0;
-  color: var(--muted);
+}
+.text-button:hover:not(:disabled) {
+  color: var(--focus);
 }
 .text-button:disabled {
   text-decoration: none;
@@ -372,22 +400,24 @@ tbody td {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 12px;
-  margin-top: 14px;
+  margin-top: 10px;
 }
 .primary-button {
-  background: var(--ink);
-  color: var(--paper);
   border: 1px solid var(--ink);
-  font-weight: 650;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 18px;
   padding: 12px 24px;
-  min-height: 52px;
+  min-height: 56px;
 }
 .primary-button:hover {
-  background: #354e3e;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .reset-button {
   border: 1px solid var(--line);
-  background: transparent;
+  background: var(--surface);
   padding: 12px 18px;
 }
 .reset-button:hover {
@@ -395,14 +425,13 @@ tbody td {
 }
 .audio-note,
 .timer-context {
-  font-size: 12px;
-  line-height: 1.6;
   margin-top: 12px;
+  font-size: 14px;
   color: var(--muted);
 }
 .timer-context {
-  font-weight: 650;
   color: var(--ink);
+  font-weight: 600;
 }
 .time-inputs {
   display: flex;
@@ -419,8 +448,9 @@ tbody td {
   margin: 0;
   padding: 0;
   border: 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--muted);
   border-radius: 0;
+  background: transparent;
   font: inherit;
   line-height: inherit;
   letter-spacing: inherit;
@@ -440,17 +470,17 @@ tbody td {
 }
 .timer.is-done .timer-status {
   color: var(--ink);
-  font-weight: 800;
+  font-weight: 600;
 }
 .timer.is-done .countdown {
-  color: #4b6b3e;
+  color: var(--accent);
 }
 .tea-notes {
-  padding-top: 20px;
+  padding-top: 18px;
 }
 .tea-notes h2 {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 .tea-notes h2 span {
@@ -458,72 +488,33 @@ tbody td {
   font-weight: 400;
 }
 .tea-notes p {
-  font-size: 14px;
-  line-height: 1.55;
   max-width: 65ch;
+  font-size: 16px;
+  line-height: 1.45;
 }
 .tea-notes h3 {
-  font-size: 12px;
   color: var(--muted);
+  font-size: 14px;
   font-weight: 600;
-  margin-top: 18px;
-  margin-bottom: 5px;
+  margin-top: 16px;
+  margin-bottom: 4px;
 }
-
 noscript {
   display: block;
   padding: 24px 0;
 }
 
-@media (min-width: 900px) and (max-width: 1100px) {
-  .page {
-    padding: 24px 28px 20px;
-  }
-  .page-header {
-    padding-bottom: 16px;
-  }
-  .brewing-layout {
-    gap: 28px;
-    grid-template-columns: minmax(0, 1.8fr) minmax(270px, 1fr);
-  }
-  .volume-bar {
-    gap: 12px 20px;
-    padding: 16px 0;
-    margin-bottom: 24px;
-  }
-  .volume-bar legend {
-    margin-right: 12px;
-  }
-  .volume-options button {
-    padding: 10px 12px;
-  }
-  tbody td {
-    font-size: 23px;
-    padding: 7px 10px;
-  }
-  .tea-select {
-    font-size: 17px;
-  }
-  .countdown,
-  .time-inputs {
-    font-size: 80px;
-  }
-}
-
-@media (max-width: 899px) {
+@media (max-width: 899px) and (orientation: portrait), (max-width: 759px) {
   .page {
     max-width: 600px;
-    padding: 22px 24px 24px;
+    padding: 20px;
   }
   .page-header {
-    padding-bottom: 24px;
-    align-items: center;
-  }
-  .wordmark {
-    font-size: 28px;
+    gap: 16px;
+    margin-bottom: 20px;
   }
   .page-header p {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 150px;
     text-align: right;
   }
@@ -532,9 +523,10 @@ noscript {
   }
   .mobile-guide h1 {
     font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
     letter-spacing: -0.025em;
-    font-weight: 650;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
   .tea-picker {
     display: grid;
@@ -542,60 +534,53 @@ noscript {
     gap: 8px;
   }
   .tea-picker button {
-    min-height: 48px;
+    min-width: 0;
     border: 1px solid var(--line);
-    border-radius: 8px;
     background: transparent;
-    padding: 10px 5px;
-    font-size: 14px;
+    padding: 10px 4px;
+    font-size: 16px;
     font-weight: 600;
-  }
-  .tea-picker button[aria-pressed='true'] {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--paper);
-  }
-  .tea-picker button:hover:not([aria-pressed='true']) {
-    background: var(--soft);
   }
   .selected-tea {
     padding: 20px 0;
   }
   .selected-tea h2 {
-    font-size: 19px;
-    font-weight: 650;
-    margin-bottom: 14px;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
   .mobile-parameters {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 0.8fr;
-    gap: 12px;
+    grid-template-columns: 1.4fr 1fr 0.85fr;
+    gap: 10px;
     margin: 0;
   }
   .mobile-parameters > div {
     min-width: 0;
   }
   .mobile-parameters dt {
-    font-size: 12px;
     color: var(--muted);
+    font-size: 14px;
     margin-bottom: 6px;
   }
   .mobile-parameters dd {
     margin: 0;
-    font-size: 31px;
-    letter-spacing: -0.035em;
-    font-weight: 550;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
   .mobile-parameters .unit {
     margin-left: 2px;
-    font-size: 13px;
+    font-size: 14px;
   }
   .volume-bar {
-    padding: 20px 0;
-    gap: 14px;
+    gap: 12px;
+    padding-bottom: 16px;
     margin-bottom: 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
   }
   .volume-bar fieldset {
     display: block;
@@ -603,18 +588,14 @@ noscript {
   }
   .volume-bar legend {
     float: none;
-    font-size: 14px;
     padding: 0;
-    margin: 0 0 12px;
-  }
-  .volume-options {
-    gap: 6px;
+    margin: 0 0 10px;
+    font-size: 16px;
   }
   .volume-options button {
     flex: 1;
     min-width: 0;
     padding: 10px 8px;
-    font-size: 14px;
   }
   .dose-note {
     margin: 0;
@@ -638,52 +619,213 @@ noscript {
     display: none;
   }
   .timer-heading h2 {
-    font-size: 17px;
+    font-size: 16px;
   }
   .timer-status {
-    margin-top: 8px;
+    margin-top: 4px;
   }
   .countdown,
   .time-inputs {
-    font-size: 88px;
+    font-size: 80px;
   }
   .timer-actions {
-    margin-top: 10px;
+    margin-top: 8px;
   }
   .primary-button {
-    min-height: 56px;
-  }
-  .audio-note,
-  .timer-context {
-    font-size: 12px;
-  }
-  .tea-notes {
-    padding-top: 24px;
-  }
-  .tea-notes h2 {
-    font-size: 15px;
-  }
-  .tea-notes p {
     font-size: 16px;
   }
+}
+
+@media (min-width: 760px) and (max-width: 1280px) and (orientation: landscape) {
+  .page {
+    padding: 12px 24px;
+  }
+  .page-header {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  .page-header p {
+    font-size: 14px;
+  }
+  .volume-bar {
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+  .volume-bar legend {
+    margin-right: 12px;
+  }
+  .volume-options button {
+    padding-inline: 12px;
+  }
+  .dose-note {
+    font-size: 12px;
+  }
+  .brewing-layout {
+    grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr);
+    gap: 24px;
+  }
+  thead th {
+    padding: 0 8px 8px;
+  }
+  tbody th {
+    padding-left: 8px;
+  }
+  tbody td {
+    padding: 4px 8px;
+    line-height: 1.25;
+  }
+  .tea-select {
+    padding: 8px 0;
+  }
+  .timer {
+    padding-bottom: 12px;
+  }
+  .timer-status {
+    margin-top: 4px;
+    min-height: 20px;
+  }
+  .countdown,
+  .time-inputs {
+    font-size: 80px;
+  }
+  .timer-actions {
+    margin-top: 6px;
+  }
+  .primary-button {
+    min-height: 48px;
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+  .reset-button {
+    padding: 10px 14px;
+  }
+  .tea-notes {
+    padding-top: 12px;
+  }
+  .tea-notes h2 {
+    margin-bottom: 6px;
+  }
   .tea-notes h3 {
-    font-size: 13px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (min-height: 720px) {
+  .page {
+    padding: 20px 28px;
+    font-size: clamp(18px, min(1.5625vw, 2.5vh), 20px);
+  }
+  .page-header {
+    padding-bottom: 12px;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  .page-header p,
+  .dose-note {
+    font-size: 0.8em;
+  }
+  .volume-bar {
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid var(--line);
+    gap: 12px 20px;
+  }
+  .brewing-layout {
+    grid-template-columns: minmax(0, 1.7fr) minmax(300px, 1fr);
+    gap: 28px;
+  }
+  thead th {
+    padding: 0 10px 12px;
+    font-size: 0.8em;
+  }
+  tbody th {
+    padding-left: 10px;
+  }
+  tbody td {
+    padding: 8px 10px;
+    font-size: clamp(24px, min(2.65625vw, 4.25vh), 34px);
+    line-height: 1.2;
+  }
+  .tea-select {
+    padding: 12px 4px 12px 0;
+    font-size: clamp(18px, min(1.953125vw, 3.125vh), 25px);
+  }
+  .default-time {
+    font-size: clamp(12px, min(1.25vw, 2vh), 16px);
+    line-height: 1.3;
+  }
+  .table-footnote {
+    margin-top: 12px;
+    font-size: 0.8em;
+  }
+  .timer-heading h2 {
+    font-size: 1em;
+  }
+  .timer-heading > span,
+  .timer-status,
+  .text-button,
+  .tea-notes h2,
+  .tea-notes h3,
+  .tea-notes p {
+    font-size: 0.9em;
+  }
+  .countdown,
+  .time-inputs {
+    font-size: clamp(80px, min(8.75vw, 14vh), 112px);
+  }
+  .primary-button,
+  .reset-button {
+    min-height: 56px;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (max-height: 560px) {
+  .page {
+    padding-block: 8px;
+  }
+  .page-header {
+    padding-bottom: 0;
+    margin-bottom: 4px;
+  }
+  .volume-bar {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  .countdown,
+  .time-inputs {
+    font-size: 72px;
+  }
+  .tea-notes p {
+    line-height: 1.35;
+  }
+  .tea-notes h2 {
+    margin-bottom: 4px;
+  }
+  .tea-notes h3 {
+    margin-top: 6px;
+  }
+  .table-footnote {
+    margin-top: 5px;
   }
 }
 
 @media (max-width: 359px) {
   .page {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-inline: 16px;
+  }
+  .page-header {
+    gap: 12px;
+  }
+  .page-header p {
+    max-width: 130px;
   }
   .mobile-parameters {
     gap: 8px;
   }
   .mobile-parameters dd {
-    font-size: 26px;
-  }
-  .page-header p {
-    max-width: 130px;
+    font-size: 28px;
   }
 }
 

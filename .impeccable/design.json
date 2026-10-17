@@ -1,328 +1,321 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-17T19:24:05.089353Z",
+  "generatedAt": "2026-10-17T23:03:32.400706+00:00",
   "title": "Design System: lazy-tea",
   "extensions": {
     "colorMeta": {
-      "paper": {
+      "bg": {
         "role": "neutral",
-        "displayName": "Ciepły papier",
+        "displayName": "Paper",
         "tonalRamp": [
-          "oklch(15.000% 0.00668 97.350)",
-          "oklch(26.429% 0.00668 97.350)",
-          "oklch(37.857% 0.00668 97.350)",
-          "oklch(49.286% 0.00668 97.350)",
-          "oklch(60.714% 0.00668 97.350)",
-          "oklch(72.143% 0.00668 97.350)",
-          "oklch(83.571% 0.00668 97.350)",
-          "oklch(95.000% 0.00668 97.350)"
+          "oklch(15% 0.00668 97.350)",
+          "oklch(26% 0.00668 97.350)",
+          "oklch(38% 0.00668 97.350)",
+          "oklch(49% 0.00668 97.350)",
+          "oklch(61% 0.00668 97.350)",
+          "oklch(72% 0.00668 97.350)",
+          "oklch(84% 0.00668 97.350)",
+          "oklch(95% 0.00668 97.350)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface paper",
+        "tonalRamp": [
+          "oklch(15% 0.00668 97.350)",
+          "oklch(26% 0.00668 97.350)",
+          "oklch(38% 0.00668 97.350)",
+          "oklch(49% 0.00668 97.350)",
+          "oklch(61% 0.00668 97.350)",
+          "oklch(72% 0.00668 97.350)",
+          "oklch(84% 0.00668 97.350)",
+          "oklch(95% 0.00668 97.350)"
         ]
       },
       "ink": {
-        "role": "primary",
-        "displayName": "Zielony atrament",
+        "role": "neutral",
+        "displayName": "Green ink",
         "tonalRamp": [
-          "oklch(15.000% 0.03400 165.413)",
-          "oklch(26.429% 0.03400 165.413)",
-          "oklch(37.857% 0.03400 165.413)",
-          "oklch(49.286% 0.03400 165.413)",
-          "oklch(60.714% 0.03400 165.413)",
-          "oklch(72.143% 0.03400 165.413)",
-          "oklch(83.571% 0.03400 165.413)",
-          "oklch(95.000% 0.03400 165.413)"
+          "oklch(15% 0.03400 165.413)",
+          "oklch(26% 0.03400 165.413)",
+          "oklch(38% 0.03400 165.413)",
+          "oklch(49% 0.03400 165.413)",
+          "oklch(61% 0.03400 165.413)",
+          "oklch(72% 0.03400 165.413)",
+          "oklch(84% 0.03400 165.413)",
+          "oklch(95% 0.03400 165.413)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Cichy tekst",
+        "displayName": "Muted green",
         "tonalRamp": [
-          "oklch(15.000% 0.02516 153.600)",
-          "oklch(26.429% 0.02516 153.600)",
-          "oklch(37.857% 0.02516 153.600)",
-          "oklch(49.286% 0.02516 153.600)",
-          "oklch(60.714% 0.02516 153.600)",
-          "oklch(72.143% 0.02516 153.600)",
-          "oklch(83.571% 0.02516 153.600)",
-          "oklch(95.000% 0.02516 153.600)"
+          "oklch(15% 0.02516 153.600)",
+          "oklch(26% 0.02516 153.600)",
+          "oklch(38% 0.02516 153.600)",
+          "oklch(49% 0.02516 153.600)",
+          "oklch(61% 0.02516 153.600)",
+          "oklch(72% 0.02516 153.600)",
+          "oklch(84% 0.02516 153.600)",
+          "oklch(95% 0.02516 153.600)"
         ]
       },
-      "line": {
-        "role": "neutral",
-        "displayName": "Linia papieru",
-        "tonalRamp": [
-          "oklch(15.000% 0.01727 137.031)",
-          "oklch(26.429% 0.01727 137.031)",
-          "oklch(37.857% 0.01727 137.031)",
-          "oklch(49.286% 0.01727 137.031)",
-          "oklch(60.714% 0.01727 137.031)",
-          "oklch(72.143% 0.01727 137.031)",
-          "oklch(83.571% 0.01727 137.031)",
-          "oklch(95.000% 0.01727 137.031)"
-        ]
-      },
-      "selected": {
+      "accent": {
         "role": "primary",
-        "displayName": "Zieleń wyboru",
+        "displayName": "Accent green",
         "tonalRamp": [
-          "oklch(15.000% 0.01873 137.798)",
-          "oklch(26.429% 0.01873 137.798)",
-          "oklch(37.857% 0.01873 137.798)",
-          "oklch(49.286% 0.01873 137.798)",
-          "oklch(60.714% 0.01873 137.798)",
-          "oklch(72.143% 0.01873 137.798)",
-          "oklch(83.571% 0.01873 137.798)",
-          "oklch(95.000% 0.01873 137.798)"
+          "oklch(15% 0.07155 138.233)",
+          "oklch(26% 0.07155 138.233)",
+          "oklch(38% 0.07155 138.233)",
+          "oklch(49% 0.07155 138.233)",
+          "oklch(61% 0.07155 138.233)",
+          "oklch(72% 0.07155 138.233)",
+          "oklch(84% 0.07155 138.233)",
+          "oklch(95% 0.07155 138.233)"
+        ]
+      },
+      "on-accent": {
+        "role": "neutral",
+        "displayName": "Paper on accent",
+        "tonalRamp": [
+          "oklch(15% 0.00668 97.350)",
+          "oklch(26% 0.00668 97.350)",
+          "oklch(38% 0.00668 97.350)",
+          "oklch(49% 0.00668 97.350)",
+          "oklch(61% 0.00668 97.350)",
+          "oklch(72% 0.00668 97.350)",
+          "oklch(84% 0.00668 97.350)",
+          "oklch(95% 0.00668 97.350)"
         ]
       },
       "soft": {
         "role": "neutral",
-        "displayName": "Miękka zieleń papieru",
+        "displayName": "Light sage",
         "tonalRamp": [
-          "oklch(15.000% 0.01209 116.809)",
-          "oklch(26.429% 0.01209 116.809)",
-          "oklch(37.857% 0.01209 116.809)",
-          "oklch(49.286% 0.01209 116.809)",
-          "oklch(60.714% 0.01209 116.809)",
-          "oklch(72.143% 0.01209 116.809)",
-          "oklch(83.571% 0.01209 116.809)",
-          "oklch(95.000% 0.01209 116.809)"
+          "oklch(15% 0.01811 123.983)",
+          "oklch(26% 0.01811 123.983)",
+          "oklch(38% 0.01811 123.983)",
+          "oklch(49% 0.01811 123.983)",
+          "oklch(61% 0.01811 123.983)",
+          "oklch(72% 0.01811 123.983)",
+          "oklch(84% 0.01811 123.983)",
+          "oklch(95% 0.01811 123.983)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Sage line",
+        "tonalRamp": [
+          "oklch(15% 0.01727 137.031)",
+          "oklch(26% 0.01727 137.031)",
+          "oklch(38% 0.01727 137.031)",
+          "oklch(49% 0.01727 137.031)",
+          "oklch(61% 0.01727 137.031)",
+          "oklch(72% 0.01727 137.031)",
+          "oklch(84% 0.01727 137.031)",
+          "oklch(95% 0.01727 137.031)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus ink",
+        "tonalRamp": [
+          "oklch(15% 0.03400 165.413)",
+          "oklch(26% 0.03400 165.413)",
+          "oklch(38% 0.03400 165.413)",
+          "oklch(49% 0.03400 165.413)",
+          "oklch(61% 0.03400 165.413)",
+          "oklch(72% 0.03400 165.413)",
+          "oklch(84% 0.03400 165.413)",
+          "oklch(95% 0.03400 165.413)"
         ]
       },
       "error": {
-        "role": "primary",
-        "displayName": "Błąd pola",
+        "role": "neutral",
+        "displayName": "Brick error",
         "tonalRamp": [
-          "oklch(15.000% 0.12714 33.950)",
-          "oklch(26.429% 0.12714 33.950)",
-          "oklch(37.857% 0.12714 33.950)",
-          "oklch(49.286% 0.12714 33.950)",
-          "oklch(60.714% 0.12714 33.950)",
-          "oklch(72.143% 0.12714 33.950)",
-          "oklch(83.571% 0.12714 33.950)",
-          "oklch(95.000% 0.12714 33.950)"
-        ]
-      },
-      "wordmark-accent": {
-        "role": "primary",
-        "displayName": "Zieleń podpisu",
-        "tonalRamp": [
-          "oklch(15.000% 0.07548 139.206)",
-          "oklch(26.429% 0.07548 139.206)",
-          "oklch(37.857% 0.07548 139.206)",
-          "oklch(49.286% 0.07548 139.206)",
-          "oklch(60.714% 0.07548 139.206)",
-          "oklch(72.143% 0.07548 139.206)",
-          "oklch(83.571% 0.07548 139.206)",
-          "oklch(95.000% 0.07548 139.206)"
-        ]
-      },
-      "primary-hover": {
-        "role": "primary",
-        "displayName": "Zieleń działania",
-        "tonalRamp": [
-          "oklch(15.000% 0.04085 155.984)",
-          "oklch(26.429% 0.04085 155.984)",
-          "oklch(37.857% 0.04085 155.984)",
-          "oklch(49.286% 0.04085 155.984)",
-          "oklch(60.714% 0.04085 155.984)",
-          "oklch(72.143% 0.04085 155.984)",
-          "oklch(83.571% 0.04085 155.984)",
-          "oklch(95.000% 0.04085 155.984)"
-        ]
-      },
-      "done": {
-        "role": "primary",
-        "displayName": "Zieleń gotowości",
-        "tonalRamp": [
-          "oklch(15.000% 0.07813 137.078)",
-          "oklch(26.429% 0.07813 137.078)",
-          "oklch(37.857% 0.07813 137.078)",
-          "oklch(49.286% 0.07813 137.078)",
-          "oklch(60.714% 0.07813 137.078)",
-          "oklch(72.143% 0.07813 137.078)",
-          "oklch(83.571% 0.07813 137.078)",
-          "oklch(95.000% 0.07813 137.078)"
+          "oklch(15% 0.11999 31.375)",
+          "oklch(26% 0.11999 31.375)",
+          "oklch(38% 0.11999 31.375)",
+          "oklch(49% 0.11999 31.375)",
+          "oklch(61% 0.11999 31.375)",
+          "oklch(72% 0.11999 31.375)",
+          "oklch(84% 0.11999 31.375)",
+          "oklch(95% 0.11999 31.375)"
         ]
       }
     },
     "typographyMeta": {
       "wordmark": {
-        "displayName": "wordmark",
-        "purpose": "Znak słowny; telefon 28px."
+        "displayName": "Wordmark",
+        "purpose": "The ink-colored lazy-tea. wordmark with a green dot."
       },
       "headline": {
-        "displayName": "headline",
-        "purpose": "Pytanie w widoku telefonu."
+        "displayName": "Headline",
+        "purpose": "The question above tea selection on phones."
       },
       "title": {
-        "displayName": "title",
-        "purpose": "Nagłówek minutnika; telefon 17px."
+        "displayName": "Title",
+        "purpose": "The timer and selected-tea headings."
       },
       "body": {
-        "displayName": "body",
-        "purpose": "Bazowy tekst i akapity."
+        "displayName": "Body",
+        "purpose": "Main content; tips use line height 1.45."
       },
       "note": {
-        "displayName": "note",
-        "purpose": "Krótkie wskazówki; telefon 16px."
+        "displayName": "Note",
+        "purpose": "Supporting text, messages and timer status."
       },
       "label": {
-        "displayName": "label",
-        "purpose": "Pomocnicze podpisy i nagłówki kolumn."
-      },
-      "control": {
-        "displayName": "control",
-        "purpose": "Główna akcja i wybór objętości."
+        "displayName": "Label",
+        "purpose": "Table headings and short labels."
       },
       "table-number": {
-        "displayName": "table-number",
-        "purpose": "Wartości tabeli; tablet 23px."
+        "displayName": "Table Number",
+        "purpose": "Tabular values; fluid scaling up to 34px on a large landscape tablet."
       },
       "mobile-parameter": {
-        "displayName": "mobile-parameter",
-        "purpose": "Wartości jednej herbaty; do 359px: 26px."
+        "displayName": "Mobile Parameter",
+        "purpose": "Parameters for one tea on phones."
       },
       "countdown": {
-        "displayName": "countdown",
-        "purpose": "Czas do końca; tablet 80px."
+        "displayName": "Countdown",
+        "purpose": "Timer digits and editor fields; fluid scaling up to 112px on a large landscape tablet."
       }
     },
     "shadows": [],
     "motion": [
       {
-        "name": "row-selection",
+        "name": "row-background",
         "value": "background-color 160ms ease-out",
-        "purpose": "Zmiana tła wiersza; wyłączona przy prefers-reduced-motion: reduce."
+        "purpose": "Row background changes; disabled with prefers-reduced-motion: reduce."
       }
     ],
     "breakpoints": [
       {
-        "name": "narrow-phone-max",
-        "value": "359px"
+        "name": "phone",
+        "value": "(max-width: 899px) and (orientation: portrait), (max-width: 759px)"
       },
       {
-        "name": "mobile-max",
-        "value": "899px"
+        "name": "tablet-landscape",
+        "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape)"
       },
       {
-        "name": "table-min",
-        "value": "900px"
+        "name": "narrow-phone",
+        "value": "(max-width: 359px)"
       },
       {
-        "name": "compact-tablet-max",
-        "value": "1100px"
+        "name": "short-tablet",
+        "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (max-height: 560px)"
+      },
+      {
+        "name": "tall-tablet",
+        "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (min-height: 720px)"
       }
     ]
   },
   "components": [
     {
-      "name": "Start / Pauza / Wznów",
+      "name": "Start",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Główne działanie minutnika; minimalna wysokość na telefonie rośnie do 56px.",
+      "description": "Ink-colored start or pause button; hover uses accent green.",
       "html": "<button class=\"ds-primary\" type=\"button\">Start</button>",
-      "css": ".ds-primary{font-family:Manrope,sans-serif;font-size:16px;color:var(--ink,#263d33);border-radius:8px;cursor:pointer;min-height:48px;background:var(--ink,#263d33);color:var(--paper,#fbfaf5);border:1px solid var(--ink,#263d33);font-weight:650;padding:12px 24px;min-height:52px;} .ds-primary:hover{background:#354e3e;} @media(max-width:899px){.ds-primary{min-height:56px;}} .ds-primary:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;} .ds-primary:disabled{opacity:.55;cursor:default;}"
+      "css": ".ds-primary{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;border:1px solid var(--ink,#263d33);background:var(--ink,#263d33);color:var(--bg,#fbfaf5);border-radius:10px;font-size:18px;font-weight:600;line-height:1.5;min-height:56px;padding:12px 24px;}.ds-primary:hover{background:var(--accent,#59784f);border-color:var(--accent,#59784f);}.ds-primary:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}.ds-primary:disabled{cursor:not-allowed;color:var(--muted,#58675c);opacity:.55;}",
+      "refersTo": "button-primary"
     },
     {
       "name": "Reset",
       "kind": "button",
-      "refersTo": "button-reset",
-      "description": "Spokojna czynność drugorzędna obok głównego działania.",
+      "description": "Secondary button on the paper background.",
       "html": "<button class=\"ds-reset\" type=\"button\">Reset</button>",
-      "css": ".ds-reset{font-family:Manrope,sans-serif;font-size:16px;color:var(--ink,#263d33);border-radius:8px;cursor:pointer;min-height:48px;border:1px solid var(--line,#cdd5ca);background:transparent;padding:12px 18px;} .ds-reset:hover{background:var(--soft,#f0f2e9);} .ds-reset:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;} .ds-reset:disabled{opacity:.55;cursor:default;}"
+      "css": ".ds-reset{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-height:48px;border:1px solid var(--line,#cdd5ca);background:var(--surface,#fbfaf5);color:var(--ink,#263d33);border-radius:10px;padding:12px 18px;font-size:16px;line-height:1.5;}.ds-reset:hover{background:var(--soft,#e5eadd);}.ds-reset:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}.ds-reset:disabled{cursor:not-allowed;color:var(--muted,#58675c);opacity:.55;}",
+      "refersTo": "button-reset"
     },
     {
-      "name": "Zmień czas",
+      "name": "Text action",
       "kind": "button",
-      "refersTo": "button-text",
-      "description": "Podkreślony przycisk otwierający edytor czasu; wyłączony podczas sesji.",
+      "description": "Underlined actions for editing time, saving or cancelling.",
       "html": "<button class=\"ds-text\" type=\"button\">Zmień czas</button>",
-      "css": ".ds-text{font-family:Manrope,sans-serif;font-size:16px;color:var(--ink,#263d33);border-radius:8px;cursor:pointer;min-height:48px;border:0;background:transparent;text-decoration:underline;text-underline-offset:4px;font-size:13px;padding:0;color:var(--muted,#58675c);} .ds-text:disabled{text-decoration:none;} .ds-text:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;} .ds-text:disabled{opacity:.55;cursor:default;}"
+      "css": ".ds-text{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-height:48px;min-inline-size:48px;border:0;background:transparent;border-radius:10px;padding:0;color:var(--accent,#59784f);font-size:16px;line-height:1.5;text-decoration:underline;text-underline-offset:4px;}.ds-text:hover:not(:disabled){color:var(--focus,#263d33);}.ds-text:disabled{text-decoration:none;}.ds-text:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}.ds-text:disabled{cursor:not-allowed;color:var(--muted,#58675c);opacity:.55;}",
+      "refersTo": "button-text"
     },
     {
-      "name": "Wybór objętości",
+      "name": "Volume choice",
       "kind": "button",
-      "refersTo": "volume-choice",
-      "description": "Stan bazowy i zaznaczony tej samej grupy przycisków.",
-      "html": "<div class=\"ds-volume\" role=\"group\" aria-label=\"Wybierz objętość\"><button type=\"button\" aria-pressed=\"false\">250 <span>ml</span></button><button type=\"button\" aria-pressed=\"true\">350 <span>ml</span></button></div>",
-      "css": ".ds-volume{display:flex;gap:6px;} .ds-volume button{font-family:Manrope,sans-serif;font-size:16px;color:var(--ink,#263d33);border-radius:8px;cursor:pointer;min-height:48px;background:transparent;border:1px solid var(--line,#cdd5ca);padding:10px 16px;font-weight:650;} .ds-volume span{font-weight:400;} .ds-volume button[aria-pressed=\"true\"]{background:var(--ink,#263d33);border-color:var(--ink,#263d33);color:var(--paper,#fbfaf5);} .ds-volume button:hover:not([aria-pressed=\"true\"]){background:var(--soft,#f0f2e9);} .ds-volume button:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;} @media(min-width:900px) and (max-width:1100px){.ds-volume button{padding:10px 12px;}} @media(max-width:899px){.ds-volume button{padding:10px 8px;font-size:14px;flex:1;min-width:0;}}"
+      "description": "A group of options with an ink-colored selection and light text.",
+      "html": "<div class=\"ds-volume\" role=\"group\" aria-label=\"Wybierz objętość\"><button type=\"button\" aria-pressed=\"false\">250 <span>ml</span></button><button type=\"button\" aria-pressed=\"true\">350 <span>ml</span></button><button type=\"button\" aria-pressed=\"false\">500 <span>ml</span></button></div>",
+      "css": ".ds-volume{display:flex;gap:6px;}.ds-volume button{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-height:48px;border:1px solid var(--line,#cdd5ca);border-radius:10px;background:transparent;color:var(--ink,#263d33);padding:10px 16px;font-size:16px;line-height:1.5;font-weight:600;}.ds-volume span{font-weight:400;}.ds-volume button[aria-pressed=\"true\"]{background:var(--ink,#263d33);color:var(--bg,#fbfaf5);border-color:var(--ink,#263d33);}.ds-volume button:hover:not([aria-pressed=\"true\"]){background:var(--soft,#e5eadd);}.ds-volume button:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
+      "refersTo": "volume-choice"
     },
     {
-      "name": "Wybór herbaty na telefonie",
+      "name": "Phone tea selection",
       "kind": "button",
-      "refersTo": "tea-choice-mobile",
-      "description": "Dotykowa opcja herbaty z jednoznacznym stanem zaznaczenia.",
-      "html": "<button class=\"ds-tea-choice\" type=\"button\" aria-pressed=\"true\">Zielona</button>",
-      "css": ".ds-tea-choice{font-family:Manrope,sans-serif;font-size:16px;color:var(--ink,#263d33);border-radius:8px;cursor:pointer;min-height:48px;border:1px solid var(--line,#cdd5ca);background:transparent;padding:10px 5px;font-size:14px;font-weight:600;} .ds-tea-choice[aria-pressed=\"true\"]{background:var(--ink,#263d33);border-color:var(--ink,#263d33);color:var(--paper,#fbfaf5);} .ds-tea-choice:hover:not([aria-pressed=\"true\"]){background:var(--soft,#f0f2e9);} .ds-tea-choice:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;} .ds-tea-choice:disabled{opacity:.55;cursor:default;}"
+      "description": "Six buttons in a compact three-column grid.",
+      "html": "<div class=\"ds-picker\" role=\"group\" aria-label=\"Rodzaj herbaty\"><button type=\"button\" aria-pressed=\"false\">Czarna</button><button type=\"button\" aria-pressed=\"false\">Earl Grey</button><button type=\"button\" aria-pressed=\"true\">Zielona</button><button type=\"button\" aria-pressed=\"false\">Biała</button><button type=\"button\" aria-pressed=\"false\">Oolong</button><button type=\"button\" aria-pressed=\"false\">Rooibos</button></div>",
+      "css": ".ds-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:460px;}.ds-picker button{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-width:0;min-height:48px;border:1px solid var(--line,#cdd5ca);border-radius:10px;background:transparent;color:var(--ink,#263d33);padding:10px 4px;font-size:16px;line-height:1.5;font-weight:600;}.ds-picker button[aria-pressed=\"true\"]{background:var(--ink,#263d33);color:var(--bg,#fbfaf5);border-color:var(--ink,#263d33);}.ds-picker button:hover:not([aria-pressed=\"true\"]){background:var(--soft,#e5eadd);}.ds-picker button:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
+      "refersTo": "tea-choice-mobile"
     },
     {
-      "name": "Własna objętość",
+      "name": "Custom volume",
       "kind": "input",
-      "refersTo": "field",
-      "description": "Pole numeryczne; aria-invalid zmienia obrys na kolor błędu.",
-      "html": "<label class=\"ds-field-label\">Objętość w ml <input class=\"ds-field\" type=\"number\" inputmode=\"numeric\" min=\"1\" max=\"10000\" step=\"1\" value=\"350\" aria-invalid=\"false\" /></label>",
-      "css": ".ds-field-label{display:flex;align-items:center;gap:8px;font:13px Manrope,sans-serif;color:var(--ink,#263d33);} .ds-field{font:16px Manrope,sans-serif;width:112px;min-height:48px;border:1px solid var(--line,#cdd5ca);border-radius:8px;background:var(--paper,#fbfaf5);color:var(--ink,#263d33);padding:8px 12px;accent-color:var(--ink,#263d33);caret-color:var(--ink,#263d33);} .ds-field[aria-invalid=\"true\"]{border-color:var(--error,#963b27);} .ds-field:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;}"
+      "description": "A numeric field with a readable label and error state.",
+      "html": "<label class=\"ds-field\">Objętość w ml <input type=\"number\" min=\"1\" max=\"10000\" step=\"1\" value=\"350\"></label>",
+      "css": ".ds-field{font-family:'Atkinson Hyperlegible Next',sans-serif;display:flex;align-items:center;gap:8px;color:var(--ink,#263d33);font-size:14px;line-height:1.5;}.ds-field input{font-family:'Atkinson Hyperlegible Next',sans-serif;width:112px;min-height:48px;border:1px solid var(--muted,#58675c);border-radius:10px;padding:10px 12px;background:var(--surface,#fbfaf5);color:var(--ink,#263d33);font-size:16px;line-height:1.5;accent-color:var(--accent,#59784f);caret-color:var(--accent,#59784f);}.ds-field input[aria-invalid=\"true\"]{border-color:var(--error,#8f392b);}.ds-field input:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
+      "refersTo": "field"
     },
     {
-      "name": "Wybrany wiersz herbaty",
+      "name": "Selected tea row",
       "kind": "custom",
-      "refersTo": "tea-row-selected",
-      "description": "Płaski wiersz łączy wybór, temperaturę, czas i dawkę.",
-      "html": "<table class=\"ds-table\"><tbody><tr class=\"ds-row\"><th scope=\"row\"><button class=\"ds-tea-select\" type=\"button\" aria-pressed=\"true\">Zielona</button></th><td>75–80<span class=\"ds-unit\">°C</span></td><td>1–3<span class=\"ds-unit\">min</span><span class=\"ds-default\">minutnik 2:00</span></td><td>3,5<span class=\"ds-unit\">g</span></td></tr></tbody></table>",
-      "css": ".ds-table{width:100%;border-collapse:collapse;text-align:left;font-family:Manrope,sans-serif;font-variant-numeric:tabular-nums;color:var(--ink,#263d33);} .ds-row{border-top:1px solid var(--line,#cdd5ca);border-bottom:1px solid var(--line,#cdd5ca);cursor:pointer;transition:background-color 160ms ease-out;} .ds-row:hover{background:var(--soft,#f0f2e9);} .ds-row:has([aria-pressed=\"true\"]){background:var(--selected,#dce5d9);} .ds-row th{padding:0 0 0 12px;font-weight:650;} .ds-row td{padding:16px 12px;font-size:25px;font-weight:500;white-space:nowrap;} .ds-tea-select{display:flex;align-items:center;gap:8px;width:100%;min-height:48px;border:0;border-radius:0;padding:16px 4px 16px 0;background:transparent;font:650 18px Manrope,sans-serif;color:var(--ink,#263d33);cursor:pointer;text-align:left;} .ds-tea-select[aria-pressed=\"true\"]::after{content:\"\";width:6px;height:6px;background:var(--ink,#263d33);border-radius:50%;flex-shrink:0;} .ds-unit{font-size:.55em;font-weight:500;margin-left:4px;color:var(--muted,#58675c);} .ds-default{display:block;font-size:12px;line-height:1.5;font-weight:400;color:var(--muted,#58675c);margin-top:3px;} .ds-tea-select:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px;} @media(min-width:900px) and (max-width:1100px){.ds-row td{font-size:23px;padding:7px 10px;}.ds-tea-select{font-size:17px;}} @media(prefers-reduced-motion:reduce){.ds-row{transition:none;}}"
+      "description": "A flat parameter row with a green selection dot.",
+      "html": "<table class=\"ds-table\" aria-label=\"Parametry zielonej herbaty\"><tbody><tr class=\"ds-selected\"><th scope=\"row\"><button type=\"button\" aria-pressed=\"true\">Zielona</button></th><td>75–80<span class=\"ds-unit\">°C</span></td><td>1–3<span class=\"ds-unit\">min</span></td><td>3,5<span class=\"ds-unit\">g</span></td></tr></tbody></table>",
+      "css": ".ds-table{font-family:'Atkinson Hyperlegible Next',sans-serif;width:100%;border-collapse:collapse;text-align:left;color:var(--ink,#263d33);font-variant-numeric:tabular-nums;}.ds-table tr{border-top:1px solid var(--line,#cdd5ca);border-bottom:1px solid var(--line,#cdd5ca);transition:background-color 160ms ease-out;}.ds-table tr:hover{background:var(--soft,#e5eadd);}.ds-table tr.ds-selected{background:var(--soft,#e5eadd);}.ds-table th{padding:0 0 0 12px;font-weight:600;}.ds-table td{padding:14px 12px;font-size:24px;font-weight:600;white-space:nowrap;}.ds-table button{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;min-height:48px;border:0;border-radius:0;padding:14px 4px 14px 0;background:transparent;color:var(--ink,#263d33);font-size:18px;line-height:1.5;font-weight:600;text-align:left;}.ds-table button[aria-pressed=\"true\"]::after{content:\"\";width:6px;height:6px;flex-shrink:0;border-radius:50%;background:var(--accent,#59784f);}.ds-unit{font-size:.65em;font-weight:400;margin-left:4px;color:var(--muted,#58675c);}.ds-table button:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-table tr{transition:none;}}",
+      "refersTo": "tea-row-selected"
     },
     {
-      "name": "Odczyt minutnika",
+      "name": "Wordmark",
       "kind": "custom",
-      "description": "Nazwa sesji, trwały status i duże cyfry; klasa ds-done przedstawia zakończenie.",
-      "html": "<section class=\"ds-timer ds-done\" aria-label=\"Minutnik\"><div class=\"ds-timer-heading\"><h2>Minutnik</h2><span>Zielona</span></div><p class=\"ds-status\" role=\"status\">Gotowe</p><output class=\"ds-countdown\" role=\"timer\" aria-label=\"Pozostały czas\">0:00</output></section>",
-      "css": ".ds-timer{font-family:Manrope,sans-serif;color:var(--ink,#263d33);padding-bottom:24px;border-bottom:1px solid var(--line,#cdd5ca);} .ds-timer-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;} .ds-timer-heading h2{margin:0;font-size:18px;font-weight:700;text-wrap:balance;} .ds-timer-heading>span{font-size:14px;color:var(--muted,#58675c);} .ds-status{margin:12px 0 0;min-height:24px;font-size:13px;line-height:1.6;color:var(--muted,#58675c);} .ds-countdown{display:block;font-size:88px;font-weight:500;line-height:1.2;letter-spacing:-.04em;font-variant-numeric:tabular-nums;padding-top:2px;} .ds-done .ds-status{color:var(--ink,#263d33);font-weight:800;} .ds-done .ds-countdown{color:#4b6b3e;} @media(min-width:900px) and (max-width:1100px){.ds-countdown{font-size:80px;}} @media(max-width:899px){.ds-timer-heading h2{font-size:17px;}.ds-status{margin-top:8px;}}"
-    },
-    {
-      "name": "Edycja minutnika w miejscu",
-      "kind": "custom",
-      "description": "Pola minut i sekund zastępują odczyt; zapis i anulowanie zajmują miejsce kontrolki edycji, bez przesuwania przycisku Start.",
-      "html": "<form class=\"ds-time-editor\" aria-label=\"Ustaw czas parzenia\"><div class=\"ds-time-inputs\"><label><span class=\"ds-sr-only\">Minuty</span><input type=\"number\" min=\"0\" max=\"99\" value=\"2\"></label><span aria-hidden=\"true\">:</span><label><span class=\"ds-sr-only\">Sekundy</span><input type=\"number\" min=\"0\" max=\"59\" value=\"00\"></label></div><div class=\"ds-time-actions\"><button type=\"button\">Ustaw czas</button><button type=\"button\">Anuluj</button></div></form>",
-      "css": ".ds-time-editor{font-family:Manrope,sans-serif;color:var(--ink,#263d33)} .ds-time-inputs{display:flex;align-items:baseline;font-size:88px;font-weight:500;line-height:1.2;letter-spacing:-.04em;font-variant-numeric:tabular-nums;padding-top:2px} .ds-time-inputs label{min-width:0} .ds-time-inputs input{display:block;width:2ch;min-width:0;min-height:0;margin:0;padding:0;border:0;border-bottom:1px solid var(--line,#cdd5ca);border-radius:0;font:inherit;line-height:inherit;letter-spacing:inherit;appearance:textfield;background:var(--paper,#fbfaf5);color:inherit;caret-color:var(--ink,#263d33)} .ds-time-inputs input::-webkit-inner-spin-button,.ds-time-inputs input::-webkit-outer-spin-button{appearance:none;margin:0} .ds-time-actions{display:flex;gap:24px} .ds-time-actions button{font:inherit;font-size:13px;color:var(--muted,#58675c);border:0;border-radius:8px;background:transparent;text-decoration:underline;text-underline-offset:4px;min-height:48px;padding:0;cursor:pointer} .ds-time-actions button:hover{color:var(--ink,#263d33)} .ds-time-editor input:focus-visible,.ds-time-editor button:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px} .ds-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0} @media(min-width:900px) and (max-width:1100px){.ds-time-inputs{font-size:80px}}"
+      "description": "A compact ink-colored wordmark with a green dot, linking to the home page.",
+      "html": "<a class=\"ds-wordmark\" href=\"/\" aria-label=\"lazy-tea — strona główna\">lazy-tea<span aria-hidden=\"true\">.</span></a>",
+      "css": ".ds-wordmark{font-family:'Atkinson Hyperlegible Next',sans-serif;display:inline-flex;min-block-size:48px;align-items:center;color:var(--ink,#263d33);font-size:32px;line-height:1.5;font-weight:700;letter-spacing:-.035em;text-decoration:none;white-space:nowrap;}.ds-wordmark span{color:var(--accent,#59784f);}.ds-wordmark:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
+      "refersTo": "wordmark"
     }
   ],
   "narrative": {
-    "northStar": "Kuchenna ściąga",
-    "overview": "„Kuchenna ściąga” porządkuje parametry herbaty jak podręczną tabelę przy czajniku. Ciepły papier, zielony atrament i jeden czytelny sans tworzą spokojny, użytkowy charakter; duże liczby są pierwszym planem, krótkie podpisy pomagają je odczytać.\n\nSystem jest płaski i oszczędny: cienkie poziome linie rozdzielają informacje, wypełnienie wskazuje wybór, a mocny przycisk prowadzi do uruchomienia minutnika. Różne szerokości ekranu zachowują tę samą hierarchię parametrów i stanu parzenia. Interfejs pozostaje po polsku.",
+    "northStar": "Dashboard by the kettle",
+    "overview": "A light dashboard on a paper background, with green ink and a calm green accent. The direction matches the dashboard selected by the user: large, readable parameters, a lighter timer and the lazy-tea. wordmark with a green dot.\n\nFlat dividers and compact typography make brewing data easy to scan. The layout adjusts its density for phones and landscape tablets while preserving comfortable controls, clear selection and a clear timer state.",
     "keyCharacteristics": [
-      "Ciepły papier i przygaszona zieleń.",
-      "Duże liczby, spokojne podpisy i czytelny Manrope.",
-      "Prostokątne kontrolki z delikatnie zaokrąglonymi narożnikami.",
-      "Płaskie powierzchnie, poziome linie i jednoznaczne zaznaczenie."
+      "Paper background, dark green ink and a green accent.",
+      "Locally hosted Atkinson Hyperlegible Next and tabular numerals.",
+      "Flat dividers, outlined choices and gently rounded controls.",
+      "A lightweight timer and a stronger wordmark with a green dot."
     ],
     "rules": [
       {
-        "name": "Czytelnego wyboru",
-        "body": "Wybrana pozycja ma własne wypełnienie i stan aria-pressed; wiersz tabeli dodatkowo ma małą kropkę.",
+        "name": "The Clear selection Rule",
+        "body": "Selected options have an ink fill and light text; the selected row has a sage background and a green dot.",
         "section": "colors"
       },
       {
-        "name": "Spokojnych cyfr",
-        "body": "Parametry i minutnik używają cyfr tabelarycznych; jednostki i podpisy pozostają mniejsze od wartości.",
+        "name": "The Calm numbers Rule",
+        "body": "Parameters and the timer use tabular numerals; units and labels remain smaller than their values.",
         "section": "typography"
       },
       {
-        "name": "Płaskiego papieru",
-        "body": "Oddzielaj grupy linią, odstępem lub tonem tła; bieżący system nie używa cieni.",
+        "name": "The Flat surfaces Rule",
+        "body": "Separate groups with a rule, spacing or an existing sage surface tone.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do zachowuj polskie etykiety, czytelne jednostki i wyraźną hierarchię liczb.",
-      "Do używaj istniejących kolorów i lokalnego Manrope.",
-      "Do zachowuj widoczny fokus, dotykowe pola oraz tekstowy komunikat „Gotowe”.",
-      "Do sprawdzaj obie kompozycje po obu stronach granicy 899/900 px oraz wąski telefon."
+      "Do use the paper background, green ink and locally hosted Atkinson Hyperlegible Next.",
+      "Do preserve a lightweight timer, stronger values and smaller units.",
+      "Do preserve visible focus and touch targets of at least 48 px.",
+      "Do check complete content on phones and short landscape tablets."
     ],
     "donts": [
-      "Don't rozbijaj tabeli sześciu herbat na sześć kart w widoku poziomego tabletu.",
-      "Don't zastępuj małych jednostek i podpisów równie dużym tekstem jak wartości.",
-      "Don't dodawaj ozdobnych cieni, wejść ani animacji każdej sekundy do tej płaskiej ściągi.",
-      "Don't utożsamiaj przeglądanej herbaty z herbatą aktywnego minutnika; stan sesji ma własny podpis."
+      "Don't restore the replaced dark palette with a gold accent.",
+      "Don't split the six-tea table into cards in the landscape dashboard.",
+      "Don't add decorative shadows, entrance animations or animation on every second."
     ]
   }
 }
