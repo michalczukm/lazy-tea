@@ -103,6 +103,7 @@ function renderTimer() {
 function setAudioUnavailable() {
   audioAvailable = false
   setText($('#audio-note'), 'Dźwięk niedostępny. Na koniec zobaczysz komunikat „Gotowe”.')
+  $('#audio-note').hidden = false
 }
 
 async function unlockAudio() {
@@ -115,7 +116,7 @@ async function unlockAudio() {
     await audioContext.resume()
     if (audioContext.state !== 'running') throw new Error('Audio suspended')
     audioAvailable = true
-    setText($('#audio-note'), 'Na koniec: delikatny dźwięk i komunikat.')
+    $('#audio-note').hidden = true
   } catch {
     setAudioUnavailable()
   }
