@@ -14,13 +14,14 @@ const timer = new BrewTimer(selectedId, teaById(selectedId).seconds)
 $('#tea-table').innerHTML = TEAS.map(
   tea => `<tr data-tea-id="${tea.id}">
   <th scope="row"><button type="button" class="tea-select" data-tea-id="${tea.id}" aria-pressed="false">${tea.name}</button></th>
-  <td>${tea.temperature}<span class="unit">°C</span></td>
-  <td>${tea.time}<span class="unit">min</span><span class="default-time">minutnik ${formatTime(tea.seconds)}</span></td>
-  <td><span data-dose></span><span class="unit">g</span></td>
+  <td>${tea.temperature}<span class="lazy-unit unit">°C</span></td>
+  <td>${tea.time}<span class="lazy-unit unit">min</span><span class="default-time">minutnik ${formatTime(tea.seconds)}</span></td>
+  <td><span data-dose></span><span class="lazy-unit unit">g</span></td>
 </tr>`,
 ).join('')
 $('#tea-picker').innerHTML = TEAS.map(
-  tea => `<button type="button" data-tea-id="${tea.id}" aria-pressed="false">${tea.name}</button>`,
+  tea =>
+    `<button type="button" class="lazy-choice" data-tea-id="${tea.id}" aria-pressed="false">${tea.name}</button>`,
 ).join('')
 
 function setText(element, text) {

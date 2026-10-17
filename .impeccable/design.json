@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-17T23:03:32.400706+00:00",
+  "generatedAt": "2026-10-17T23:32:52.336841+00:00",
   "title": "Design System: lazy-tea",
   "extensions": {
     "colorMeta": {
-      "bg": {
+      "lazy-color-bg": {
         "role": "neutral",
         "displayName": "Paper",
         "tonalRamp": [
@@ -18,7 +18,7 @@
           "oklch(95% 0.00668 97.350)"
         ]
       },
-      "surface": {
+      "lazy-color-surface": {
         "role": "neutral",
         "displayName": "Surface paper",
         "tonalRamp": [
@@ -32,7 +32,7 @@
           "oklch(95% 0.00668 97.350)"
         ]
       },
-      "ink": {
+      "lazy-color-ink": {
         "role": "neutral",
         "displayName": "Green ink",
         "tonalRamp": [
@@ -46,7 +46,7 @@
           "oklch(95% 0.03400 165.413)"
         ]
       },
-      "muted": {
+      "lazy-color-muted": {
         "role": "neutral",
         "displayName": "Muted green",
         "tonalRamp": [
@@ -60,7 +60,7 @@
           "oklch(95% 0.02516 153.600)"
         ]
       },
-      "accent": {
+      "lazy-color-accent": {
         "role": "primary",
         "displayName": "Accent green",
         "tonalRamp": [
@@ -74,9 +74,9 @@
           "oklch(95% 0.07155 138.233)"
         ]
       },
-      "on-accent": {
+      "lazy-color-on-accent": {
         "role": "neutral",
-        "displayName": "Paper on accent",
+        "displayName": "On action",
         "tonalRamp": [
           "oklch(15% 0.00668 97.350)",
           "oklch(26% 0.00668 97.350)",
@@ -88,7 +88,7 @@
           "oklch(95% 0.00668 97.350)"
         ]
       },
-      "soft": {
+      "lazy-color-soft": {
         "role": "neutral",
         "displayName": "Light sage",
         "tonalRamp": [
@@ -102,7 +102,7 @@
           "oklch(95% 0.01811 123.983)"
         ]
       },
-      "line": {
+      "lazy-color-line": {
         "role": "neutral",
         "displayName": "Sage line",
         "tonalRamp": [
@@ -116,7 +116,7 @@
           "oklch(95% 0.01727 137.031)"
         ]
       },
-      "focus": {
+      "lazy-color-focus": {
         "role": "neutral",
         "displayName": "Focus ink",
         "tonalRamp": [
@@ -130,7 +130,7 @@
           "oklch(95% 0.03400 165.413)"
         ]
       },
-      "error": {
+      "lazy-color-error": {
         "role": "neutral",
         "displayName": "Brick error",
         "tonalRamp": [
@@ -143,52 +143,100 @@
           "oklch(84% 0.11999 31.375)",
           "oklch(95% 0.11999 31.375)"
         ]
+      },
+      "lazy-color-pressed": {
+        "role": "neutral",
+        "displayName": "Pressed sage",
+        "tonalRamp": [
+          "oklch(15% 0.02695 132.995)",
+          "oklch(26% 0.02695 132.995)",
+          "oklch(38% 0.02695 132.995)",
+          "oklch(49% 0.02695 132.995)",
+          "oklch(61% 0.02695 132.995)",
+          "oklch(72% 0.02695 132.995)",
+          "oklch(84% 0.02695 132.995)",
+          "oklch(95% 0.02695 132.995)"
+        ]
+      },
+      "lazy-action-bg": {
+        "role": "primary",
+        "displayName": "Action bg",
+        "tonalRamp": [
+          "oklch(15% 0.03400 165.413)",
+          "oklch(26% 0.03400 165.413)",
+          "oklch(38% 0.03400 165.413)",
+          "oklch(49% 0.03400 165.413)",
+          "oklch(61% 0.03400 165.413)",
+          "oklch(72% 0.03400 165.413)",
+          "oklch(84% 0.03400 165.413)",
+          "oklch(95% 0.03400 165.413)"
+        ]
+      },
+      "lazy-action-hover": {
+        "role": "primary",
+        "displayName": "Action hover",
+        "tonalRamp": [
+          "oklch(15% 0.07155 138.233)",
+          "oklch(26% 0.07155 138.233)",
+          "oklch(38% 0.07155 138.233)",
+          "oklch(49% 0.07155 138.233)",
+          "oklch(61% 0.07155 138.233)",
+          "oklch(72% 0.07155 138.233)",
+          "oklch(84% 0.07155 138.233)",
+          "oklch(95% 0.07155 138.233)"
+        ]
+      },
+      "lazy-action-active": {
+        "role": "primary",
+        "displayName": "Action active",
+        "tonalRamp": [
+          "oklch(15% 0.03400 165.413)",
+          "oklch(26% 0.03400 165.413)",
+          "oklch(38% 0.03400 165.413)",
+          "oklch(49% 0.03400 165.413)",
+          "oklch(61% 0.03400 165.413)",
+          "oklch(72% 0.03400 165.413)",
+          "oklch(84% 0.03400 165.413)",
+          "oklch(95% 0.03400 165.413)"
+        ]
       }
     },
     "typographyMeta": {
       "wordmark": {
         "displayName": "Wordmark",
-        "purpose": "The ink-colored lazy-tea. wordmark with a green dot."
+        "purpose": "Shared brand link with an accent dot."
       },
-      "headline": {
-        "displayName": "Headline",
-        "purpose": "The question above tea selection on phones."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "The timer and selected-tea headings."
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Fluid phone tea-selection question."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Main content; tips use line height 1.45."
+        "purpose": "Main content and notes."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Timer and selected-tea headings."
       },
       "note": {
         "displayName": "Note",
-        "purpose": "Supporting text, messages and timer status."
-      },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Table headings and short labels."
-      },
-      "table-number": {
-        "displayName": "Table Number",
-        "purpose": "Tabular values; fluid scaling up to 34px on a large landscape tablet."
-      },
-      "mobile-parameter": {
-        "displayName": "Mobile Parameter",
-        "purpose": "Parameters for one tea on phones."
+        "purpose": "Supporting information."
       },
       "countdown": {
         "displayName": "Countdown",
-        "purpose": "Timer digits and editor fields; fluid scaling up to 112px on a large landscape tablet."
+        "purpose": "Regular timer digits and inline editor, resized by app device variants."
+      },
+      "parameter": {
+        "displayName": "Parameter",
+        "purpose": "Semibold phone readings with smaller units."
       }
     },
     "shadows": [],
     "motion": [
       {
-        "name": "row-background",
-        "value": "background-color 160ms ease-out",
-        "purpose": "Row background changes; disabled with prefers-reduced-motion: reduce."
+        "name": "state",
+        "value": "background-color var(--lazy-duration-state) var(--lazy-ease-state)",
+        "purpose": "Shared control and local row state changes; removed for reduced motion."
       }
     ],
     "breakpoints": [
@@ -197,20 +245,20 @@
         "value": "(max-width: 899px) and (orientation: portrait), (max-width: 759px)"
       },
       {
-        "name": "tablet-landscape",
+        "name": "landscape-tablet",
         "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape)"
       },
       {
-        "name": "narrow-phone",
-        "value": "(max-width: 359px)"
+        "name": "large-tablet",
+        "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (min-height: 720px)"
       },
       {
         "name": "short-tablet",
         "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (max-height: 560px)"
       },
       {
-        "name": "tall-tablet",
-        "value": "(min-width: 760px) and (max-width: 1280px) and (orientation: landscape) and (min-height: 720px)"
+        "name": "narrow-phone",
+        "value": "(max-width: 359px)"
       }
     ]
   },
@@ -218,81 +266,89 @@
     {
       "name": "Start",
       "kind": "button",
-      "description": "Ink-colored start or pause button; hover uses accent green.",
-      "html": "<button class=\"ds-primary\" type=\"button\">Start</button>",
-      "css": ".ds-primary{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;border:1px solid var(--ink,#263d33);background:var(--ink,#263d33);color:var(--bg,#fbfaf5);border-radius:10px;font-size:18px;font-weight:600;line-height:1.5;min-height:56px;padding:12px 24px;}.ds-primary:hover{background:var(--accent,#59784f);border-color:var(--accent,#59784f);}.ds-primary:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}.ds-primary:disabled{cursor:not-allowed;color:var(--muted,#58675c);opacity:.55;}",
-      "refersTo": "button-primary"
+      "refersTo": "button-primary",
+      "description": "Shared control with the app’s local sizing where applicable.",
+      "html": "<button class=\"ds-start\" type=\"button\">Start</button>",
+      "css": ".ds-start{font-family:var(--lazy-font-family);display:inline-flex;align-items:center;justify-content:center;gap:var(--lazy-space-2);min-block-size:var(--lazy-control-size);min-inline-size:var(--lazy-control-size);max-inline-size:100%;padding:0.625rem var(--lazy-space-4);border:1px solid var(--lazy-color-line);border-radius:var(--lazy-radius-control);background:var(--lazy-color-surface);color:var(--lazy-color-ink);font-size:var(--lazy-text-body);font-weight:var(--lazy-font-semibold);line-height:var(--lazy-leading-body);text-align:center;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;transition:background-color var(--lazy-duration-state) var(--lazy-ease-state);min-block-size:var(--lazy-control-size-primary);padding:var(--lazy-space-3) var(--lazy-space-6);background:var(--lazy-action-bg);border-color:var(--lazy-action-bg);color:var(--lazy-color-on-accent);font-size:var(--lazy-text-title);}.ds-start:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}.ds-start:disabled{opacity:0.55;cursor:not-allowed;}@media(hover:hover){.ds-start:not(:disabled):hover{background:var(--lazy-color-soft);background:var(--lazy-action-hover);border-color:var(--lazy-action-hover);}}.ds-start:not(:disabled):active{background:var(--lazy-color-pressed);background:var(--lazy-action-active);border-color:var(--lazy-action-active);}@media(prefers-reduced-motion:reduce){.ds-start{transition:none;}}"
     },
     {
       "name": "Reset",
       "kind": "button",
-      "description": "Secondary button on the paper background.",
+      "refersTo": "button-reset",
+      "description": "Shared control with the app’s local sizing where applicable.",
       "html": "<button class=\"ds-reset\" type=\"button\">Reset</button>",
-      "css": ".ds-reset{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-height:48px;border:1px solid var(--line,#cdd5ca);background:var(--surface,#fbfaf5);color:var(--ink,#263d33);border-radius:10px;padding:12px 18px;font-size:16px;line-height:1.5;}.ds-reset:hover{background:var(--soft,#e5eadd);}.ds-reset:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}.ds-reset:disabled{cursor:not-allowed;color:var(--muted,#58675c);opacity:.55;}",
-      "refersTo": "button-reset"
+      "css": ".ds-reset{font-family:var(--lazy-font-family);display:inline-flex;align-items:center;justify-content:center;gap:var(--lazy-space-2);min-block-size:var(--lazy-control-size);min-inline-size:var(--lazy-control-size);max-inline-size:100%;padding:0.625rem var(--lazy-space-4);border:1px solid var(--lazy-color-line);border-radius:var(--lazy-radius-control);background:var(--lazy-color-surface);color:var(--lazy-color-ink);font-size:var(--lazy-text-body);font-weight:var(--lazy-font-semibold);line-height:var(--lazy-leading-body);text-align:center;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;transition:background-color var(--lazy-duration-state) var(--lazy-ease-state);padding:12px 18px;}.ds-reset:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}.ds-reset:disabled{opacity:0.55;cursor:not-allowed;}@media(hover:hover){.ds-reset:not(:disabled):hover{background:var(--lazy-color-soft);}}.ds-reset:not(:disabled):active{background:var(--lazy-color-pressed);}@media(prefers-reduced-motion:reduce){.ds-reset{transition:none;}}"
     },
     {
       "name": "Text action",
       "kind": "button",
-      "description": "Underlined actions for editing time, saving or cancelling.",
+      "refersTo": "button-text",
+      "description": "Shared control with the app’s local sizing where applicable.",
       "html": "<button class=\"ds-text\" type=\"button\">Zmień czas</button>",
-      "css": ".ds-text{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-height:48px;min-inline-size:48px;border:0;background:transparent;border-radius:10px;padding:0;color:var(--accent,#59784f);font-size:16px;line-height:1.5;text-decoration:underline;text-underline-offset:4px;}.ds-text:hover:not(:disabled){color:var(--focus,#263d33);}.ds-text:disabled{text-decoration:none;}.ds-text:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}.ds-text:disabled{cursor:not-allowed;color:var(--muted,#58675c);opacity:.55;}",
-      "refersTo": "button-text"
+      "css": ".ds-text{font-family:var(--lazy-font-family);display:inline-flex;align-items:center;justify-content:center;gap:var(--lazy-space-2);min-block-size:var(--lazy-control-size);min-inline-size:var(--lazy-control-size);max-inline-size:100%;padding:0.625rem var(--lazy-space-4);border:1px solid var(--lazy-color-line);border-radius:var(--lazy-radius-control);background:var(--lazy-color-surface);color:var(--lazy-color-ink);font-size:var(--lazy-text-body);font-weight:var(--lazy-font-semibold);line-height:var(--lazy-leading-body);text-align:center;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;transition:background-color var(--lazy-duration-state) var(--lazy-ease-state);padding:0;background:transparent;border-color:transparent;color:var(--lazy-color-accent);text-decoration:underline;text-underline-offset:var(--lazy-space-1);}.ds-text:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}.ds-text:disabled{opacity:0.55;cursor:not-allowed;}@media(hover:hover){.ds-text:not(:disabled):hover{background:var(--lazy-color-soft);color:var(--lazy-color-ink);}}.ds-text:not(:disabled):active{background:var(--lazy-color-pressed);}@media(prefers-reduced-motion:reduce){.ds-text{transition:none;}}"
     },
     {
-      "name": "Volume choice",
+      "name": "Volume choices",
       "kind": "button",
-      "description": "A group of options with an ink-colored selection and light text.",
-      "html": "<div class=\"ds-volume\" role=\"group\" aria-label=\"Wybierz objętość\"><button type=\"button\" aria-pressed=\"false\">250 <span>ml</span></button><button type=\"button\" aria-pressed=\"true\">350 <span>ml</span></button><button type=\"button\" aria-pressed=\"false\">500 <span>ml</span></button></div>",
-      "css": ".ds-volume{display:flex;gap:6px;}.ds-volume button{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-height:48px;border:1px solid var(--line,#cdd5ca);border-radius:10px;background:transparent;color:var(--ink,#263d33);padding:10px 16px;font-size:16px;line-height:1.5;font-weight:600;}.ds-volume span{font-weight:400;}.ds-volume button[aria-pressed=\"true\"]{background:var(--ink,#263d33);color:var(--bg,#fbfaf5);border-color:var(--ink,#263d33);}.ds-volume button:hover:not([aria-pressed=\"true\"]){background:var(--soft,#e5eadd);}.ds-volume button:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
-      "refersTo": "volume-choice"
+      "refersTo": "choice",
+      "description": "Shared pressed buttons with lighter units and unbroken labels.",
+      "html": "<div class=\"ds-choices\" role=\"group\" aria-label=\"Objętość wody\"><button class=\"ds-choice\" type=\"button\" aria-pressed=\"true\">350 <span>ml</span></button><button class=\"ds-choice\" type=\"button\" aria-pressed=\"false\">500 <span>ml</span></button></div>",
+      "css": ".ds-choices{display:flex;flex-wrap:wrap;gap:6px;}.ds-choice{font-family:var(--lazy-font-family);display:inline-flex;align-items:center;justify-content:center;gap:var(--lazy-space-2);min-block-size:var(--lazy-control-size);min-inline-size:var(--lazy-control-size);max-inline-size:100%;padding:0.625rem var(--lazy-space-4);border:1px solid var(--lazy-color-line);border-radius:var(--lazy-radius-control);background:var(--lazy-color-surface);color:var(--lazy-color-ink);font-size:var(--lazy-text-body);font-weight:var(--lazy-font-semibold);line-height:var(--lazy-leading-body);text-align:center;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;transition:background-color var(--lazy-duration-state) var(--lazy-ease-state);gap:4px;white-space:nowrap;overflow-wrap:normal;}.ds-choice span{font-weight:var(--lazy-font-regular);}.ds-choice[aria-pressed=\"true\"]{background:var(--lazy-action-bg);border-color:var(--lazy-action-bg);color:var(--lazy-color-on-accent);}.ds-choice:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}@media(hover:hover){.ds-choice:not(:disabled):not([aria-pressed=\"true\"]):hover{background:var(--lazy-color-soft);}}.ds-choice:not(:disabled):not([aria-pressed=\"true\"]):active{background:var(--lazy-color-pressed);}.ds-choice:disabled{opacity:0.55;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-choice{transition:none;}}"
     },
     {
-      "name": "Phone tea selection",
-      "kind": "button",
-      "description": "Six buttons in a compact three-column grid.",
-      "html": "<div class=\"ds-picker\" role=\"group\" aria-label=\"Rodzaj herbaty\"><button type=\"button\" aria-pressed=\"false\">Czarna</button><button type=\"button\" aria-pressed=\"false\">Earl Grey</button><button type=\"button\" aria-pressed=\"true\">Zielona</button><button type=\"button\" aria-pressed=\"false\">Biała</button><button type=\"button\" aria-pressed=\"false\">Oolong</button><button type=\"button\" aria-pressed=\"false\">Rooibos</button></div>",
-      "css": ".ds-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:460px;}.ds-picker button{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;min-width:0;min-height:48px;border:1px solid var(--line,#cdd5ca);border-radius:10px;background:transparent;color:var(--ink,#263d33);padding:10px 4px;font-size:16px;line-height:1.5;font-weight:600;}.ds-picker button[aria-pressed=\"true\"]{background:var(--ink,#263d33);color:var(--bg,#fbfaf5);border-color:var(--ink,#263d33);}.ds-picker button:hover:not([aria-pressed=\"true\"]){background:var(--soft,#e5eadd);}.ds-picker button:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
-      "refersTo": "tea-choice-mobile"
-    },
-    {
-      "name": "Custom volume",
+      "name": "Custom volume field",
       "kind": "input",
-      "description": "A numeric field with a readable label and error state.",
-      "html": "<label class=\"ds-field\">Objętość w ml <input type=\"number\" min=\"1\" max=\"10000\" step=\"1\" value=\"350\"></label>",
-      "css": ".ds-field{font-family:'Atkinson Hyperlegible Next',sans-serif;display:flex;align-items:center;gap:8px;color:var(--ink,#263d33);font-size:14px;line-height:1.5;}.ds-field input{font-family:'Atkinson Hyperlegible Next',sans-serif;width:112px;min-height:48px;border:1px solid var(--muted,#58675c);border-radius:10px;padding:10px 12px;background:var(--surface,#fbfaf5);color:var(--ink,#263d33);font-size:16px;line-height:1.5;accent-color:var(--accent,#59784f);caret-color:var(--accent,#59784f);}.ds-field input[aria-invalid=\"true\"]{border-color:var(--error,#8f392b);}.ds-field input:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
-      "refersTo": "field"
+      "refersTo": "field",
+      "description": "Shared field with the app’s 112px width and associated error state.",
+      "html": "<div class=\"ds-field-group\"><label class=\"ds-label\" for=\"ds-volume\">Objętość w ml</label><input class=\"ds-field\" id=\"ds-volume\" type=\"number\" value=\"350\" aria-invalid=\"true\" aria-describedby=\"ds-volume-error\"><p class=\"ds-error\" id=\"ds-volume-error\">Podaj pełną liczbę od 1 do 10 000 ml.</p></div>",
+      "css": ".ds-field-group{font-family:var(--lazy-font-family);display:grid;gap:var(--lazy-space-2);color:var(--lazy-color-ink);}.ds-label{font-weight:var(--lazy-font-regular);font-size:var(--lazy-text-small);}.ds-field{font-family:var(--lazy-font-family);font-size:var(--lazy-text-body);line-height:var(--lazy-leading-body);min-inline-size:0;min-block-size:var(--lazy-control-size);padding:0.625rem var(--lazy-space-3);border:1px solid var(--lazy-color-muted);border-radius:var(--lazy-radius-control);background:var(--lazy-color-surface);color:var(--lazy-color-ink);caret-color:var(--lazy-color-accent);width:112px;}.ds-field:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}.ds-field[aria-invalid=\"true\"]{border-color:var(--lazy-color-error);}.ds-field:disabled{opacity:0.55;cursor:not-allowed;}.ds-error{margin:0;font-size:var(--lazy-text-small);color:var(--lazy-color-error);}"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "nav",
+      "refersTo": "wordmark",
+      "description": "Shared brand link with an accent dot.",
+      "html": "<a class=\"ds-wordmark\" href=\"/\" aria-label=\"lazy-tea — strona główna\">lazy-tea<span aria-hidden=\"true\">.</span></a>",
+      "css": ".ds-wordmark{font-family:var(--lazy-font-family);display:inline-flex;align-items:center;min-block-size:var(--lazy-control-size);color:var(--lazy-color-ink);font-size:var(--lazy-text-wordmark);font-weight:var(--lazy-font-bold);letter-spacing:var(--lazy-tracking-wordmark);line-height:var(--lazy-leading-heading);text-decoration:none;white-space:nowrap;}.ds-wordmark span{color:var(--lazy-color-accent);}.ds-wordmark:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}"
     },
     {
       "name": "Selected tea row",
       "kind": "custom",
-      "description": "A flat parameter row with a green selection dot.",
-      "html": "<table class=\"ds-table\" aria-label=\"Parametry zielonej herbaty\"><tbody><tr class=\"ds-selected\"><th scope=\"row\"><button type=\"button\" aria-pressed=\"true\">Zielona</button></th><td>75–80<span class=\"ds-unit\">°C</span></td><td>1–3<span class=\"ds-unit\">min</span></td><td>3,5<span class=\"ds-unit\">g</span></td></tr></tbody></table>",
-      "css": ".ds-table{font-family:'Atkinson Hyperlegible Next',sans-serif;width:100%;border-collapse:collapse;text-align:left;color:var(--ink,#263d33);font-variant-numeric:tabular-nums;}.ds-table tr{border-top:1px solid var(--line,#cdd5ca);border-bottom:1px solid var(--line,#cdd5ca);transition:background-color 160ms ease-out;}.ds-table tr:hover{background:var(--soft,#e5eadd);}.ds-table tr.ds-selected{background:var(--soft,#e5eadd);}.ds-table th{padding:0 0 0 12px;font-weight:600;}.ds-table td{padding:14px 12px;font-size:24px;font-weight:600;white-space:nowrap;}.ds-table button{font-family:'Atkinson Hyperlegible Next',sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;min-height:48px;border:0;border-radius:0;padding:14px 4px 14px 0;background:transparent;color:var(--ink,#263d33);font-size:18px;line-height:1.5;font-weight:600;text-align:left;}.ds-table button[aria-pressed=\"true\"]::after{content:\"\";width:6px;height:6px;flex-shrink:0;border-radius:50%;background:var(--accent,#59784f);}.ds-unit{font-size:.65em;font-weight:400;margin-left:4px;color:var(--muted,#58675c);}.ds-table button:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-table tr{transition:none;}}",
-      "refersTo": "tea-row-selected"
+      "refersTo": "selected-row",
+      "description": "Shared table rules with the app’s numeric hierarchy and selected tea button.",
+      "html": "<table class=\"ds-table\"><thead><tr><th scope=\"col\">Herbata</th><th scope=\"col\">Woda</th><th scope=\"col\">Susz</th></tr></thead><tbody><tr class=\"ds-selected\"><th scope=\"row\"><button class=\"ds-tea\" type=\"button\" aria-pressed=\"true\">Zielona</button></th><td>75–80<span class=\"ds-unit\">°C</span></td><td>3,5<span class=\"ds-unit\">g</span></td></tr></tbody></table>",
+      "css": ".ds-table{font-family:var(--lazy-font-family);width:100%;border-collapse:collapse;text-align:start;color:var(--lazy-color-ink);font-variant-numeric:tabular-nums;}.ds-table thead th{padding:0 12px 12px;font-size:var(--lazy-text-small);font-weight:var(--lazy-font-semibold);color:var(--lazy-color-muted);}.ds-table tbody tr{border-block:1px solid var(--lazy-color-line);transition:background-color var(--lazy-duration-state) var(--lazy-ease-state);}.ds-selected,.ds-table tbody tr:hover{background:var(--lazy-color-soft);}.ds-table tbody th{padding:0 0 0 12px;}.ds-table td{padding:14px 12px;font-size:24px;font-weight:var(--lazy-font-semibold);white-space:nowrap;}.ds-tea{font-family:var(--lazy-font-family);display:flex;align-items:center;gap:8px;width:100%;min-height:var(--lazy-control-size);border:0;border-radius:0;padding:14px 4px 14px 0;background:transparent;color:var(--lazy-color-ink);font-size:18px;font-weight:var(--lazy-font-semibold);text-align:left;cursor:pointer;}.ds-tea[aria-pressed=\"true\"]::after{content:\"\";width:6px;height:6px;flex-shrink:0;border-radius:50%;background:var(--lazy-color-accent);}.ds-tea:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}.ds-unit{margin-inline-start:var(--lazy-space-1);font-size:0.65em;font-weight:var(--lazy-font-regular);color:var(--lazy-color-muted);}@media(prefers-reduced-motion:reduce){.ds-table tbody tr{transition:none;}}"
     },
     {
-      "name": "Wordmark",
+      "name": "Countdown",
       "kind": "custom",
-      "description": "A compact ink-colored wordmark with a green dot, linking to the home page.",
-      "html": "<a class=\"ds-wordmark\" href=\"/\" aria-label=\"lazy-tea — strona główna\">lazy-tea<span aria-hidden=\"true\">.</span></a>",
-      "css": ".ds-wordmark{font-family:'Atkinson Hyperlegible Next',sans-serif;display:inline-flex;min-block-size:48px;align-items:center;color:var(--ink,#263d33);font-size:32px;line-height:1.5;font-weight:700;letter-spacing:-.035em;text-decoration:none;white-space:nowrap;}.ds-wordmark span{color:var(--accent,#59784f);}.ds-wordmark:focus-visible{outline:3px solid var(--focus,#263d33);outline-offset:4px;}",
-      "refersTo": "wordmark"
+      "refersTo": "countdown",
+      "description": "Shared regular display role; app device variants resize this same role.",
+      "html": "<output class=\"ds-countdown\" role=\"timer\" aria-label=\"Pozostały czas\">2:00</output>",
+      "css": ".ds-countdown{font-family:var(--lazy-font-family);color:var(--lazy-color-ink);font-size:var(--lazy-text-display);font-weight:var(--lazy-font-regular);line-height:var(--lazy-leading-display);letter-spacing:var(--lazy-tracking-heading);font-variant-numeric:tabular-nums;display:block;padding-top:2px;}"
+    },
+    {
+      "name": "Inline time editor",
+      "kind": "input",
+      "refersTo": "countdown",
+      "description": "App-owned in-place fields keep countdown typography and baseline geometry.",
+      "html": "<div class=\"ds-time-inputs\"><label><span class=\"ds-sr\">Minuty</span><input class=\"ds-time-field\" type=\"number\" value=\"2\" aria-label=\"Minuty\"></label><span aria-hidden=\"true\">:</span><label><span class=\"ds-sr\">Sekundy</span><input class=\"ds-time-field\" type=\"number\" value=\"00\" aria-label=\"Sekundy\"></label></div>",
+      "css": ".ds-time-inputs{font-family:var(--lazy-font-family);color:var(--lazy-color-ink);font-size:var(--lazy-text-display);font-weight:var(--lazy-font-regular);line-height:var(--lazy-leading-display);letter-spacing:var(--lazy-tracking-heading);font-variant-numeric:tabular-nums;display:flex;align-items:baseline;padding-top:2px;}.ds-time-inputs label{min-width:0;}.ds-time-field{display:block;width:2ch;min-width:0;min-height:0;margin:0;padding:0;border:0;border-bottom:1px solid var(--lazy-color-muted);border-radius:0;background:transparent;color:var(--lazy-color-ink);font:inherit;line-height:inherit;letter-spacing:inherit;caret-color:var(--lazy-color-accent);appearance:textfield;}.ds-time-field::-webkit-inner-spin-button,.ds-time-field::-webkit-outer-spin-button{appearance:none;margin:0;}.ds-time-field:focus-visible{outline:var(--lazy-focus-width) solid var(--lazy-color-focus);outline-offset:var(--lazy-focus-offset);}.ds-sr{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}"
     }
   ],
   "narrative": {
     "northStar": "Dashboard by the kettle",
-    "overview": "A light dashboard on a paper background, with green ink and a calm green accent. The direction matches the dashboard selected by the user: large, readable parameters, a lighter timer and the lazy-tea. wordmark with a green dot.\n\nFlat dividers and compact typography make brewing data easy to scan. The layout adjusts its density for phones and landscape tablets while preserving comfortable controls, clear selection and a clear timer state.",
+    "overview": "A light dashboard on paper, with green ink, a calm green accent and readable brewing values. Flat sections and compact labels keep the tea table easy to scan; a regular-weight timer balances the stronger values and wordmark.\n\nThe shared `@lazy/theme` package owns the visual foundation. The app owns its responsive brewing layout, tablet density and inline time editor. This migration preserves the established light appearance and device sizing.",
     "keyCharacteristics": [
-      "Paper background, dark green ink and a green accent.",
-      "Locally hosted Atkinson Hyperlegible Next and tabular numerals.",
+      "Paper background, green ink and a green accent by default.",
+      "Shared, self-hosted Atkinson Hyperlegible Next and tabular numerals.",
       "Flat dividers, outlined choices and gently rounded controls.",
-      "A lightweight timer and a stronger wordmark with a green dot."
+      "A lightweight timer and a stronger wordmark with an accent dot."
     ],
     "rules": [
       {
-        "name": "The Clear selection Rule",
-        "body": "Selected options have an ink fill and light text; the selected row has a sage background and a green dot.",
+        "name": "The Semantic actions Rule",
+        "body": "Use action tokens for filled controls and selections; never derive action fill from ink.",
         "section": "colors"
       },
       {
@@ -302,18 +358,19 @@
       },
       {
         "name": "The Flat surfaces Rule",
-        "body": "Separate groups with a rule, spacing or an existing sage surface tone.",
+        "body": "Separate groups with a rule, spacing or an existing soft surface tone.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do use the paper background, green ink and locally hosted Atkinson Hyperlegible Next.",
+      "Do use shared semantic tokens, fonts and component classes from @lazy/theme.",
       "Do preserve a lightweight timer, stronger values and smaller units.",
       "Do preserve visible focus and touch targets of at least 48 px.",
-      "Do check complete content on phones and short landscape tablets."
+      "Do check complete content on phones, short landscape tablets and with enlarged browser fonts."
     ],
     "donts": [
-      "Don't restore the replaced dark palette with a gold accent.",
+      "Don't introduce a private palette, duplicate font registrations or generated vendor edits.",
+      "Don't infer action fills from ink; dark compatibility depends on semantic action tokens.",
       "Don't split the six-tea table into cards in the landscape dashboard.",
       "Don't add decorative shadows, entrance animations or animation on every second."
     ]

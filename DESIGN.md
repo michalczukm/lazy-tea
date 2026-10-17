@@ -1,120 +1,117 @@
 ---
 name: lazy-tea
-description: A light tea brewing guide with a timer.
+description: A calm tea brewing dashboard using the shared lazy theme.
 colors:
-  bg: '#fbfaf5'
-  surface: '#fbfaf5'
-  ink: '#263d33'
-  muted: '#58675c'
-  accent: '#59784f'
-  on-accent: '#fbfaf5'
-  soft: '#e5eadd'
-  line: '#cdd5ca'
-  focus: '#263d33'
-  error: '#8f392b'
+  lazy-color-bg: '#fbfaf5'
+  lazy-color-surface: '#fbfaf5'
+  lazy-color-ink: '#263d33'
+  lazy-color-muted: '#58675c'
+  lazy-color-accent: '#59784f'
+  lazy-color-on-accent: '#fbfaf5'
+  lazy-color-soft: '#e5eadd'
+  lazy-color-line: '#cdd5ca'
+  lazy-color-focus: '#263d33'
+  lazy-color-error: '#8f392b'
+  lazy-color-pressed: '#d4dfcd'
+  lazy-action-bg: '#263d33'
+  lazy-action-hover: '#59784f'
+  lazy-action-active: '#263d33'
 typography:
   wordmark:
     fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '32px'
+    fontSize: '2rem'
     fontWeight: 700
+    lineHeight: 1.2
     letterSpacing: '-0.035em'
-  headline:
+  heading:
     fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '24px'
+    fontSize: 'clamp(1.5rem, 3vw, 2.25rem)'
     fontWeight: 600
     lineHeight: 1.2
     letterSpacing: '-0.025em'
-  title:
-    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '18px'
-    fontWeight: 600
   body:
     fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '16px'
+    fontSize: '1rem'
     fontWeight: 400
     lineHeight: 1.5
+  title:
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
+    fontSize: '1.125rem'
+    fontWeight: 600
+    lineHeight: 1.2
   note:
     fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '14px'
+    fontSize: '0.875rem'
     fontWeight: 400
-  label:
-    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '14px'
-    fontWeight: 600
-  table-number:
-    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '24px'
-    fontWeight: 600
-  mobile-parameter:
-    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '32px'
-    fontWeight: 600
-    lineHeight: 1.15
-    letterSpacing: '-0.025em'
   countdown:
     fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
-    fontSize: '88px'
+    fontSize: '5.5rem'
     fontWeight: 400
+    lineHeight: 1.15
+    letterSpacing: '-0.025em'
+  parameter:
+    fontFamily: 'Atkinson Hyperlegible Next, sans-serif'
+    fontSize: '2rem'
+    fontWeight: 600
     lineHeight: 1.15
     letterSpacing: '-0.025em'
 rounded:
-  control: '10px'
+  control: '0.625rem'
   row: '0'
   indicator: '50%'
 spacing:
-  tight: '6px'
-  small: '8px'
-  control-gap: '10px'
-  related: '12px'
-  standard: '16px'
-  section-small: '20px'
-  section: '24px'
-  page-inline: '32px'
-  columns: '36px'
+  '1': '0.25rem'
+  '2': '0.5rem'
+  '3': '0.75rem'
+  '4': '1rem'
+  '5': '1.25rem'
+  '6': '1.5rem'
+  '8': '2rem'
 components:
   button-primary:
-    backgroundColor: '{colors.ink}'
-    textColor: '{colors.bg}'
+    backgroundColor: '{colors.lazy-action-bg}'
+    textColor: '{colors.lazy-color-on-accent}'
     rounded: '{rounded.control}'
-    padding: '12px 24px'
+    padding: '0.75rem 1.5rem'
+  button-primary-hover:
+    backgroundColor: '{colors.lazy-action-hover}'
+    textColor: '{colors.lazy-color-on-accent}'
+  button-primary-active:
+    backgroundColor: '{colors.lazy-action-active}'
+    textColor: '{colors.lazy-color-on-accent}'
   button-reset:
-    backgroundColor: '{colors.surface}'
-    textColor: '{colors.ink}'
+    backgroundColor: '{colors.lazy-color-surface}'
+    textColor: '{colors.lazy-color-ink}'
     rounded: '{rounded.control}'
     padding: '12px 18px'
   button-text:
     backgroundColor: 'transparent'
-    textColor: '{colors.accent}'
+    textColor: '{colors.lazy-color-accent}'
     rounded: '{rounded.control}'
     padding: '0'
-  volume-choice:
-    backgroundColor: 'transparent'
-    textColor: '{colors.ink}'
+  choice:
+    backgroundColor: '{colors.lazy-color-surface}'
+    textColor: '{colors.lazy-color-ink}'
     rounded: '{rounded.control}'
-    padding: '10px 16px'
+    padding: '0.625rem 1rem'
   choice-selected:
-    backgroundColor: '{colors.ink}'
-    textColor: '{colors.bg}'
-  tea-choice-mobile:
-    backgroundColor: 'transparent'
-    textColor: '{colors.ink}'
-    rounded: '{rounded.control}'
-    padding: '10px 4px'
+    backgroundColor: '{colors.lazy-action-bg}'
+    textColor: '{colors.lazy-color-on-accent}'
   field:
-    backgroundColor: '{colors.surface}'
-    textColor: '{colors.ink}'
+    backgroundColor: '{colors.lazy-color-surface}'
+    textColor: '{colors.lazy-color-ink}'
     rounded: '{rounded.control}'
-    padding: '10px 12px'
-  tea-row-selected:
-    backgroundColor: '{colors.soft}'
-    textColor: '{colors.ink}'
+    padding: '0.625rem 0.75rem'
+  selected-row:
+    backgroundColor: '{colors.lazy-color-soft}'
+    textColor: '{colors.lazy-color-ink}'
     rounded: '{rounded.row}'
-  button-primary-hover:
-    backgroundColor: '{colors.accent}'
-    textColor: '{colors.bg}'
   wordmark:
-    textColor: '{colors.ink}'
+    textColor: '{colors.lazy-color-ink}'
     typography: '{typography.wordmark}'
+  countdown:
+    textColor: '{colors.lazy-color-ink}'
+    typography: '{typography.countdown}'
 ---
 
 # Design System: lazy-tea
@@ -123,120 +120,121 @@ components:
 
 **Creative North Star: "Dashboard by the kettle"**
 
-A light dashboard on a paper background, with green ink and a calm green accent. The direction matches the dashboard selected by the user: large, readable parameters, a lighter timer and the lazy-tea. wordmark with a green dot.
+A light dashboard on paper, with green ink, a calm green accent and readable brewing values. Flat sections and compact labels keep the tea table easy to scan; a regular-weight timer balances the stronger values and wordmark.
 
-Flat dividers and compact typography make brewing data easy to scan. The layout adjusts its density for phones and landscape tablets while preserving comfortable controls, clear selection and a clear timer state.
+The shared `@lazy/theme` package owns the visual foundation. The app owns its responsive brewing layout, tablet density and inline time editor. This migration preserves the established light appearance and device sizing.
 
 **Key Characteristics:**
 
-- Paper background, dark green ink and a green accent.
-- Locally hosted Atkinson Hyperlegible Next and tabular numerals.
+- Paper background, green ink and a green accent by default.
+- Shared, self-hosted Atkinson Hyperlegible Next and tabular numerals.
 - Flat dividers, outlined choices and gently rounded controls.
-- A lightweight timer and a stronger wordmark with a green dot.
+- A lightweight timer and a stronger wordmark with an accent dot.
 
 ## Colors
 
-The normative frontmatter values match the variables in `public/styles.css`.
+The frontmatter records the installed package's default light values. Canonical definitions live in `@lazy/theme/css/tokens.css`, upstream at `https://github.com/michalczukm/lazy-theme`. The dependency is pinned to `v0.1.0`, resolved to `4e03501afe2d0df97eceb3545ba1740f30402e4f`. App CSS consumes semantic `--lazy-*` properties directly; there is no private palette or alias layer.
 
 ### Primary
 
-- **Accent green** (`accent`): links, brand and selection dots, the completed timer and the Start hover state.
-- **Green ink** (`ink`): text, the primary action and selected option fills.
-- **Paper on accent** (`on-accent`): an existing token with the same value as the background; current primary actions and choices use `bg` directly.
+- **Accent green** (`lazy-color-accent`): links, the wordmark dot, selection dots and completed digits.
+- **Action fill** (`lazy-action-bg`, `lazy-action-hover`, `lazy-action-active`): primary and selected-choice backgrounds; paired with `lazy-color-on-accent` text. The frontmatter snapshots their resolved light colors.
 
 ### Neutral
 
-- **Paper** (`bg`, `surface`): shared background for the page, fields and Reset; sections do not form separate cards.
-- **Muted green** (`muted`): labels, units, status and field outlines.
-- **Light sage** (`soft`): the selected row and hover states for unselected choices or Reset.
-- **Sage line** (`line`): separators and option outlines.
-- **Focus ink** (`focus`): keyboard focus outlines and text-action hover states.
+- **Paper** (`lazy-color-bg`, `lazy-color-surface`): page and control surfaces.
+- **Green ink** (`lazy-color-ink`): primary text.
+- **Muted green** (`lazy-color-muted`): supporting text, units and field boundaries.
+- **Light sage** (`lazy-color-soft`): selected table rows and neutral hover states.
+- **Pressed sage** (`lazy-color-pressed`): neutral active states.
+- **Sage line** (`lazy-color-line`): decorative dividers and choice borders.
+- **Focus ink** (`lazy-color-focus`): keyboard focus outlines.
+- **Brick error** (`lazy-color-error`): invalid fields and feedback.
 
-**Brick error** (`error`) marks invalid fields and their messages.
+**The Semantic actions Rule.** Use action tokens for filled controls and selections; never derive action fill from ink.
 
-**The Clear selection Rule.** Selected options have an ink fill and light text; the selected row has a sage background and a green dot.
+The root explicitly selects light. The package also supports opt-in `data-lazy-theme="dark"`: charcoal-green surfaces, warm gold actions and dark action text. This is package compatibility, with the same markup and geometry; the app introduces no theme selector or automatic OS switching. Keep both palettes in the package.
 
 ## Typography
 
 **Display Font:** Atkinson Hyperlegible Next, sans-serif.
 **Body Font:** Atkinson Hyperlegible Next, sans-serif.
 
-Local files provide weights (400, 600, 700), with `font-display: swap` and synthesis disabled. One readable family serves the entire interface; base text is (16px) with line height (1.5).
+The package registers local weights (400, 600, 700), uses `font-display: swap` and disables synthesis. Its rem-based body and control roles respect browser font preferences. The app neither registers a second family nor keeps standalone font files.
 
 ### Hierarchy
 
-- **Wordmark:** the `wordmark` role, a compact brand mark (700).
-- **Headline:** the `headline` role, the question above phone tea selection (600).
-- **Title:** the `title` role, the timer heading (600); (16px) on phones.
-- **Body:** the `body` role; tips use line height (1.45) and a maximum width of (65ch).
-- **Note / Label:** the `note` and `label` roles; footnotes and default durations use (12px).
-- **Table number:** the `table-number` role; tea names use (18px, 600), units (0.65em, 400).
-- **Mobile parameter:** the `mobile-parameter` role; below (360px), values shrink to (28px), with (14px) units.
-- **Countdown:** the `countdown` role, light weight (400); phones and compact tablets use (80px), short tablets (72px). The time editor uses the same typography. Larger tablet variants are specified in Layout.
+- **Wordmark:** bold, compact tracking and an accent dot; uses the shared `wordmark` role.
+- **Heading:** the shared fluid `heading` role for the phone tea question.
+- **Title:** semibold timer and selected-tea headings; local phone headings use (16px).
+- **Body / Note:** shared body and supporting roles; tips use line height (1.45) and measure (65ch).
+- **Parameters:** shared semibold `parameter` role on phones; below (360px), values use (28px). Table values start at (24px), names at (18px), and units at (0.65em).
+- **Countdown:** regular `countdown` role for digits and the in-place editor. Phones and compact landscape tablets use (80px), short tablets (72px), and large tablets scale up to (112px).
 
 **The Calm numbers Rule.** Parameters and the timer use tabular numerals; units and labels remain smaller than their values.
 
 ## Layout
 
-The page is centered, with a maximum width of (1280px) and padding (24px 32px). Fine rules divide the header and shared volume bar. The table and timer form columns of `minmax(0, 1.8fr) minmax(300px, 1fr)`, separated by (36px). The table uses horizontal dividers; its first three columns occupy (30%, 25%, 27%).
+The shared page centers at (80rem), with default padding (24px 32px). The app owns the two-column brewing layout: `minmax(0, 1.8fr) minmax(300px, 1fr)` with a (36px) gap. Table columns begin at (30%, 25%, 27%); horizontal rules separate rows.
 
-Up to (899px) in portrait, or up to (759px) in any orientation, the page has a maximum width of (600px), padding (20px) and one column. A three-column choice grid replaces the table, with gaps of (8px). Parameters for one tea use `1.4fr 1fr 0.85fr` proportions and gaps of (10px). Below (360px), horizontal padding shrinks to (16px).
+Up to (899px) in portrait, or up to (759px) in any orientation, the app uses one column, a (600px) maximum width and (20px) padding. Tea choices replace the table: wrapping flex items start with a third-width basis and retain intrinsic label width. Parameter groups wrap at intrinsic widths. Volume choices use `repeat(auto-fit, minmax(4rem, 1fr))`, with unbroken labels. These patterns let controls reflow with 200% browser font sizing. Below (360px), horizontal padding becomes (16px).
 
-At (760–1280px) in landscape, the two columns use `minmax(0, 1.5fr) minmax(250px, 1fr)` and a gap of (24px). Page padding is (12px 24px), parameter cells use (4px 8px), and the timer uses (80px). Parameters remain (24px), tea names (18px), and buttons at least (48px) high. At heights up to (560px), vertical page padding shrinks to (8px), the timer to (72px), and spacing around the header and tips tightens. The page has a natural height, with no forced minimum or stretched table rows.
+At (760–1280px) in landscape, columns become `minmax(0, 1.5fr) minmax(250px, 1fr)`, gap (24px), padding (12px 24px) and cell padding (4px 8px). Controls remain at least (48px) high. At heights up to (560px), page padding becomes (8px) vertically and surrounding spacing tightens; the document retains natural height.
 
-At heights of at least (720px), actual text size scales with viewport width and height. At (1280×800), tea names are (25px), parameters (34px), table headings (16px), default durations (16px), controls (20px), notes and status (18px), and the timer and its editor (112px). After correcting the preview address, the user requested a larger scale. Page padding is (20px 28px), cell padding (8px 10px), and parameter line height (1.2). Columns use `minmax(0, 1.7fr) minmax(300px, 1fr)` with a gap of (28px). `clamp()` and `min()` limit scale on narrower or shorter viewports. Shorter screens retain the compact variant. Sizes were corrected using a photograph of the actual device: fitting content alone does not prove readability. Additional fields and messages may increase content height.
+Landscape tablets at least (720px) high use fluid sizing bounded by width and height. At (1280×800), tea names reach (25px), parameters (34px), table headings and default durations (16px), controls (20px), supporting text (18px) and digits (112px). Page padding is (20px 28px), cell padding (8px 10px), and columns are `minmax(0, 1.7fr) minmax(300px, 1fr)` with a (28px) gap. Preserve these app-specific readability adjustments when updating shared components.
 
 ## Elevation & Depth
 
-The system uses no shadows. The page and sections share a background; spacing and (1px) rules separate groups. Tonal changes mark selection, while focus remains an outline.
+The system uses no shadows. Shared surfaces, whitespace and (1px) horizontal rules separate groups. Tonal changes mark selection, while focus uses an outline.
 
-**The Flat surfaces Rule.** Separate groups with a rule, spacing or an existing sage surface tone.
+**The Flat surfaces Rule.** Separate groups with a rule, spacing or an existing soft surface tone.
 
 ## Shapes
 
-Buttons and fields use `control` corners; rows and tea-name buttons stay square (`row`). The selection dot has a diameter of (6px). Field, option and separator borders are (1px). The table has no surrounding card or vertical rules.
+Shared controls have gently rounded `control` corners. Table rows and tea-name buttons stay square; selection dots are circular (6px). Fields and choices have (1px) borders. The table has no surrounding card or vertical rules.
 
 ## Components
 
 ### Buttons
 
-The ink-colored Start uses `button-primary`, text (18px, 600), a minimum height of (56px) and an `ink` border. Hover changes the background and border to `accent`. Phones and compact tablets use (16px) text; compact tablets have a minimum height of (48px) and padding (10px 18px). The larger tablet scale is specified in Layout.
+Shared primary, secondary and text actions supply typography, borders, state colors and focus. Start uses semantic action fill and has a default minimum height of (56px). Reset adds local padding (12px 18px). Text actions remove padding, retain a (48px) minimum target and underline their text. Compact landscape sizing stays local; large tablets restore (56px) primary and Reset targets.
 
-Reset uses `button-reset`, a `line` border and a `soft` hover background. Text actions use `button-text`, (16px) text, an underline offset of (4px) and a minimum width of (48px); hover uses `focus`.
-
-All buttons have a minimum height of (48px). Button, field and link focus uses an outline of (3px solid focus), offset by (4px). Disabled buttons use `muted`, opacity (0.55) and a `not-allowed` cursor; disabled text actions lose their underline. There is no separate visual `:active` state.
+Primary hover and active states use action tokens; neutral hover and active states use soft and pressed tones. Hover rules respect hover capability. Disabled native controls use opacity (0.55) and a disabled cursor. Keyboard focus is (3px), offset (4px). Shared state transitions last (160ms ease-out); reduced motion disables transitions and animations.
 
 ### Choice controls
 
-Volume uses outlined `volume-choice`, weight (600), lighter units (400) and gaps of (6px). Phones distribute the options evenly and reduce padding to (10px 8px). Tea selection uses `tea-choice-mobile` and text (16px, 600). Both groups use the ink-colored `choice-selected`, `aria-pressed` and sage hover states for unselected options.
+Shared outlined buttons express selection with `aria-pressed`, action fill and on-accent text. Volume labels use lighter units; phone tea and volume groups use the wrapping geometry in Layout. Selection does not rely on color alone.
 
 ### Inputs / Fields
 
-The `field` variant has a minimum height of (48px), a `muted` outline and an `accent` caret. The custom-volume field is (112px) wide. The timer editor replaces the digits in place: fields are (2ch) wide, with no padding and only a `muted` bottom border. Save and cancel are text actions separated by (24px). `aria-invalid` changes the border to `error`; the message uses (14px).
+Shared fields have a muted border, surface background, accent caret and minimum height (48px). The custom-volume field is locally (112px) wide. Invalid state uses the error role and associated feedback. Visible labels accompany the volume field; inline editor fields have accessible names.
 
 ### Tea table
 
-The selected row uses `tea-row-selected`, and its tea-name button fills the first cell. Hover and selection use `soft`; a green dot distinguishes selection. Row backgrounds transition over (`160ms ease-out`); `prefers-reduced-motion: reduce` disables transitions. Digits do not animate every second.
+The shared semantic table supplies horizontal rules and soft selected rows. App-owned tea-name buttons fill the first cell and add an accent selection dot. Local sizing governs numbers, units and row density; row background transitions use shared motion tokens.
 
-### Timer and notes
+### Timer and inline editor
 
-The timer is a flat section with a bottom rule and padding (20px), reduced to (12px) on tablets. Status reserves (24px) of height, or (20px) on tablets. Actions form a `1fr auto` grid with a gap of (12px). Completion emphasizes status with weight (600) and `ink`, and digits with `accent`. Tips are short paragraphs.
+A flat section holds a regular-weight countdown, status and actions in a `1fr auto` grid. Editing replaces the digits in the same position with (2ch) fields, matching display typography and using only a bottom border. Save and cancel are text actions separated by (24px). Completion emphasizes status with semibold ink and digits with accent. The digits do not animate each second.
 
 ### Brand link
 
-`lazy-tea.` uses ink-colored text without an underline, a green dot and a minimum height of (48px). The skip link appears on focus. There is no separate navigation menu, card or chip system; choices are buttons.
+The shared ink-colored wordmark ends in an accent dot and has a minimum (48px) target. Shared skip navigation appears on focus. The app has no separate navigation menu, card or chip system.
+
+`public/index.html` loads the generated package stylesheet before `public/styles.css`; JavaScript markup uses shared component classes. `pnpm build` copies installed CSS, fonts and licenses into ignored `public/vendor/lazy-theme/`. Update the package dependency to change shared visual rules; edit app CSS for brewing geometry and device density.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- Do use the paper background, green ink and locally hosted Atkinson Hyperlegible Next.
+- Do use shared semantic tokens, fonts and component classes from @lazy/theme.
 - Do preserve a lightweight timer, stronger values and smaller units.
 - Do preserve visible focus and touch targets of at least 48 px.
-- Do check complete content on phones and short landscape tablets.
+- Do check complete content on phones, short landscape tablets and with enlarged browser fonts.
 
 ### Don't:
 
-- Don't restore the replaced dark palette with a gold accent.
+- Don't introduce a private palette, duplicate font registrations or generated vendor edits.
+- Don't infer action fills from ink; dark compatibility depends on semantic action tokens.
 - Don't split the six-tea table into cards in the landscape dashboard.
 - Don't add decorative shadows, entrance animations or animation on every second.

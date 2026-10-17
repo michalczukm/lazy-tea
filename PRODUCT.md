@@ -13,6 +13,9 @@ web
 - Target hosting: Cloudflare Pages.
 - Read lazy-list, lazy-dirt and their instructions before configuring CI or deployment. Do not guess the configuration.
 - HTML, CSS and JavaScript modules live in separate files under `public/`.
+- Shared UI comes from `@lazy/theme`, pinned to Git tag `v0.1.0` and resolved to a full commit in `pnpm-lock.yaml`.
+- `pnpm build` copies the installed CSS, fonts and licenses into ignored `public/vendor/lazy-theme/`. Development, verification and deployment run this asset-copy step; no bundler is introduced.
+- The package owns semantic colors, fonts, base styles and common controls. Tea-specific layout, timer editing and device sizing remain local.
 
 ## Users
 
@@ -68,7 +71,7 @@ Do not prescribe a fixed number of infusions.
 
 ## Confirmed Layout
 
-Selected style: the light dashboard at `http://127.0.0.1:4198/dashboard.html`, consistent with the green identity of `../lazy-diet`. It replaces the dark “Kuchenny pulpit” direction: paper background #fbfaf5, ink #263d33, green accent #59784f and locally hosted Atkinson Hyperlegible Next. Use lighter numerals, flat dividers and the `lazy-tea.` wordmark with a green dot.
+Selected style: the shared light baseline from [lazy-theme](https://github.com/michalczukm/lazy-theme), matching the previously selected dashboard and the lazy app family. It replaces the dark “Kuchenny pulpit” direction: paper background #fbfaf5, ink #263d33, green accent #59784f and locally hosted Atkinson Hyperlegible Next. Use lighter numerals, flat dividers and the `lazy-tea.` wordmark with a green dot.
 
 Landscape tablet: a six-tea table with the timer on the right. All basic content, including the complete text under “Kolejne parzenie”, should fit on screen. Target device: Lenovo TB310FU. Smaller landscape CSS widths retain the table instead of switching to the large phone view.
 

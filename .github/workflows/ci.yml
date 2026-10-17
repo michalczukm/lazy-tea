@@ -45,6 +45,7 @@ jobs:
           node-version: '22'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm build
       - name: Deploy production or PR preview
         run: pnpm exec wrangler pages deploy public --branch "$DEPLOY_BRANCH" --commit-hash "$COMMIT_SHA"
         env:

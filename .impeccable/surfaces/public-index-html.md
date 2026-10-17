@@ -8,9 +8,11 @@ related_targets: ["public/styles.css","public/app.js","public/tea.js","public/wa
 # Surface brief — public/index.html
 
 Mode: Operate. Job: read brewing parameters and start the timer while brewing.
-Confirmed direction: the user-selected light dashboard at
-http://127.0.0.1:4198/dashboard.html and the green identity of ../lazy-diet.
-Code-led restoration of the light design; replaces the dark “Kuchenny pulpit”.
+Confirmed direction: the shared light baseline from @lazy/theme v0.1.0,
+https://github.com/michalczukm/lazy-theme, preserving the approved tea composition.
+The installed package owns tokens, local fonts, base styles and common controls;
+tea-specific layout and device sizing remain in public/styles.css.
+Code-led migration of the established light UI to shared components.
 Local preview first; production deployment requires user approval.
 Target: Lenovo TB310FU in landscape; retain the table below 900 CSS px.
 Use natural document height, without a viewport minimum or stretched rows.
@@ -38,8 +40,7 @@ above the table, with large digits and a dark green Start on the right.
 Large parameters remain readable; tighter spacing and a timer sized for the
 viewport leave room for all text under “Kolejne parzenie”. Touch targets remain
 at least 48px. Phones keep six choices and one tea's parameters before the timer.
-FORM: The user's explicit request restores the light dashboard design and
-lazy-diet family identity. No new direction roll; the supplied dashboard is the
-visual authority.
+FORM: The user explicitly selected lazy-theme as the shared UI authority.
+No new direction roll; the pinned theme catalog supplies the visual contract.
 FINISH: Unreviewed and undocumented work is unfinished. Finish with the review,
 verdict, DESIGN.md and provenance for every shipped raster asset.

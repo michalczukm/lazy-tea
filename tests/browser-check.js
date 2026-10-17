@@ -6,6 +6,32 @@
     if (!condition) throw new Error(name)
     checks.push(name)
   }
+  const root = document.documentElement
+  check(
+    root.classList.contains('lazy-theme') && root.dataset.lazyTheme === 'light',
+    'shared theme starts in the approved light mode',
+  )
+  await document.fonts.ready
+  check(
+    performance
+      .getEntriesByType('resource')
+      .some(entry => new URL(entry.name).pathname.startsWith('/vendor/lazy-theme/fonts/')),
+    'fonts load from the installed shared theme',
+  )
+  root.dataset.lazyTheme = 'dark'
+  await new Promise(resolve => setTimeout(resolve, 200))
+  check(
+    getComputedStyle($('#start-pause')).backgroundColor === 'rgb(232, 196, 107)' &&
+      getComputedStyle($('[data-volume="350"]')).backgroundColor === 'rgb(232, 196, 107)' &&
+      getComputedStyle($('#start-pause')).color === 'rgb(36, 41, 31)',
+    'shared dark action colors reach primary and selected controls',
+  )
+  root.dataset.lazyTheme = 'light'
+  await new Promise(resolve => setTimeout(resolve, 200))
+  check(
+    getComputedStyle($('#start-pause')).backgroundColor === 'rgb(38, 61, 51)',
+    'returning to light restores the shared action color',
+  )
   function edit(seconds) {
     $('#edit-time').click()
     $('#minutes').value = '0'

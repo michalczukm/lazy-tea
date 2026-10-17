@@ -3,13 +3,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory public",
+    "dev": "pnpm build && python3 -m http.server 4173 --bind 127.0.0.1 --directory public",
     "test": "node --test tests/*.test.js",
-    "lint": "oxlint public tests",
+    "lint": "oxlint public scripts tests",
     "fmt": "oxfmt .",
     "fmt:check": "oxfmt --check .",
-    "verify": "pnpm test && pnpm lint && pnpm fmt:check",
-    "deploy": "wrangler pages deploy public --project-name lazy-tea --branch main"
+    "verify": "pnpm build && pnpm test && pnpm lint && pnpm fmt:check",
+    "deploy": "pnpm build && wrangler pages deploy public --project-name lazy-tea --branch main",
+    "build": "node scripts/copy-theme.js"
+  },
+  "dependencies": {
+    "@lazy/theme": "github:michalczukm/lazy-theme#v0.1.0"
   },
   "devDependencies": {
     "oxfmt": "0.73.0",

@@ -1,4 +1,5 @@
 node_modules/
+public/vendor/lazy-theme/
 .wrangler/
 .superpowers/
 .DS_Store
