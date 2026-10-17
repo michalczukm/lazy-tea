@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.superpowers/
+.DS_Store
+.impeccable/questions/
+.impeccable/decisions/
+.impeccable/review/
+.impeccable/config.local.json
+.dev.vars*
+.env*

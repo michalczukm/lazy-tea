@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fbfaf5" />
+    <meta
+      name="description"
+      content="Temperatura, czas i ilość suszu dla sześciu herbat. Prosta ściąga do kubka i dzbanka z minutnikiem."
+    />
+    <title>lazy-tea — ściąga do parzenia herbaty</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/manrope.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#brewing">Przejdź do parzenia</a>
+    <div class="page">
+      <header class="page-header">
+        <a class="wordmark" href="/" aria-label="lazy-tea — strona główna"
+          >lazy-tea<span aria-hidden="true">.</span></a
+        >
+        <p>Twoja ściąga do kubka i dzbanka.</p>
+      </header>
+
+      <main id="brewing">
+        <section class="mobile-guide" aria-labelledby="mobile-heading">
+          <h1 id="mobile-heading">Co dziś parzysz?</h1>
+          <div id="tea-picker" class="tea-picker" role="group" aria-label="Rodzaj herbaty"></div>
+          <div class="selected-tea">
+            <h2 id="selected-name">Zielona</h2>
+            <dl class="mobile-parameters">
+              <div>
+                <dt>Woda</dt>
+                <dd><span id="selected-temperature">75–80</span><span class="unit">°C</span></dd>
+              </div>
+              <div>
+                <dt>Parzenie</dt>
+                <dd><span id="selected-time">1–3</span><span class="unit">min</span></dd>
+              </div>
+              <div>
+                <dt>Susz</dt>
+                <dd><span data-dose>3,5</span><span class="unit">g</span></dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="volume-bar" aria-label="Objętość wody">
+          <fieldset>
+            <legend>Ile wody?</legend>
+            <div class="volume-options" role="group" aria-label="Wybierz objętość">
+              <button type="button" data-volume="250" aria-pressed="false">
+                250 <span>ml</span>
+              </button>
+              <button type="button" data-volume="350" aria-pressed="true">
+                350 <span>ml</span>
+              </button>
+              <button type="button" data-volume="500" aria-pressed="false">
+                500 <span>ml</span>
+              </button>
+              <button type="button" data-volume="custom" aria-pressed="false">Własna</button>
+            </div>
+          </fieldset>
+          <div class="custom-volume" id="custom-volume-wrap" hidden>
+            <label for="custom-volume">Objętość w ml</label>
+            <input
+              id="custom-volume"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              max="10000"
+              step="1"
+              value="350"
+              aria-describedby="volume-error"
+            />
+          </div>
+          <p class="dose-note">
+            <strong>1 g suszu / 100 ml</strong><span>Punkt startowy. Dostosuj do smaku.</span>
+          </p>
+          <p id="volume-error" class="field-error" role="status" hidden>
+            Podaj pełną liczbę od 1 do 10 000 ml.
+          </p>
+        </section>
+
+        <div class="brewing-layout">
+          <section class="table-guide" aria-label="Parametry sześciu herbat">
+            <h1 class="sr-only">Ściąga do parzenia herbaty</h1>
+            <table>
+              <caption class="sr-only">
+                Wybierz herbatę, aby ustawić minutnik i przeczytać wskazówki.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Herbata</th>
+                  <th scope="col">Woda</th>
+                  <th scope="col">Parzenie</th>
+                  <th scope="col">Susz</th>
+                </tr>
+              </thead>
+              <tbody id="tea-table"></tbody>
+            </table>
+            <p class="table-footnote">
+              Susz liściasty · <span data-volume-label>350 ml</span> wody
+            </p>
+          </section>
+
+          <aside class="brewing-sidebar" aria-label="Minutnik i wskazówki">
+            <section class="timer" aria-labelledby="timer-heading">
+              <div class="timer-heading">
+                <h2 id="timer-heading">Minutnik</h2>
+                <span id="timer-tea">Zielona</span>
+              </div>
+              <p id="timer-status" class="timer-status" role="status" aria-live="polite">
+                Gotowy do parzenia
+              </p>
+              <output
+                id="countdown"
+                class="countdown"
+                role="timer"
+                aria-live="off"
+                aria-label="Pozostały czas"
+                >2:00</output
+              >
+              <button
+                id="edit-time"
+                class="text-button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="time-editor"
+              >
+                Zmień czas
+              </button>
+              <form id="time-editor" class="time-editor" hidden novalidate>
+                <div class="time-inputs">
+                  <label
+                    >Minuty<input
+                      id="minutes"
+                      type="number"
+                      inputmode="numeric"
+                      min="0"
+                      max="99"
+                      step="1"
+                      value="2"
+                  /></label>
+                  <label
+                    >Sekundy<input
+                      id="seconds"
+                      type="number"
+                      inputmode="numeric"
+                      min="0"
+                      max="59"
+                      step="1"
+                      value="0"
+                  /></label>
+                  <button type="submit">Ustaw</button>
+                </div>
+                <p id="time-error" class="field-error" role="status" hidden>
+                  Wpisz 0–99 minut i 0–59 sekund, łącznie więcej niż zero.
+                </p>
+              </form>
+              <div class="timer-actions">
+                <button id="start-pause" class="primary-button" type="button">Start</button>
+                <button id="reset" class="reset-button" type="button">Reset</button>
+              </div>
+              <p id="timer-context" class="timer-context" hidden></p>
+              <p id="audio-note" class="audio-note">Na koniec: delikatny dźwięk i komunikat.</p>
+            </section>
+
+            <section class="tea-notes" aria-labelledby="notes-heading">
+              <h2 id="notes-heading">Warto wiedzieć <span id="notes-name">· Zielona</span></h2>
+              <p id="tea-tip">Gdy gorzka, spróbuj chłodniejszej wody lub krótszego czasu</p>
+              <h3>Kolejne parzenie</h3>
+              <p id="tea-rebrew">Warto spróbować; dostosuj czas do smaku</p>
+            </section>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p class="package-note">Zalecenia na opakowaniu mają pierwszeństwo.</p>
+        <p>To wartości startowe. Białe herbaty i oolongi mogą wymagać innych parametrów.</p>
+        <p class="background-note">
+          Zostaw kartę otwartą. Przy zablokowanym ekranie alarm może się nie odezwać.
+        </p>
+      </footer>
+      <noscript
+        >Włącz JavaScript, aby wyświetlić sześć herbat, przeliczać susz i korzystać z
+        minutnika.</noscript
+      >
+    </div>
+  </body>
+</html>

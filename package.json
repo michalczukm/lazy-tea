@@ -1,0 +1,20 @@
+{
+  "name": "lazy-tea",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory public",
+    "test": "node --test tests/*.test.js",
+    "lint": "oxlint public tests",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "verify": "pnpm test && pnpm lint && pnpm fmt:check",
+    "deploy": "wrangler pages deploy public --project-name lazy-tea --branch main"
+  },
+  "devDependencies": {
+    "oxfmt": "0.73.0",
+    "oxlint": "1.88.0",
+    "wrangler": "4.151.1"
+  },
+  "packageManager": "pnpm@11.8.0"
+}
