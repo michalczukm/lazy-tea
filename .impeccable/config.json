@@ -1,3 +1,18 @@
 {
-  "buildPath": "code"
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-10-17T19:08:51.303Z",
+        "reason": "User confirmed: selected Kuchenna ściąga via model-pick on the Impeccable decision page; the approved direction explicitly uses warm paper #FBFAF5, recorded in DESIGN.md and the surface brief."
+      }
+    ]
+  }
 }
