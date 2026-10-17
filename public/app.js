@@ -1,4 +1,5 @@
 import { TEAS, doseForVolume, durationFromParts, formatTime, BrewTimer } from './tea.js'
+import { keepScreenAwake } from './wake-lock.js'
 
 const $ = selector => document.querySelector(selector)
 const teaById = id => TEAS.find(tea => tea.id === id)
@@ -269,3 +270,4 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('pageshow', tick)
 renderSelection()
 renderVolume()
+keepScreenAwake()

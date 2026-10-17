@@ -470,22 +470,6 @@ tbody td {
   margin-bottom: 5px;
 }
 
-.page-footer {
-  border-top: 1px solid var(--line);
-  margin-top: 28px;
-  padding-top: 18px;
-  color: var(--muted);
-  font-size: 12px;
-}
-.package-note {
-  color: var(--ink);
-  font-weight: 700;
-  font-size: 13px;
-}
-.background-note {
-  margin-top: 10px;
-  font-size: 12px;
-}
 noscript {
   display: block;
   padding: 24px 0;
@@ -523,10 +507,6 @@ noscript {
   .countdown,
   .time-inputs {
     font-size: 80px;
-  }
-  .page-footer {
-    margin-top: 20px;
-    padding-top: 14px;
   }
 }
 
@@ -688,13 +668,6 @@ noscript {
   }
   .tea-notes h3 {
     font-size: 13px;
-  }
-  .page-footer {
-    margin-top: 28px;
-    font-size: 12px;
-  }
-  .background-note {
-    font-size: 12px;
   }
 }
 

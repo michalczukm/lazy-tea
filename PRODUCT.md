@@ -49,6 +49,10 @@ sześciu rodzajów powinny mieścić się na jednym ekranie w orientacji poziome
   „Gotowe”. Bez biblioteki i pliku audio.
 - Odczyt czasu jest korygowany po powrocie z tła; brak gwarancji alarmu
   przy zablokowanym urządzeniu i brak powiadomień systemowych.
+- Widoczna strona automatycznie korzysta z Screen Wake Lock, także przed
+  uruchomieniem minutnika. Po powrocie do karty ponawia blokadę uśpienia.
+  System lub przeglądarka mogą odmówić; brak API nie blokuje parzenia.
+- Interfejs nie ma stopki ani dodatkowych uwag pod główną zawartością.
 
 ## Approved Content
 
@@ -64,7 +68,7 @@ Użytkownik zatwierdził poniższą treść wraz ze zmianą dawki na 1 g / 100 m
 | Rooibos   | 95–100°C | 5–7 min | 5:00     |
 
 To uproszczone wartości startowe, nie uniwersalne receptury. Szczególnie
-białe herbaty i oolongi mają zróżnicowane zalecenia. Stała, widoczna uwaga:
+białe herbaty i oolongi mają zróżnicowane zalecenia. Zasada interpretacji treści:
 **„Zalecenia na opakowaniu mają pierwszeństwo”.**
 
 | Herbata   | Kolejne parzenie                        | Wskazówka                                                                   |

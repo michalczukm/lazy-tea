@@ -30,6 +30,6 @@ CI checks PRs and `main`. Same-repo PRs get previews; `main` deploys production.
 Required GitHub secrets: `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`
 (with Cloudflare Pages Edit permission).
 
-Keep the tab open. Locked devices may suppress the timer alarm.
+The visible page requests Screen Wake Lock. Browsers or power-saving settings may deny it.
 Package brewing instructions take priority. [Brewing data and sources](PRODUCT.md).
 [Font license](public/fonts/OFL.txt).
