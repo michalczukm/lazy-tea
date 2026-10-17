@@ -1,5 +1,7 @@
 # lazy-tea
 
+[Otwórz ściągę](https://lazy-tea.pages.dev/)
+
 Polska ściąga do parzenia herbaty liściastej w kubku lub dzbanku.
 Czarna, Earl Grey, zielona, biała, oolong i rooibos. Temperatura, czas,
 przelicznik suszu oraz minutnik z subtelnym dźwiękiem i komunikatem.
@@ -20,6 +22,13 @@ pnpm dev
 Otwórz http://127.0.0.1:4173. Pliki strony znajdują się w public/.
 Nie ma kroku budowania. Testy: pnpm test. Pełna weryfikacja: pnpm verify.
 Formatowanie: pnpm fmt.
+
+Sprawdzenie rzeczywistego przepływu w przeglądarce (wymaga agent-browser):
+
+```sh
+agent-browser --session lazy-tea-app open http://127.0.0.1:4173
+agent-browser --session lazy-tea-app eval --stdin < tests/browser-check.js
+```
 
 ## Minutnik i dźwięk
 
@@ -57,23 +66,25 @@ Konfiguracja jest dostosowana do Pages, bez serwera Workers i bundlera.
 - Wyłącznie katalog public/ jest publikowany.
 - Workflow nie wysyła komentarzy do PR.
 
-Jednorazowo utwórz projekt Pages Direct Upload lazy-tea z produkcyjną
-gałęzią main i ustaw sekrety repozytorium CLOUDFLARE_API_TOKEN
-(uprawnienie Account / Cloudflare Pages / Edit) oraz CLOUDFLARE_ACCOUNT_ID.
-Nie zapisuj wartości w repozytorium.
+Projekt Pages Direct Upload lazy-tea jest utworzony, z produkcyjną gałęzią
+main. CI wymaga sekretów repozytorium CLOUDFLARE_API_TOKEN (uprawnienie
+Account / Cloudflare Pages / Edit) oraz CLOUDFLARE_ACCOUNT_ID.
+Nie zapisuj wartości w repozytorium. Token można bezpiecznie wprowadzić
+interaktywnie przez GitHub CLI:
 
 ```sh
-pnpm exec wrangler pages project create lazy-tea --production-branch main --force
+gh secret set CLOUDFLARE_API_TOKEN --repo michalczukm/lazy-tea
 pnpm run deploy
 ```
 
 Polecenie pnpm run deploy publikuje produkcję. Do lokalnego sprawdzania
 obsługi nagłówków Pages można użyć pnpm exec wrangler pages dev public.
 
-Flaga --force jest potrzebna tylko przy utworzeniu projektu: zachowuje
-wybrany Cloudflare Pages, zamiast domyślnego przekierowania nowego projektu
-do Workers w obecnej wersji Wrangler. Kolejne deploye istniejącego projektu
-Pages nie wymagają tej flagi.
+Przy odtworzeniu infrastruktury użyj
+`pnpm exec wrangler pages project create lazy-tea --production-branch main --force`.
+Flaga --force jest potrzebna tylko przy utworzeniu projektu: zachowuje Pages,
+zamiast domyślnego przekierowania nowego projektu do Workers w obecnej wersji
+Wrangler. Kolejne deploye istniejącego projektu Pages nie wymagają tej flagi.
 
 Dokumentacja:
 [Pages Direct Upload z CI](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/),
