@@ -217,7 +217,7 @@ Telefoniczny wybór herbaty używa `tea-choice-mobile`, tekstu (14px, 600) i sia
 
 ### Inputs / Fields
 
-Wariant `field` ma minimalną wysokość (48px), obrys (1px solid line), tło papieru i caret w kolorze atramentu. Pole własnej objętości ma szerokość (112px). Edytor minutnika układa minuty, sekundy i przycisk Ustaw w kolumnach `1fr 1fr auto` z odstępem (8px); pola mają padding (8px). Niepoprawne pola używają obrysu `error`, komunikatu tekstowego (13px) i `aria-invalid`.
+Wariant `field` ma minimalną wysokość (48px), obrys (1px solid line), tło papieru i caret w kolorze atramentu. Pole własnej objętości ma szerokość (112px). Edytor minutnika zastępuje odczyt czasu w tym samym miejscu. Minuty i sekundy mają tę samą typografię co cyfry minutnika, szerokość (2ch), zerowy padding i jedynie dolny obrys (1px solid line); pola rozdziela dwukropek. Pod nimi Ustaw czas i Anuluj zajmują miejsce kontrolki Zmień czas, z odstępem (24px). Poprawna edycja nie przesuwa przycisku Start. Niepoprawne pola używają obrysu `error`, komunikatu tekstowego (13px) i `aria-invalid`.
 
 ### Tea table
 
@@ -228,6 +228,8 @@ Wybrany wiersz używa `tea-row-selected`; nazwa herbaty ma (18px, 650), na table
 Minutnik jest częścią płaskiej prawej kolumny, z dolną linią i paddingiem dolnym (24px). Nazwa odliczanej herbaty jest obok nagłówka; status rezerwuje wysokość (24px), a liczby używają roli `countdown`. Działania są siatką `1fr auto` z odstępem (12px). „Gotowe” pozostaje widocznym komunikatem; status ma wówczas wagę (800), a cyfry kolor `done`.
 
 Przeglądanie innej herbaty podczas odliczania albo pauzy nie zmienia sesji minutnika. Przy rozbieżnym wyborze pojawia się tekst wskazujący nadal odliczaną herbatę. Edycja czasu jest wówczas wyłączona. Wskazówki odnoszą się do przeglądanej pozycji i pozostają krótkimi akapitami.
+
+Zmień czas otwiera edycję w miejscu dużych cyfr, bez dodatkowego panelu. Ustaw czas lub Enter zapisuje wartość; Anuluj lub Escape przywraca niezmieniony odczyt. Fokus wraca do kontrolki edycji. Uruchomienie minutnika podczas poprawnej edycji zapisuje czas i rozpoczyna odliczanie.
 
 ### Brand link and assets
 

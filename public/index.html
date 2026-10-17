@@ -123,6 +123,48 @@
                 aria-label="Pozostały czas"
                 >2:00</output
               >
+              <form
+                id="time-editor"
+                class="time-editor"
+                aria-label="Ustaw czas parzenia"
+                hidden
+                novalidate
+              >
+                <div class="time-inputs">
+                  <label>
+                    <span class="sr-only">Minuty</span>
+                    <input
+                      id="minutes"
+                      type="number"
+                      inputmode="numeric"
+                      min="0"
+                      max="99"
+                      step="1"
+                      value="2"
+                    />
+                  </label>
+                  <span class="time-separator" aria-hidden="true">:</span>
+                  <label>
+                    <span class="sr-only">Sekundy</span>
+                    <input
+                      id="seconds"
+                      type="number"
+                      inputmode="numeric"
+                      min="0"
+                      max="59"
+                      step="1"
+                      value="00"
+                    />
+                  </label>
+                </div>
+                <div class="time-edit-actions">
+                  <button class="text-button" type="submit">Ustaw czas</button>
+                  <button id="cancel-time" class="text-button" type="button">Anuluj</button>
+                </div>
+                <p id="time-error" class="field-error" role="status" hidden>
+                  Wpisz 0–99 minut i 0–59 sekund, łącznie więcej niż zero.
+                </p>
+              </form>
               <button
                 id="edit-time"
                 class="text-button"
@@ -132,34 +174,6 @@
               >
                 Zmień czas
               </button>
-              <form id="time-editor" class="time-editor" hidden novalidate>
-                <div class="time-inputs">
-                  <label
-                    >Minuty<input
-                      id="minutes"
-                      type="number"
-                      inputmode="numeric"
-                      min="0"
-                      max="99"
-                      step="1"
-                      value="2"
-                  /></label>
-                  <label
-                    >Sekundy<input
-                      id="seconds"
-                      type="number"
-                      inputmode="numeric"
-                      min="0"
-                      max="59"
-                      step="1"
-                      value="0"
-                  /></label>
-                  <button type="submit">Ustaw</button>
-                </div>
-                <p id="time-error" class="field-error" role="status" hidden>
-                  Wpisz 0–99 minut i 0–59 sekund, łącznie więcej niż zero.
-                </p>
-              </form>
               <div class="timer-actions">
                 <button id="start-pause" class="primary-button" type="button">Start</button>
                 <button id="reset" class="reset-button" type="button">Reset</button>

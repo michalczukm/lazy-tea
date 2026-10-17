@@ -30,6 +30,28 @@
   )
   $('[data-volume="350"]').click()
 
+  const clockTop = $('#countdown').getBoundingClientRect().top
+  const startTop = $('#start-pause').getBoundingClientRect().top
+  $('#edit-time').click()
+  check($('#countdown').hidden, 'editing replaces the time readout')
+  check(
+    Math.abs($('.time-inputs').getBoundingClientRect().top - clockTop) < 2,
+    'time inputs occupy the clock position',
+  )
+  check(
+    Math.abs($('#start-pause').getBoundingClientRect().top - startTop) < 2,
+    'editing does not add a panel or move the Start action',
+  )
+  $('#minutes').value = '9'
+  $('#cancel-time').click()
+  check(
+    !$('#countdown').hidden && $('#countdown').textContent === '2:00',
+    'cancel restores the unchanged time readout',
+  )
+  $('#edit-time').click()
+  $('#time-editor').dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))
+  check($('#time-editor').hidden, 'Escape closes inline time editing')
+
   edit(0)
   check(!$('#time-error').hidden && !$('#time-editor').hidden, 'zero duration cannot be applied')
   $('#seconds').value = '5'

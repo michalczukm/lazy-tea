@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-17T19:09:12.356941Z",
+  "generatedAt": "2026-10-17T19:24:05.089353Z",
   "title": "Design System: lazy-tea",
   "extensions": {
     "colorMeta": {
@@ -277,6 +277,13 @@
       "description": "Nazwa sesji, trwały status i duże cyfry; klasa ds-done przedstawia zakończenie.",
       "html": "<section class=\"ds-timer ds-done\" aria-label=\"Minutnik\"><div class=\"ds-timer-heading\"><h2>Minutnik</h2><span>Zielona</span></div><p class=\"ds-status\" role=\"status\">Gotowe</p><output class=\"ds-countdown\" role=\"timer\" aria-label=\"Pozostały czas\">0:00</output></section>",
       "css": ".ds-timer{font-family:Manrope,sans-serif;color:var(--ink,#263d33);padding-bottom:24px;border-bottom:1px solid var(--line,#cdd5ca);} .ds-timer-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;} .ds-timer-heading h2{margin:0;font-size:18px;font-weight:700;text-wrap:balance;} .ds-timer-heading>span{font-size:14px;color:var(--muted,#58675c);} .ds-status{margin:12px 0 0;min-height:24px;font-size:13px;line-height:1.6;color:var(--muted,#58675c);} .ds-countdown{display:block;font-size:88px;font-weight:500;line-height:1.2;letter-spacing:-.04em;font-variant-numeric:tabular-nums;padding-top:2px;} .ds-done .ds-status{color:var(--ink,#263d33);font-weight:800;} .ds-done .ds-countdown{color:#4b6b3e;} @media(min-width:900px) and (max-width:1100px){.ds-countdown{font-size:80px;}} @media(max-width:899px){.ds-timer-heading h2{font-size:17px;}.ds-status{margin-top:8px;}}"
+    },
+    {
+      "name": "Edycja minutnika w miejscu",
+      "kind": "custom",
+      "description": "Pola minut i sekund zastępują odczyt; zapis i anulowanie zajmują miejsce kontrolki edycji, bez przesuwania przycisku Start.",
+      "html": "<form class=\"ds-time-editor\" aria-label=\"Ustaw czas parzenia\"><div class=\"ds-time-inputs\"><label><span class=\"ds-sr-only\">Minuty</span><input type=\"number\" min=\"0\" max=\"99\" value=\"2\"></label><span aria-hidden=\"true\">:</span><label><span class=\"ds-sr-only\">Sekundy</span><input type=\"number\" min=\"0\" max=\"59\" value=\"00\"></label></div><div class=\"ds-time-actions\"><button type=\"button\">Ustaw czas</button><button type=\"button\">Anuluj</button></div></form>",
+      "css": ".ds-time-editor{font-family:Manrope,sans-serif;color:var(--ink,#263d33)} .ds-time-inputs{display:flex;align-items:baseline;font-size:88px;font-weight:500;line-height:1.2;letter-spacing:-.04em;font-variant-numeric:tabular-nums;padding-top:2px} .ds-time-inputs label{min-width:0} .ds-time-inputs input{display:block;width:2ch;min-width:0;min-height:0;margin:0;padding:0;border:0;border-bottom:1px solid var(--line,#cdd5ca);border-radius:0;font:inherit;line-height:inherit;letter-spacing:inherit;appearance:textfield;background:var(--paper,#fbfaf5);color:inherit;caret-color:var(--ink,#263d33)} .ds-time-inputs input::-webkit-inner-spin-button,.ds-time-inputs input::-webkit-outer-spin-button{appearance:none;margin:0} .ds-time-actions{display:flex;gap:24px} .ds-time-actions button{font:inherit;font-size:13px;color:var(--muted,#58675c);border:0;border-radius:8px;background:transparent;text-decoration:underline;text-underline-offset:4px;min-height:48px;padding:0;cursor:pointer} .ds-time-actions button:hover{color:var(--ink,#263d33)} .ds-time-editor input:focus-visible,.ds-time-editor button:focus-visible{outline:3px solid var(--ink,#263d33);outline-offset:4px} .ds-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0} @media(min-width:900px) and (max-width:1100px){.ds-time-inputs{font-size:80px}}"
     }
   ],
   "narrative": {

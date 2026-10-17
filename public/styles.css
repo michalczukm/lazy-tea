@@ -345,7 +345,8 @@ tbody td {
   font-size: 13px;
   margin-top: 12px;
 }
-.countdown {
+.countdown,
+.time-inputs {
   display: block;
   font-size: 88px;
   font-weight: 500;
@@ -403,29 +404,36 @@ tbody td {
   font-weight: 650;
   color: var(--ink);
 }
-.time-editor {
-  padding: 12px 0;
-}
 .time-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  align-items: end;
-  gap: 8px;
+  display: flex;
+  align-items: baseline;
 }
 .time-inputs label {
-  font-size: 12px;
-  color: var(--muted);
+  min-width: 0;
 }
 .time-inputs input {
   display: block;
-  margin-top: 5px;
-  padding: 8px;
+  width: 2ch;
   min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  appearance: textfield;
 }
-.time-inputs button {
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  background: var(--soft);
+.time-inputs input::-webkit-inner-spin-button,
+.time-inputs input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.time-edit-actions {
+  display: flex;
+  gap: 24px;
 }
 .time-editor .field-error {
   margin-top: 8px;
@@ -512,7 +520,8 @@ noscript {
   .tea-select {
     font-size: 17px;
   }
-  .countdown {
+  .countdown,
+  .time-inputs {
     font-size: 80px;
   }
   .page-footer {
@@ -654,7 +663,8 @@ noscript {
   .timer-status {
     margin-top: 8px;
   }
-  .countdown {
+  .countdown,
+  .time-inputs {
     font-size: 88px;
   }
   .timer-actions {

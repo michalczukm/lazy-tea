@@ -38,6 +38,8 @@ sześciu rodzajów powinny mieścić się na jednym ekranie w orientacji poziome
 - Dawka służy jako punkt startowy do dostosowania według smaku.
 - Minutnik z czasem domyślnym dla herbaty, ręczną edycją, startem,
   pauzą i resetem.
+- Edycja czasu zastępuje duże cyfry polami minut i sekund w tym samym
+  miejscu. Bez dodatkowego panelu; dostępne zapisanie i anulowanie zmiany.
 - Dla każdej herbaty: temperatura wody, zakres czasu, domyślny czas
   minutnika, dawka suszu, informacja o kolejnym parzeniu i jedna wskazówka.
 - Kolejność prac: uzgodnienie treści, projekt z Impeccable, implementacja.

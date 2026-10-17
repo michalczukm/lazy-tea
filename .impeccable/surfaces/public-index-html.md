@@ -12,6 +12,8 @@ Confirmed direction: Kuchenna ściąga; code-led; tablet 10″ landscape.
 Signature interaction: wybór wiersza łączy parametry, wskazówkę i gotowy minutnik;
 przeglądanie pozostaje niezależne od uruchomionej sesji.
 Motion: krótka zmiana tła zaznaczenia, bez wejść i animowania każdej sekundy.
+Time editing: zastępuje duży odczyt polami minut i sekund w tej samej pozycji;
+zapis i anulowanie zajmują miejsce kontrolki Zmień czas, bez dodatkowego panelu.
 
 ## Direction contract
 

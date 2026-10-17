@@ -32,8 +32,12 @@ function activeSession() {
 
 function closeEditor() {
   $('#time-editor').hidden = true
+  $('#countdown').hidden = false
+  $('#edit-time').hidden = false
   $('#edit-time').setAttribute('aria-expanded', 'false')
   $('#time-error').hidden = true
+  $('#minutes').setAttribute('aria-invalid', 'false')
+  $('#seconds').setAttribute('aria-invalid', 'false')
 }
 
 function renderSelection() {
@@ -193,14 +197,24 @@ $('#custom-volume').addEventListener('input', event => {
 })
 
 $('#edit-time').addEventListener('click', () => {
-  const opening = $('#time-editor').hidden
-  $('#time-editor').hidden = !opening
-  $('#edit-time').setAttribute('aria-expanded', String(opening))
-  if (opening) {
-    $('#minutes').value = Math.floor(timer.durationSeconds / 60)
-    $('#seconds').value = timer.durationSeconds % 60
-    $('#minutes').focus()
-    $('#minutes').select()
+  $('#time-editor').hidden = false
+  $('#countdown').hidden = true
+  $('#edit-time').hidden = true
+  $('#edit-time').setAttribute('aria-expanded', 'true')
+  $('#minutes').value = Math.floor(timer.durationSeconds / 60)
+  $('#seconds').value = String(timer.durationSeconds % 60).padStart(2, '0')
+  $('#minutes').focus()
+  $('#minutes').select()
+})
+function cancelTimeEdit() {
+  closeEditor()
+  $('#edit-time').focus()
+}
+$('#cancel-time').addEventListener('click', cancelTimeEdit)
+$('#time-editor').addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    cancelTimeEdit()
   }
 })
 $('#time-editor').addEventListener('submit', event => {
@@ -214,7 +228,7 @@ $('#time-editor').addEventListener('submit', event => {
   timer.configure(timer.teaId, seconds)
   closeEditor()
   renderTimer()
-  $('#edit-time').focus()
+  if (event.submitter) $('#edit-time').focus()
 })
 $('#start-pause').addEventListener('click', () => {
   const wasRunning = timer.status === 'running'
