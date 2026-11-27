@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#fbfaf5" />
     <meta
       name="description"
-      content="Temperatura, czas i ilość suszu dla sześciu herbat. Prosta ściąga do kubka i dzbanka z minutnikiem."
+      content="Temperatura, czas i ilość suszu dla sześciu herbat. Minutnik do parzenia oraz przepisy na matchę i matcha latte."
     />
     <title>lazy-tea — ściąga do parzenia herbaty</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -28,205 +28,309 @@
         <a class="lazy-wordmark wordmark" href="/" aria-label="lazy-tea — strona główna"
           >lazy-tea<span aria-hidden="true">.</span></a
         >
-        <p class="lazy-note">Twoja ściąga do kubka i dzbanka.</p>
+        <nav class="lazy-choices guide-nav" aria-label="Poradniki" data-guide-picker hidden>
+          <button type="button" class="lazy-choice" aria-controls="tea-guide" aria-pressed="true">
+            Herbaty
+          </button>
+          <button
+            type="button"
+            class="lazy-choice"
+            aria-controls="matcha-guide"
+            aria-pressed="false"
+          >
+            Matcha
+          </button>
+        </nav>
       </header>
 
-      <main id="brewing">
-        <section class="mobile-guide" aria-labelledby="mobile-heading">
-          <h1 id="mobile-heading" class="lazy-heading">Co dziś parzysz?</h1>
-          <div
-            id="tea-picker"
-            class="lazy-choices tea-picker"
-            role="group"
-            aria-label="Rodzaj herbaty"
-          ></div>
-          <div class="selected-tea">
-            <h2 id="selected-name" class="lazy-title">Zielona</h2>
-            <dl class="mobile-parameters">
-              <div>
-                <dt>Woda</dt>
-                <dd class="lazy-value">
-                  <span id="selected-temperature">75–80</span><span class="lazy-unit unit">°C</span>
-                </dd>
-              </div>
-              <div>
-                <dt>Parzenie</dt>
-                <dd class="lazy-value">
-                  <span id="selected-time">1–3</span><span class="lazy-unit unit">min</span>
-                </dd>
-              </div>
-              <div>
-                <dt>Susz</dt>
-                <dd class="lazy-value">
-                  <span data-dose>3,5</span><span class="lazy-unit unit">g</span>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-
-        <section class="volume-bar" aria-label="Objętość wody">
-          <fieldset>
-            <legend>Ile wody?</legend>
-            <div class="lazy-choices volume-options" role="group" aria-label="Wybierz objętość">
-              <button type="button" class="lazy-choice" data-volume="250" aria-pressed="false">
-                250 <span>ml</span>
-              </button>
-              <button type="button" class="lazy-choice" data-volume="350" aria-pressed="true">
-                350 <span>ml</span>
-              </button>
-              <button type="button" class="lazy-choice" data-volume="500" aria-pressed="false">
-                500 <span>ml</span>
-              </button>
-              <button type="button" class="lazy-choice" data-volume="custom" aria-pressed="false">
-                Własna
-              </button>
+      <main id="brewing" tabindex="-1">
+        <div id="tea-guide">
+          <section class="mobile-guide" aria-labelledby="mobile-heading">
+            <h1 id="mobile-heading" class="lazy-heading">Co dziś parzysz?</h1>
+            <div
+              id="tea-picker"
+              class="lazy-choices tea-picker"
+              role="group"
+              aria-label="Rodzaj herbaty"
+            ></div>
+            <div class="selected-tea">
+              <h2 id="selected-name" class="lazy-title">Zielona</h2>
+              <dl class="mobile-parameters">
+                <div>
+                  <dt>Woda</dt>
+                  <dd class="lazy-value">
+                    <span id="selected-temperature">75–80</span
+                    ><span class="lazy-unit unit">°C</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Parzenie</dt>
+                  <dd class="lazy-value">
+                    <span id="selected-time">1–3</span><span class="lazy-unit unit">min</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Susz</dt>
+                  <dd class="lazy-value">
+                    <span data-dose>3,5</span><span class="lazy-unit unit">g</span>
+                  </dd>
+                </div>
+              </dl>
             </div>
-          </fieldset>
-          <div class="custom-volume" id="custom-volume-wrap" hidden>
-            <label for="custom-volume">Objętość w ml</label>
-            <input
-              class="lazy-field"
-              id="custom-volume"
-              type="number"
-              inputmode="numeric"
-              min="1"
-              max="10000"
-              step="1"
-              value="350"
-              aria-describedby="volume-error"
-            />
-          </div>
-          <p class="dose-note">
-            <strong>1 g suszu / 100 ml</strong><span>Punkt startowy. Dostosuj do smaku.</span>
-          </p>
-          <p id="volume-error" class="lazy-error field-error" role="status" hidden>
-            Podaj pełną liczbę od 1 do 10 000 ml.
-          </p>
-        </section>
+          </section>
 
-        <div class="brewing-layout">
-          <section class="table-guide" aria-label="Parametry sześciu herbat">
-            <h1 class="lazy-sr-only">Ściąga do parzenia herbaty</h1>
-            <table class="lazy-table">
-              <caption class="lazy-sr-only">
-                Wybierz herbatę, aby ustawić minutnik i przeczytać wskazówki.
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Herbata</th>
-                  <th scope="col">Woda</th>
-                  <th scope="col">Parzenie</th>
-                  <th scope="col">Susz</th>
-                </tr>
-              </thead>
-              <tbody id="tea-table"></tbody>
-            </table>
-            <p class="table-footnote">
-              Susz liściasty · <span data-volume-label>350 ml</span> wody
+          <section class="volume-bar" aria-label="Objętość wody">
+            <fieldset>
+              <legend>Ile wody?</legend>
+              <div class="lazy-choices volume-options" role="group" aria-label="Wybierz objętość">
+                <button type="button" class="lazy-choice" data-volume="250" aria-pressed="false">
+                  250 <span>ml</span>
+                </button>
+                <button type="button" class="lazy-choice" data-volume="350" aria-pressed="true">
+                  350 <span>ml</span>
+                </button>
+                <button type="button" class="lazy-choice" data-volume="500" aria-pressed="false">
+                  500 <span>ml</span>
+                </button>
+                <button type="button" class="lazy-choice" data-volume="custom" aria-pressed="false">
+                  Własna
+                </button>
+              </div>
+            </fieldset>
+            <div class="custom-volume" id="custom-volume-wrap" hidden>
+              <label for="custom-volume">Objętość w ml</label>
+              <input
+                class="lazy-field"
+                id="custom-volume"
+                type="number"
+                inputmode="numeric"
+                min="1"
+                max="10000"
+                step="1"
+                value="350"
+                aria-describedby="volume-error"
+              />
+            </div>
+            <p class="dose-note">
+              <strong>1 g suszu / 100 ml</strong><span>Punkt startowy. Dostosuj do smaku.</span>
+            </p>
+            <p id="volume-error" class="lazy-error field-error" role="status" hidden>
+              Podaj pełną liczbę od 1 do 10 000 ml.
             </p>
           </section>
 
-          <aside class="brewing-sidebar" aria-label="Minutnik i wskazówki">
-            <section class="timer" aria-labelledby="timer-heading">
-              <div class="timer-heading">
-                <h2 id="timer-heading" class="lazy-title">Minutnik</h2>
-                <span id="timer-tea">Zielona</span>
-              </div>
-              <p id="timer-status" class="timer-status" role="status" aria-live="polite">
-                Gotowy do parzenia
+          <div class="brewing-layout">
+            <section class="table-guide" aria-label="Parametry sześciu herbat">
+              <h1 class="lazy-sr-only">Ściąga do parzenia herbaty</h1>
+              <table class="lazy-table">
+                <caption class="lazy-sr-only">
+                  Wybierz herbatę, aby ustawić minutnik i przeczytać wskazówki.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Herbata</th>
+                    <th scope="col">Woda</th>
+                    <th scope="col">Parzenie</th>
+                    <th scope="col">Susz</th>
+                  </tr>
+                </thead>
+                <tbody id="tea-table"></tbody>
+              </table>
+              <p class="table-footnote">
+                Susz liściasty · <span data-volume-label>350 ml</span> wody
               </p>
-              <output
-                id="countdown"
-                class="lazy-display countdown"
-                role="timer"
-                aria-live="off"
-                aria-label="Pozostały czas"
-                >2:00</output
-              >
-              <form
-                id="time-editor"
-                class="time-editor"
-                aria-label="Ustaw czas parzenia"
-                hidden
-                novalidate
-              >
-                <div class="lazy-display time-inputs">
-                  <label>
-                    <span class="lazy-sr-only">Minuty</span>
-                    <input
-                      id="minutes"
-                      type="number"
-                      inputmode="numeric"
-                      min="0"
-                      max="99"
-                      step="1"
-                      value="2"
-                    />
-                  </label>
-                  <span class="time-separator" aria-hidden="true">:</span>
-                  <label>
-                    <span class="lazy-sr-only">Sekundy</span>
-                    <input
-                      id="seconds"
-                      type="number"
-                      inputmode="numeric"
-                      min="0"
-                      max="59"
-                      step="1"
-                      value="00"
-                    />
-                  </label>
-                </div>
-                <div class="time-edit-actions">
-                  <button class="lazy-button lazy-button--text text-button" type="submit">
-                    Ustaw czas
-                  </button>
-                  <button
-                    id="cancel-time"
-                    class="lazy-button lazy-button--text text-button"
-                    type="button"
-                  >
-                    Anuluj
-                  </button>
-                </div>
-                <p id="time-error" class="lazy-error field-error" role="status" hidden>
-                  Wpisz 0–99 minut i 0–59 sekund, łącznie więcej niż zero.
-                </p>
-              </form>
-              <button
-                id="edit-time"
-                class="lazy-button lazy-button--text text-button"
-                type="button"
-                aria-expanded="false"
-                aria-controls="time-editor"
-              >
-                Zmień czas
-              </button>
-              <div class="timer-actions">
-                <button
-                  id="start-pause"
-                  class="lazy-button lazy-button--primary primary-button"
-                  type="button"
-                >
-                  Start
-                </button>
-                <button id="reset" class="lazy-button reset-button" type="button">Reset</button>
-              </div>
-              <p id="timer-context" class="timer-context" hidden></p>
-              <p id="audio-note" class="audio-note" role="status" hidden></p>
             </section>
 
-            <section class="tea-notes" aria-labelledby="notes-heading">
-              <h2 id="notes-heading" class="lazy-title">
-                Warto wiedzieć <span id="notes-name">· Zielona</span>
-              </h2>
-              <p id="tea-tip">Gdy gorzka, spróbuj chłodniejszej wody lub krótszego czasu</p>
-              <h3>Kolejne parzenie</h3>
-              <p id="tea-rebrew">Warto spróbować; dostosuj czas do smaku</p>
-            </section>
-          </aside>
+            <aside class="brewing-sidebar" aria-label="Minutnik i wskazówki">
+              <section class="timer" aria-labelledby="timer-heading">
+                <div class="timer-heading">
+                  <h2 id="timer-heading" class="lazy-title">Minutnik</h2>
+                  <span id="timer-tea">Zielona</span>
+                </div>
+                <p id="timer-status" class="timer-status" role="status" aria-live="polite">
+                  Gotowy do parzenia
+                </p>
+                <output
+                  id="countdown"
+                  class="lazy-display countdown"
+                  role="timer"
+                  aria-live="off"
+                  aria-label="Pozostały czas"
+                  >2:00</output
+                >
+                <form
+                  id="time-editor"
+                  class="time-editor"
+                  aria-label="Ustaw czas parzenia"
+                  hidden
+                  novalidate
+                >
+                  <div class="lazy-display time-inputs">
+                    <label>
+                      <span class="lazy-sr-only">Minuty</span>
+                      <input
+                        id="minutes"
+                        type="number"
+                        inputmode="numeric"
+                        min="0"
+                        max="99"
+                        step="1"
+                        value="2"
+                      />
+                    </label>
+                    <span class="time-separator" aria-hidden="true">:</span>
+                    <label>
+                      <span class="lazy-sr-only">Sekundy</span>
+                      <input
+                        id="seconds"
+                        type="number"
+                        inputmode="numeric"
+                        min="0"
+                        max="59"
+                        step="1"
+                        value="00"
+                      />
+                    </label>
+                  </div>
+                  <div class="time-edit-actions">
+                    <button class="lazy-button lazy-button--text text-button" type="submit">
+                      Ustaw czas
+                    </button>
+                    <button
+                      id="cancel-time"
+                      class="lazy-button lazy-button--text text-button"
+                      type="button"
+                    >
+                      Anuluj
+                    </button>
+                  </div>
+                  <p id="time-error" class="lazy-error field-error" role="status" hidden>
+                    Wpisz 0–99 minut i 0–59 sekund, łącznie więcej niż zero.
+                  </p>
+                </form>
+                <button
+                  id="edit-time"
+                  class="lazy-button lazy-button--text text-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="time-editor"
+                >
+                  Zmień czas
+                </button>
+                <div class="timer-actions">
+                  <button
+                    id="start-pause"
+                    class="lazy-button lazy-button--primary primary-button"
+                    type="button"
+                  >
+                    Start
+                  </button>
+                  <button id="reset" class="lazy-button reset-button" type="button">Reset</button>
+                </div>
+                <p id="timer-context" class="timer-context" hidden></p>
+                <p id="audio-note" class="audio-note" role="status" hidden></p>
+              </section>
+
+              <section class="tea-notes" aria-labelledby="notes-heading">
+                <h2 id="notes-heading" class="lazy-title">
+                  Warto wiedzieć <span id="notes-name">· Zielona</span>
+                </h2>
+                <p id="tea-tip">Gdy gorzka, spróbuj chłodniejszej wody lub krótszego czasu</p>
+                <h3>Kolejne parzenie</h3>
+                <p id="tea-rebrew">Warto spróbować; dostosuj czas do smaku</p>
+              </section>
+            </aside>
+          </div>
         </div>
+
+        <section class="matcha-guide" id="matcha-guide" aria-labelledby="matcha-heading" hidden>
+          <h1 class="lazy-heading" id="matcha-heading">Matcha</h1>
+          <p id="matcha-tea-status" class="matcha-tea-status" role="status"></p>
+          <p id="matcha-audio-note" class="audio-note" role="status" hidden>
+            Dźwięk minutnika niedostępny.
+          </p>
+          <div class="lazy-choices" role="group" aria-label="Wariant matchy" data-guide-picker>
+            <button
+              type="button"
+              class="lazy-choice"
+              aria-controls="matcha-classic"
+              aria-pressed="true"
+            >
+              Klasyczna
+            </button>
+            <button
+              type="button"
+              class="lazy-choice"
+              aria-controls="matcha-latte"
+              aria-pressed="false"
+            >
+              Latte
+            </button>
+          </div>
+
+          <div class="matcha-recipe" id="matcha-classic">
+            <section>
+              <h2 class="lazy-title">Składniki na 1 porcję</h2>
+              <ul class="matcha-ingredients" role="list">
+                <li><strong>2 g</strong> matchy</li>
+                <li><strong>10 ml</strong> wody w temperaturze pokojowej</li>
+                <li><strong>60 ml</strong> wody o temperaturze <strong>80°C</strong></li>
+              </ul>
+            </section>
+            <section>
+              <h2 class="lazy-title">Przygotowanie</h2>
+              <ol class="matcha-steps">
+                <li>Zamocz chasen (bambusową miotełkę) w ciepłej wodzie, żeby zmiękczyć włosie.</li>
+                <li>Przesiej matchę przez drobne sitko do czarki.</li>
+                <li>
+                  Dodaj 10 ml wody w temperaturze pokojowej i rozetrzyj matchę chasenem na gładko.
+                </li>
+                <li>Dolej 60 ml wody o temperaturze 80°C.</li>
+                <li>
+                  Ubijaj chasenem szybkimi ruchami w kształcie litery M lub W przez ok. 30 sekund,
+                  aż powstanie pianka.
+                </li>
+              </ol>
+            </section>
+          </div>
+
+          <div class="matcha-recipe" id="matcha-latte" hidden>
+            <section>
+              <h2 class="lazy-title">Składniki na 1 porcję</h2>
+              <ul class="matcha-ingredients" role="list">
+                <li><strong>2 g</strong> matchy</li>
+                <li><strong>10 ml</strong> wody w temperaturze pokojowej</li>
+                <li><strong>40 ml</strong> wody o temperaturze <strong>80°C</strong></li>
+                <li><strong>150 ml</strong> mleka lub napoju roślinnego</li>
+              </ul>
+            </section>
+            <section>
+              <h2 class="lazy-title">Przygotowanie</h2>
+              <ol class="matcha-steps">
+                <li>Zamocz chasen (bambusową miotełkę) w ciepłej wodzie, żeby zmiękczyć włosie.</li>
+                <li>Przesiej matchę przez drobne sitko do czarki.</li>
+                <li>
+                  Dodaj 10 ml wody w temperaturze pokojowej i rozetrzyj matchę chasenem na gładko.
+                </li>
+                <li>Dolej 40 ml wody o temperaturze 80°C.</li>
+                <li>
+                  Ubijaj chasenem szybkimi ruchami w kształcie litery M lub W przez ok. 30 sekund,
+                  aż powstanie pianka.
+                </li>
+                <li>
+                  Spień mleko lub napój roślinny i przelej do szklanki. Powoli wlej przygotowaną
+                  matchę.
+                </li>
+              </ol>
+            </section>
+          </div>
+
+          <a
+            class="lazy-button lazy-button--text text-button"
+            href="https://mymatcha.pl/blog/jak-parzyc-matche-tradycyjnie-ceremonia-parzenia-krok-po-kroku"
+            >Przepis MyMatcha</a
+          >
+        </section>
       </main>
 
       <noscript
