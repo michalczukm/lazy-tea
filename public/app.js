@@ -85,6 +85,7 @@ function renderTimer() {
   }
   setText($('#timer-tea'), tea.name)
   setText($('#timer-status'), statusLabels[timer.status])
+  setText($('#matcha-tea-status'), timer.status === 'done' ? 'Herbata gotowa · ' + tea.name : '')
   setText($('#countdown'), formatTime(timer.secondsLeft(Date.now())))
   setText(
     $('#start-pause'),
@@ -106,6 +107,7 @@ function setAudioUnavailable() {
   audioAvailable = false
   setText($('#audio-note'), 'Dźwięk niedostępny. Na koniec zobaczysz komunikat „Gotowe”.')
   $('#audio-note').hidden = false
+  $('#matcha-audio-note').hidden = false
 }
 
 async function unlockAudio() {
@@ -119,6 +121,7 @@ async function unlockAudio() {
     if (audioContext.state !== 'running') throw new Error('Audio suspended')
     audioAvailable = true
     $('#audio-note').hidden = true
+    $('#matcha-audio-note').hidden = true
   } catch {
     setAudioUnavailable()
   }
@@ -181,6 +184,19 @@ $('#tea-table').addEventListener('click', event => {
 $('#tea-picker').addEventListener('click', event => {
   const button = event.target.closest('button')
   if (button) selectTea(button.dataset.teaId)
+})
+document.querySelectorAll('[data-guide-picker]').forEach(picker => {
+  const options = picker.querySelectorAll('button')
+  picker.addEventListener('click', event => {
+    const button = event.target.closest('button')
+    if (!button) return
+    for (const option of options) {
+      const selected = option === button
+      option.setAttribute('aria-pressed', String(selected))
+      document.getElementById(option.getAttribute('aria-controls')).hidden = !selected
+    }
+  })
+  picker.hidden = false
 })
 document.querySelectorAll('[data-volume]').forEach(button => {
   button.addEventListener('click', () => {

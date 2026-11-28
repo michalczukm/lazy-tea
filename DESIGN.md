@@ -203,7 +203,7 @@ Primary hover and active states use action tokens; neutral hover and active stat
 
 ### Choice controls
 
-Shared outlined buttons express selection with `aria-pressed`, action fill and on-accent text. Volume labels use lighter units; phone tea and volume groups use the wrapping geometry in Layout. Selection does not rely on color alone.
+Shared outlined buttons express selection with `aria-pressed`, action fill and on-accent text. The header uses these buttons to switch between Herbaty and Matcha. The Matcha guide uses the same pattern for Klasyczna and Latte. Volume labels use lighter units; phone tea and volume groups use the wrapping geometry in Layout. Selection does not rely on color alone.
 
 ### Inputs / Fields
 
@@ -219,7 +219,7 @@ A flat section holds a regular-weight countdown, status and actions in a `1fr au
 
 ### Brand link
 
-The shared ink-colored wordmark ends in an accent dot and has a minimum (48px) target. Shared skip navigation appears on focus. The app has no separate navigation menu, card or chip system.
+The shared ink-colored wordmark ends in an accent dot and has a minimum (48px) target. Shared skip navigation appears on focus.
 
 `public/index.html` loads the generated package stylesheet before `public/styles.css`; JavaScript markup uses shared component classes. `pnpm build` copies installed CSS, fonts and licenses into ignored `public/vendor/lazy-theme/`. Update the package dependency to change shared visual rules; edit app CSS for brewing geometry and device density.
 

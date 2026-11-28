@@ -10,10 +10,52 @@ legend {
 .page-header {
   margin-bottom: 20px;
 }
-.page-header p {
-  font-size: var(--lazy-text-body);
+.guide-nav {
+  margin-inline-start: auto;
+}
+.guide-nav button {
+  padding-inline: var(--lazy-space-3);
 }
 
+.matcha-guide {
+  max-inline-size: 61rem;
+  padding-block-start: var(--lazy-space-3);
+}
+.matcha-guide > .lazy-choices {
+  margin-block: var(--lazy-space-4) var(--lazy-space-6);
+}
+.matcha-tea-status:not(:empty) {
+  margin-block-start: var(--lazy-space-2);
+  font-weight: var(--lazy-font-semibold);
+}
+.matcha-recipe {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--lazy-space-6) var(--lazy-space-8);
+  padding-block: var(--lazy-space-5);
+  border-block: 1px solid var(--lazy-color-line);
+}
+.matcha-ingredients,
+.matcha-steps {
+  display: grid;
+  gap: var(--lazy-space-2);
+  margin-block: var(--lazy-space-3) 0;
+}
+.matcha-ingredients {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.matcha-steps {
+  max-inline-size: var(--lazy-reading-width);
+  padding-inline-start: 1.5em;
+}
+.matcha-steps li {
+  padding-inline-start: var(--lazy-space-1);
+}
+.matcha-steps li::marker {
+  color: var(--lazy-color-muted);
+  font-weight: var(--lazy-font-semibold);
+}
 .volume-bar {
   display: flex;
   align-items: center;
@@ -285,10 +327,11 @@ noscript {
     gap: 16px;
     margin-bottom: 20px;
   }
-  .page-header p {
-    font-size: 14px;
-    max-width: 150px;
-    text-align: right;
+  .matcha-guide {
+    padding-block-start: 0;
+  }
+  .matcha-recipe {
+    grid-template-columns: minmax(0, 1fr);
   }
   .mobile-guide {
     display: block;
@@ -406,9 +449,6 @@ noscript {
     padding-bottom: 8px;
     margin-bottom: 8px;
   }
-  .page-header p {
-    font-size: 14px;
-  }
   .volume-bar {
     padding-bottom: 10px;
     margin-bottom: 12px;
@@ -483,7 +523,6 @@ noscript {
     margin-bottom: 0;
     border-bottom: 0;
   }
-  .page-header p,
   .dose-note {
     font-size: 0.8em;
   }
@@ -579,9 +618,6 @@ noscript {
   }
   .page-header {
     gap: 12px;
-  }
-  .page-header p {
-    max-width: 130px;
   }
   .mobile-parameters {
     gap: 8px;

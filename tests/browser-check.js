@@ -133,5 +133,42 @@
   )
   $('#reset').click()
   $('#tea-picker [data-tea-id="green"]').click()
+
+  const matcha = $('[aria-controls="matcha-guide"]')
+  const teas = $('[aria-controls="tea-guide"]')
+  check(teas?.getAttribute('aria-pressed') === 'true', 'the tea guide opens by default')
+  edit(2)
+  $('#start-pause').click()
+  matcha.click()
+  check(
+    getComputedStyle($('#tea-guide')).display === 'none' &&
+      matcha.getAttribute('aria-pressed') === 'true',
+    'opening matcha hides the tea timer and selects the guide',
+  )
+  check(
+    !$('#matcha-classic').hidden &&
+      $('#matcha-classic ol li').textContent.includes('ciepłej wodzie'),
+    'classic matcha starts with soaking the chasen',
+  )
+  $('[aria-controls="matcha-latte"]').click()
+  check(
+    $('#matcha-classic').hidden &&
+      !$('#matcha-latte').hidden &&
+      $('#matcha-latte ol li').textContent.includes('ciepłej wodzie') &&
+      $('#matcha-latte').textContent.includes('150 ml'),
+    'latte shows its own recipe, starting with soaking the chasen',
+  )
+  await new Promise(resolve => setTimeout(resolve, 2200))
+  const teaStatus = $('#matcha-tea-status')
+  check(
+    teaStatus?.offsetHeight > 0 && teaStatus.textContent === 'Herbata gotowa · Zielona',
+    'the tea completion notice is available from the matcha guide',
+  )
+  teas.click()
+  check(
+    $('#matcha-guide').hidden && $('#timer-status').textContent === 'Gotowe',
+    'the active timer finishes while the matcha guide is open',
+  )
+  $('#reset').click()
   return checks
 })()
